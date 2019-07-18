@@ -1,0 +1,28 @@
+version: $(frameworkVersion).{build}
+dotnet_csproj:
+   patch: true
+   file: '**\*.csproj'
+   version: $(frameworkVersion)
+   package_version: $(frameworkVersion)
+   assembly_version: $(frameworkVersion)
+   file_version: '{version}'
+   informational_version: '{version}'
+environment:
+  frameworkVersion: 3.2.0
+before_build:
+ - dotnet restore
+build_script:
+ - dotnet build --configuration Release /verbosity:minimal "Ocaramba.templates.sln"
+test:
+  assemblies:
+    only:
+      - '**\*.ProjectExample.*.dll'
+after_test:
+- ps: >-
+    7z a testresults.zip .\Ocaramba.ProjectExample.NUnit.*\bin\Release\**\*.png
+
+    7z a testresults.zip .\Ocaramba.ProjectExample.NUnit.*\bin\Release\**\*.html
+
+    7z a testresults.zip .\Ocaramba.ProjectExample.NUnit.*\bin\Release\**\*.log
+
+    appveyor PushArtifact testresults.zip

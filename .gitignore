@@ -1,0 +1,6 @@
+/.vs/Ocaramba.templates/v15
+/Ocaramba.templates.sln.DotSettings.user
+/Ocaramba.ProjectExample.NUnit.*/bin/*
+/Ocaramba.ProjectExample.NUnit.*/obj/*
+/.vs
+/packages
