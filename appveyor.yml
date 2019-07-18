@@ -11,6 +11,7 @@ environment:
   frameworkVersion: 3.2.0
 before_build:
  - dotnet restore
+ - nuget restore
 build_script:
  - dotnet build --configuration Release /verbosity:minimal "Ocaramba.templates.sln"
 test:
