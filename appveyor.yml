@@ -7,8 +7,14 @@ dotnet_csproj:
    assembly_version: $(frameworkVersion)
    file_version: '{version}'
    informational_version: '{version}'
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: $(frameworkVersion)
+  assembly_file_version: '{version}'
+  assembly_informational_version: $(frameworkVersion)
 environment:
-  frameworkVersion: 3.2.0
+  frameworkVersion: 1.0.0
 before_build:
  - dotnet restore
  - nuget restore
@@ -20,10 +26,12 @@ test:
       - '**\*.ProjectExample.*.dll'
 after_test:
 - ps: >-
-    7z a testresults.zip .\Ocaramba.ProjectExample.NUnit.*\bin\Release\**\*.png
+    7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.png
 
-    7z a testresults.zip .\Ocaramba.ProjectExample.NUnit.*\bin\Release\**\*.html
+    7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.html
 
-    7z a testresults.zip .\Ocaramba.ProjectExample.NUnit.*\bin\Release\**\*.log
+    7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.log
 
     appveyor PushArtifact testresults.zip
+
+    appveyor PushArtifact .\OcarambaTemplatesVSIX\bin\Release\*.vsix
