@@ -21,14 +21,9 @@ before_build:
 build:
   project: Ocaramba.templates.sln
   verbosity: minimal
-after_test:
-- ps: >-
-    7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.png
-
-    7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.html
-
-    7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.log
-
-    appveyor PushArtifact testresults.zip
-
-    appveyor PushArtifact .\OcarambaTemplatesVSIX\bin\Release\*.vsix
+artifacts:
+  - path: .\**\*.vsix
+    name: Template
+test_script:
+    - ps: >-
+         #.\ExecutingTests.ps1
