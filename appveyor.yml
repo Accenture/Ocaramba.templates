@@ -18,8 +18,9 @@ environment:
 before_build:
  - dotnet restore
  - nuget restore
-build_script:
- - dotnet build --configuration Release /verbosity:minimal "Ocaramba.templates.sln"
+build:
+  project: Ocaramba.sln
+  verbosity: minimal
 test:
   assemblies:
     only:
