@@ -24,7 +24,7 @@ build:
 test:
   assemblies:
     only:
-      - '**\*.ProjectExample.*.dll'
+      - '**\*.ProjectExample.*.NetFramework.dll'
 after_test:
 - ps: >-
     7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.png
