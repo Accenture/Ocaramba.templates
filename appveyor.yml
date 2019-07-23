@@ -19,7 +19,7 @@ before_build:
  - dotnet restore
  - nuget restore
 build:
-  project: Ocaramba.sln
+  project: Ocaramba.templates.sln
   verbosity: minimal
 test:
   assemblies:
