@@ -21,10 +21,6 @@ before_build:
 build:
   project: Ocaramba.templates.sln
   verbosity: minimal
-test:
-  assemblies:
-    only:
-      - '**\*.ProjectExample.*.NetFramework.dll'
 after_test:
 - ps: >-
     7z a testresults.zip .\Ocaramba.ProjectExample.*\bin\Release\**\*.png
