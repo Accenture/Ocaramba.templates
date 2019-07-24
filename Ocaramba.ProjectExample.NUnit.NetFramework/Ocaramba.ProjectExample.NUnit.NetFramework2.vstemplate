@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Ocaramba.ProjectExample.NUnit.NetFramework2</Name>
+    <Description>Ocaramba.ProjectExample.NUnit.NetFramework2</Description>
+    <Icon>Ocaramba.ProjectExample.NUnit.NetFramework2.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>ac8bf509-a237-4ae5-9697-6b7cde4c85b1</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Ocaramba.ProjectExample.NUnit.NetFramework2</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <Folder Name="DataDriven" TargetFolderName="DataDriven">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataDriven.xml">DataDriven.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataDrivenHelper.cs">DataDrivenHelper.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TestData.cs">TestData.cs</ProjectItem>
+      </Folder>
+      <Folder Name="PageObjects" TargetFolderName="PageObjects">
+        <ProjectItem ReplaceParameters="true" TargetFileName="InternetPage.cs">InternetPage.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Tests" TargetFolderName="Tests">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsNUnit.cs">HerokuappTestsNUnit.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ProjectBaseConfiguration.cs">ProjectBaseConfiguration.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
