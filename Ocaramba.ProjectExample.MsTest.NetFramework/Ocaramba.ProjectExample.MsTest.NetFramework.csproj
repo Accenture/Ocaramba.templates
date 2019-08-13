@@ -93,6 +93,7 @@
     <Compile Include="Tests\HerokuappTestsMsTest1.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="AssemblyInfo.cs" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>

@@ -112,11 +112,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="AssemblyInfo.cs" />
+    <None Include="Ocaramba.ProjectExample.NUnit.NetFramework.ico" />
     <None Include="packages.config" />
-    <None Include="Ocaramba.ProjectExample.NUnit.NetFramework2.ico" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.ProjectExample.NUnit.NetFramework2.vstemplate" />
+    <VSTemplate Include="Ocaramba.ProjectExample.NUnit.NetFramework.vstemplate" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataDriven\DataDriven.xml" />
