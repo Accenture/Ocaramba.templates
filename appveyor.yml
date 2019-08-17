@@ -1,12 +1,4 @@
 version: $(frameworkVersion).{build}
-dotnet_csproj:
-   patch: true
-   file: '**\*.csproj'
-   version: $(frameworkVersion)
-   package_version: $(frameworkVersion)
-   assembly_version: $(frameworkVersion)
-   file_version: '{version}'
-   informational_version: '{version}'
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
