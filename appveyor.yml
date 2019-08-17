@@ -13,9 +13,11 @@ before_build:
 build:
   project: Ocaramba.templates.sln
   verbosity: minimal
+test:
+  # only assemblies to test
+  assemblies:
+    only:
+      - '**\Ocaramba.ProjectExample.*.dll'
 artifacts:
   - path: .\**\*.vsix
     name: Template
-test_script:
-    - ps: >-
-         #.\ExecutingTests.ps1
