@@ -1,6 +1,7 @@
 version: $(frameworkVersion).{build}
 environment:
   frameworkVersion: 1.0.0
+configuration: Release
 before_build:
  - dotnet restore
  - nuget restore
