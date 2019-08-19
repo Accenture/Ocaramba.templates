@@ -24,16 +24,16 @@
     <Compile Include="ProjectTestBase.cs" />
 	</ItemGroup>
   <ItemGroup>
-    <None Update="appsettings.Linux.json">
+    <None Include="appsettings.Linux.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="appsettings.json">
+    <None Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="DataDriven\DataDriven.xml">
+    <None Include="DataDriven\DataDriven.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="nlog.config">
+    <None Include="nlog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
