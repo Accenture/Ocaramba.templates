@@ -9,7 +9,7 @@
     <SortOrder>1000</SortOrder>
     <TemplateID>3b129647-bd8b-449f-be5d-6046f97978bb</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Ocaramba.ProjectExample.MsTest.NetFramework2</DefaultName>
+    <DefaultName>Ocaramba.ProjectExample.MsTest.NetFramework</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
   </TemplateData>
   <TemplateContent>
@@ -25,9 +25,6 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTemplate.csproj">ProjectTemplate.csproj</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
-      <Folder Name="Properties" TargetFolderName="Properties">
-        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
-      </Folder>
       <ProjectItem ReplaceParameters="false" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
       <Folder Name="Tests" TargetFolderName="Tests">
         <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest.cs">HerokuappTestsMsTest.cs</ProjectItem>

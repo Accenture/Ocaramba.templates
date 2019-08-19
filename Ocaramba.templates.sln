@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocaramba.ProjectExample.NUnit.NetCore", "Ocaramba.ProjectExample.NUnit.NetCore\Ocaramba.ProjectExample.NUnit.NetCore.csproj", "{E56D131D-CEC3-4CD1-A346-7E7FB78720CB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5C3EAAB-7DD8-4D6C-9E18-A75F37BF817B}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
@@ -18,16 +16,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.ProjectExample.MsT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.Templates", "Ocaramba.Templates.VSIX\Ocaramba.Templates.csproj", "{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.ProjectExample.NUnit.NetCore", "Ocaramba.ProjectExample.NUnit.NetCore\Ocaramba.ProjectExample.NUnit.NetCore.csproj", "{53EFEAAC-6775-486A-A476-AA47B1C353DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E56D131D-CEC3-4CD1-A346-7E7FB78720CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E56D131D-CEC3-4CD1-A346-7E7FB78720CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E56D131D-CEC3-4CD1-A346-7E7FB78720CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E56D131D-CEC3-4CD1-A346-7E7FB78720CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BD3F9327-C8FA-4DA2-8BA8-BA9CCFA03B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BD3F9327-C8FA-4DA2-8BA8-BA9CCFA03B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3F9327-C8FA-4DA2-8BA8-BA9CCFA03B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,6 +36,10 @@ Global
 		{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,22 +1,19 @@
-<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>Ocaramba.ProjectExample.NUnit.NetCore</Name>
-    <Description>A project template for automated tests using Ocaramba framework and Selenium WebDriver</Description>
+    <Description>Ocaramba.ProjectExample.NUnit.NetCore</Description>
+    <Icon>Ocaramba.ProjectExample.NUnit.NetCore.ico</Icon>
     <ProjectType>CSharp</ProjectType>
-    <ProjectSubType>
-    </ProjectSubType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
+    <TemplateID>6c4e9577-cdd2-48eb-8ba4-a02ff57f4d1d</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>Ocaramba.ProjectExample.NUnit.NetCore</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
-    <LocationField>Enabled</LocationField>
-    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-    <CreateInPlace>true</CreateInPlace>
-    <Icon>__TemplateIcon.png</Icon>
-    <PreviewImage>__PreviewImage.png</PreviewImage>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Ocaramba.ProjectExample.NUnit.NetCore.csproj" File="Ocaramba.ProjectExample.NUnit.NetCore.csproj" ReplaceParameters="true">
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
       <Folder Name="DataDriven" TargetFolderName="DataDriven">
         <ProjectItem ReplaceParameters="true" TargetFileName="DataDriven.xml">DataDriven.xml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="DataDrivenHelper.cs">DataDrivenHelper.cs</ProjectItem>
