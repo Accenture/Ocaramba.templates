@@ -1,4 +1,5 @@
 version: $(frameworkVersion).{build}
+image: Visual Studio 2017
 environment:
   frameworkVersion: 1.0.0
 configuration: Release
@@ -8,11 +9,6 @@ before_build:
 build:
   project: Ocaramba.templates.sln
   verbosity: minimal
-test:
-  # only assemblies to test
-  assemblies:
-    only:
-      - '**\Ocaramba.ProjectExample.*.dll'
 artifacts:
   - path: .\**\*.vsix
     name: Template
