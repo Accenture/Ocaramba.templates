@@ -112,7 +112,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.ProjectExample.NUnit.NetFramework.vstemplate">
+    <VSTemplate Include="Ocaramba.NUnit.NetFramework.vstemplate">
       <SubType>Designer</SubType>
     </VSTemplate>
   </ItemGroup>

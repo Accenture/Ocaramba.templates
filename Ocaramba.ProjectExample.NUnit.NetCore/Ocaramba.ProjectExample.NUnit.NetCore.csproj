@@ -186,7 +186,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.ProjectExample.NUnit.NetCore.vstemplate" />
+    <VSTemplate Include="Ocaramba.NUnit.NetCore.vstemplate" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataDriven\DataDriven.xml" />

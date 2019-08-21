@@ -100,7 +100,7 @@
     <None Include="Testsettings.testsettings" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.ProjectExample.MsTest.NetFramework.vstemplate">
+    <VSTemplate Include="Ocaramba.MsTest.NetFramework.vstemplate">
       <SubType>Designer</SubType>
     </VSTemplate>
   </ItemGroup>
