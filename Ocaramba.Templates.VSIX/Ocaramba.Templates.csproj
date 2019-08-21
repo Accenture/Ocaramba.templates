@@ -134,6 +134,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ocaramba.PageObjectClassTemplate\Ocaramba.PageObjectClassTemplate.csproj">
+      <Project>{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}</Project>
+      <Name>Ocaramba.PageObjectClassTemplate</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\Ocaramba.ProjectExample.MsTest.NetFramework\Ocaramba.ProjectExample.MsTest.NetFramework.csproj">
       <Project>{0706AE93-76DA-43AF-8117-A8BD4A346A93}</Project>
       <Name>Ocaramba.ProjectExample.MsTest.NetFramework</Name>

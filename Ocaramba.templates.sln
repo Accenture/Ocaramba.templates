@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.Templates", "Ocara
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.ProjectExample.NUnit.NetCore", "Ocaramba.ProjectExample.NUnit.NetCore\Ocaramba.ProjectExample.NUnit.NetCore.csproj", "{53EFEAAC-6775-486A-A476-AA47B1C353DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.PageObjectClassTemplate", "Ocaramba.PageObjectClassTemplate\Ocaramba.PageObjectClassTemplate.csproj", "{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EFEAAC-6775-486A-A476-AA47B1C353DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

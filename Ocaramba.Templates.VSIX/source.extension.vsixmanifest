@@ -21,6 +21,7 @@
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ocaramba.ProjectExample.NUnit.NetFramework" d:TargetPath="|Ocaramba.ProjectExample.NUnit.NetFramework;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ocaramba.ProjectExample.MsTest.NetFramework" d:TargetPath="|Ocaramba.ProjectExample.MsTest.NetFramework;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ocaramba.ProjectExample.NUnit.NetCore" d:TargetPath="|Ocaramba.ProjectExample.NUnit.NetCore;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="Ocaramba.PageObjectClassTemplate" d:TargetPath="|Ocaramba.PageObjectClassTemplate;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
     </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
