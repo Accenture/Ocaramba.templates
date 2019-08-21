@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("OcarambaTemplatesVSIX")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Objectivity Bespoke Software Specialists")]
 [assembly: AssemblyProduct("OcarambaTemplatesVSIX")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("Copyright © Objectivity Bespoke Software Specialists 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

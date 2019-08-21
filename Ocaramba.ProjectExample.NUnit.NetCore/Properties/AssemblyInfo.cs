@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Ocaramba.ProjectExample.NUnit.NetCore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Jakub Raczek")]
+[assembly: AssemblyCompany("Objectivity Bespoke Software Specialists")]
 [assembly: AssemblyProduct("Ocaramba.ProjectExample.NUnit.NetCore")]
-[assembly: AssemblyCopyright("Copyright © Jakub Raczek 2019")]
+[assembly: AssemblyCopyright("Copyright © Objectivity Bespoke Software Specialists 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

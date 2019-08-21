@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ocaramba.ProjectExample.MsTest.NetFramework2")]
+[assembly: AssemblyTitle("Ocaramba.ProjectExample.MsTest.NetFramework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Jakub Raczek")]
-[assembly: AssemblyProduct("Ocaramba.ProjectExample.MsTest.NetFramework2")]
-[assembly: AssemblyCopyright("Copyright © Jakub Raczek 2019")]
+[assembly: AssemblyCompany("Objectivity Bespoke Software Specialists")]
+[assembly: AssemblyProduct("Ocaramba.ProjectExample.MsTest.NetFramework")]
+[assembly: AssemblyCopyright("Copyright © Objectivity Bespoke Software Specialists 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
