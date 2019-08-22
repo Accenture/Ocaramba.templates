@@ -36,16 +36,16 @@ namespace Ocaramba.ProjectExample.MsTest.NetFramework.Tests
         public void TickCheckboxTest()
         {
             // TODO: Add your test code here
-            var checkboxes = new InternetPage(this.DriverContext)
-                .OpenHomePage();
+            var checkboxes = new InternetPage(this.DriverContext);
+            checkboxes.OpenHomePage();
         }
 
         [TestMethod]
         public void UnTickCheckboxTest()
         {
             // TODO: Add your test code here
-            var checkboxes = new InternetPage(this.DriverContext)
-                .OpenHomePage();
+            var checkboxes = new InternetPage(this.DriverContext);
+            checkboxes.OpenHomePage();
         }
     }
 }

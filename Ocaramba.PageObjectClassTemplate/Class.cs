@@ -14,7 +14,8 @@ namespace $rootnamespace$
         /// Locators for elements
         /// </summary>
         private readonly ElementLocator
-            linkLocator = new ElementLocator(Locator.CssSelector, "a[href='/{0}']");
+            linkLocator = new ElementLocator(Locator.CssSelector, "a[href='/{0}']"),
+            basicAuthLink = new ElementLocator(Locator.XPath, "//a[contains(text(),'Auth')]");
 
         public $safeitemrootname$(DriverContext driverContext)
             : base(driverContext)
@@ -24,11 +25,19 @@ namespace $rootnamespace$
         /// <summary>
         /// Methods for this HomePage
         /// </summary>
-        public void OpenHomePage()
+        public void ClickOnElementWithLocatorFormating(string page)
         {
-            var url = BaseConfiguration.GetUrlValue;
-            this.Driver.NavigateTo(new Uri(url));
-            Logger.Info(CultureInfo.CurrentCulture, "Opening page {0}", url);
+            Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
+            this.Driver.GetElement(this.linkLocator.Format(page)).Click();
+        }
+
+        /// <summary>
+        /// Methods for this HomePage
+        /// </summary>
+        public void ClickOnElement()
+        {
+            Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
+            this.Driver.GetElement(this.linkLocator.basicAuthLink).Click();
         }
 
     }

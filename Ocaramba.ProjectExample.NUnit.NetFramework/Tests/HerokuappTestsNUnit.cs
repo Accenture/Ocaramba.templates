@@ -2,7 +2,7 @@
 // See documentation : https://github.com/ObjectivityLtd/Ocaramba 
 
 using NUnit.Framework;
-using Ocaramba.Template.NUnit.PageObjects;
+using Ocaramba.ProjectExample.NUnit.NetFramework.PageObjects;
 
 namespace Ocaramba.ProjectExample.NUnit.NetFramework.Tests
 {

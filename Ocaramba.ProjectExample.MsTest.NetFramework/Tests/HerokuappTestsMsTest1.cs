@@ -34,8 +34,8 @@ namespace Ocaramba.ProjectExample.MsTest.NetFramework.Tests
         public void PageSourceContainsCaseTest()
         {
             // TODO: Add your test code here
-            var statusCodes = new InternetPage(this.DriverContext)
-                .OpenHomePage();
+            var statusCodes = new InternetPage(this.DriverContext);
+            statusCodes.OpenHomePage();
         }
     }
 }

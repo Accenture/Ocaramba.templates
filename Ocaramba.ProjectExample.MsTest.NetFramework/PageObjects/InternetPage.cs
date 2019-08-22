@@ -48,12 +48,11 @@ namespace Ocaramba.ProjectExample.MsTest.NetFramework.PageObjects
         /// Methods for this HomePage
         /// </summary>
         /// <returns>Returns HomePage</returns>
-        public InternetPage OpenHomePage()
+        public void OpenHomePage()
         {
             var url = BaseConfiguration.GetUrlValue;
-            this.Driver.NavigateTo(new Uri(url));
             Logger.Info(CultureInfo.CurrentCulture, "Opening page {0}", url);
-            return this;
+            this.Driver.NavigateTo(new Uri(url));
         }
 
         /// <summary>
@@ -63,6 +62,7 @@ namespace Ocaramba.ProjectExample.MsTest.NetFramework.PageObjects
 
         public void GoToPage(string page)
         {
+            Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
             this.Driver.GetElement(this.linkLocator.Format(page)).Click();
         }   
     }
