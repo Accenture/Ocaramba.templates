@@ -37,7 +37,7 @@ namespace $rootnamespace$
         public void ClickOnElement()
         {
             Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
-            this.Driver.GetElement(this.linkLocator.basicAuthLink).Click();
+            this.Driver.GetElement(this.basicAuthLink).Click();
         }
 
     }
