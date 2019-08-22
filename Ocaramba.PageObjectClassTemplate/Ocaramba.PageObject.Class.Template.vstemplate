@@ -2,13 +2,13 @@
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>Ocaramba.PageObjectClassTemplate</Name>
-    <Description>Ocaramba.PageObjectClassTemplate</Description>
+    <Description>Ocaramba page object class</Description>
     <Icon>Ocaramba.PageObjectClassTemplate.ico</Icon>
     <TemplateID>a12a551e-8446-4a02-a32a-bd9c01d556f3</TemplateID>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
-    <DefaultName>Class.cs</DefaultName>
+    <DefaultName>Page.cs</DefaultName>
   </TemplateData>
   <TemplateContent>
     <References>

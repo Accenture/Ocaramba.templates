@@ -134,9 +134,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ocaramba.PageObjectClassTemplate\Ocaramba.PageObjectClassTemplate.csproj">
+    <ProjectReference Include="..\Ocaramba.PageObjectClassTemplate\Ocaramba.PageObject.Class.Template.csproj">
       <Project>{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}</Project>
-      <Name>Ocaramba.PageObjectClassTemplate</Name>
+      <Name>Ocaramba.PageObject.Class.Template</Name>
       <VSIXSubPath>ItemTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
@@ -159,6 +159,13 @@
       <Project>{BD3F9327-C8FA-4DA2-8BA8-BA9CCFA03B49}</Project>
       <Name>Ocaramba.ProjectExample.NUnit.NetFramework</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Ocaramba.TestNunit.Class.Template\Ocaramba.TestNunit.Class.Template.csproj">
+      <Project>{BB31ED7A-719A-48A3-9204-55AACA222997}</Project>
+      <Name>Ocaramba.TestNunit.Class.Template</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
