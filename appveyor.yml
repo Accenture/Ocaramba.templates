@@ -2,6 +2,7 @@ version: $(frameworkVersion).{build}
 image: Visual Studio 2017
 environment:
   frameworkVersion: 1.0.0
+  latestNugetUrl: https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 configuration: Release
 assembly_info:
   patch: true
@@ -9,6 +10,23 @@ assembly_info:
   assembly_version: $(frameworkVersion)
   assembly_file_version: '{version}'
   assembly_informational_version: $(frameworkVersion)
+before_build:
+- ps: >-
+      $url = $env:latestNugetUrl
+      
+      echo "Downloading nuget from:" $url
+      
+      $output = $env:APPVEYOR_BUILD_FOLDER + ".\.nuget\nuget.exe"
+      
+      (New-Object System.Net.WebClient).DownloadFile($url, $output)
+      
+      echo "nuget downloaded to:" $output
+      
+      cd Ocaramba.Templates.VSIX
+      
+      ..\.nuget\nuget.exe restore -PackagesDirectory ..\packages
+      
+      cd ..
 build:
   project: Ocaramba.templates.sln
   verbosity: minimal
