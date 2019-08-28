@@ -32,5 +32,11 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
     </Project>
+	<CustomParameters>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.1.16"/>
+      <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
+      <CustomParameter Name="$NUnit-version$" Value="3.11.0"/>
+      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.13.0"/>
+    </CustomParameters>
   </TemplateContent>
 </VSTemplate>

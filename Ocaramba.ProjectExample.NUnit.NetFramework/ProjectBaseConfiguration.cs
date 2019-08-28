@@ -3,7 +3,7 @@ using System.IO;
 using NUnit.Framework;
 using Ocaramba.Helpers;
 
-namespace Ocaramba.ProjectExample.NUnit.NetFramework
+namespace $safeprojectname$
 {
     /// <summary>
     /// SeleniumConfiguration that consume app.config file
