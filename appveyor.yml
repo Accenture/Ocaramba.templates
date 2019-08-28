@@ -9,9 +9,6 @@ assembly_info:
   assembly_version: $(frameworkVersion)
   assembly_file_version: '{version}'
   assembly_informational_version: $(frameworkVersion)
-before_build:
- - dotnet restore
- - nuget restore
 build:
   project: Ocaramba.templates.sln
   verbosity: minimal
