@@ -2,9 +2,9 @@
 // See documentation : https://github.com/ObjectivityLtd/Ocaramba 
 
 using NUnit.Framework;
-using Ocaramba.ProjectExample.NUnit.NetFramework.PageObjects;
+using $safeprojectname$.PageObjects;
 
-namespace Ocaramba.ProjectExample.NUnit.NetFramework.Tests
+namespace $safeprojectname$.Tests
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Fixtures)]

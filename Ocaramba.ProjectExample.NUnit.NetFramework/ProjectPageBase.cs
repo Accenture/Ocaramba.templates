@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Ocaramba.ProjectExample.NUnit.NetFramework
+namespace $safeprojectname$
 {
     public partial class ProjectPageBase
     {
