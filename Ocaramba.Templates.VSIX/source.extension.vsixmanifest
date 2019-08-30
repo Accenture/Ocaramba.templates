@@ -8,7 +8,7 @@
         <License>LICENSE</License>
         <ReleaseNotes>https://github.com/ObjectivityLtd/Ocaramba.templates/releases</ReleaseNotes>
         <Icon>Objectivity_logo_avatar.png</Icon>
-        <Tags>Ocaramba,automation,testing,ui testing,test automation,automated testing,selenium,webdriver,nunit,xunit,mstest,specflow</Tags>
+        <Tags>Ocaramba</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[11.0,)" />

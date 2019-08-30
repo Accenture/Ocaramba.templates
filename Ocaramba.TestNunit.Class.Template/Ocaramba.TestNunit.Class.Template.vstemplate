@@ -9,6 +9,10 @@
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <DefaultName>Test.cs</DefaultName>
+    <LanguageTag>C#</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <PlatformTag>linux</PlatformTag>
+    <ProjectTypeTag>Test</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <References>

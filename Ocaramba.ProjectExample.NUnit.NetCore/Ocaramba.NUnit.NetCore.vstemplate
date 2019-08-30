@@ -11,6 +11,10 @@
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>Ocaramba.ProjectExample.NUnit.NetCore</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
+    <LanguageTag>C#</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <PlatformTag>linux</PlatformTag>
+    <ProjectTypeTag>Test</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
