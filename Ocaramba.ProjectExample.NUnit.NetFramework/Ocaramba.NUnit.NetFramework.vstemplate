@@ -9,7 +9,7 @@
     <SortOrder>1000</SortOrder>
     <TemplateID>ac8bf509-a237-4ae5-9697-6b7cde4c85b1</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Ocaramba.ProjectExample.NUnit.NetFramework</DefaultName>
+    <DefaultName>Ocaramba.UITests</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>
@@ -39,9 +39,15 @@
 	<CustomParameters>
       <CustomParameter Name="$Ocaramba-version$" Value="3.1.16"/>
       <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
-	  <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
+	    <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
       <CustomParameter Name="$NUnit-version$" Value="3.11.0"/>
       <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.15.0"/>
+      <CustomParameter Name="$NLog-version$" Value="4.6.6"/>
+      <CustomParameter Name="$NPOI-version$" Value="2.4.1"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="75.0.3770.90"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.24.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.141.59"/>
+      <CustomParameter Name="$SharpZipLib-version$" Value="1.0.0"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>

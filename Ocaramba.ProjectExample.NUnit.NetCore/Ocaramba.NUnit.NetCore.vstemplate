@@ -9,7 +9,7 @@
     <SortOrder>1000</SortOrder>
     <TemplateID>6c4e9577-cdd2-48eb-8ba4-a02ff57f4d1d</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Ocaramba.ProjectExample.NUnit.NetCore</DefaultName>
+    <DefaultName>Ocaramba.UITests</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>

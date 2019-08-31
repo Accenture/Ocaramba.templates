@@ -9,7 +9,7 @@
     <SortOrder>1000</SortOrder>
     <TemplateID>3b129647-bd8b-449f-be5d-6046f97978bb</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Ocaramba.ProjectExample.MsTest.NetFramework</DefaultName>
+    <DefaultName>Ocaramba.UITests</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>
