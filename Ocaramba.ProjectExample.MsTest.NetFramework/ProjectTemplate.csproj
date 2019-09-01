@@ -31,8 +31,8 @@
 		<WarningLevel>4</WarningLevel>
 	</PropertyGroup>
 	<ItemGroup>
-    <Reference Include="Ocaramba, Version=3.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ocaramba.3.2.1-alpha\lib\net451\Ocaramba.dll</HintPath>
+    <Reference Include="Ocaramba, Version=$Ocaramba-version$.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ocaramba.$Ocaramba-version$\lib\net45\Ocaramba.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
 	<Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -40,7 +40,7 @@
       <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.6.6\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\packages\NLog.$NLog-version$\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -53,11 +53,11 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=$Selenium.WebDriver-version$.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.$Selenium.WebDriver-version$\lib\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=$Selenium.Support-version$.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.$Selenium.Support-version$\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
 	</ItemGroup>
 	<ItemGroup>
@@ -74,6 +74,10 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>   
+	<None Include="Runsettings.runsettings" >
+	<SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Testsettings.testsettings">	
 <SubType>Designer</SubType>
@@ -85,13 +89,13 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets'))" />
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.GeckoDriver.Win64.0.24.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.GeckoDriver.Win64.0.24.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets'))" />
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.90\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.90\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.$Selenium.WebDriver.IEDriver-version$\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.$Selenium.WebDriver.IEDriver-version$\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.GeckoDriver.Win64.$Selenium.WebDriver.GeckoDriver.Win64-version$\build\Selenium.WebDriver.GeckoDriver.Win64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.GeckoDriver.Win64.$Selenium.WebDriver.GeckoDriver.Win64-version$\build\Selenium.WebDriver.GeckoDriver.Win64.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.$Selenium.WebDriver.ChromeDriver-version$\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.$Selenium.WebDriver.ChromeDriver-version$\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
-  <Import Project="..\packages\Selenium.WebDriver.GeckoDriver.Win64.0.24.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets" Condition="Exists('..\packages\Selenium.WebDriver.GeckoDriver.Win64.0.24.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets')" />
-  <Import Project="..\packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets')" />
-  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.90\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.90\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.GeckoDriver.Win64.$Selenium.WebDriver.GeckoDriver.Win64-version$\build\Selenium.WebDriver.GeckoDriver.Win64.targets" Condition="Exists('..\packages\Selenium.WebDriver.GeckoDriver.Win64.$Selenium.WebDriver.GeckoDriver.Win64-version$\build\Selenium.WebDriver.GeckoDriver.Win64.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.IEDriver.$Selenium.WebDriver.IEDriver-version$\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.$Selenium.WebDriver.IEDriver-version$\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.$Selenium.WebDriver.ChromeDriver-version$\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.$Selenium.WebDriver.ChromeDriver-version$\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

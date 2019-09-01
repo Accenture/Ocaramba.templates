@@ -36,5 +36,15 @@
       </Folder>
       <ProjectItem ReplaceParameters="false" TargetFileName="Testsettings.testsettings">Testsettings.testsettings</ProjectItem>
     </Project>
+    <CustomParameters>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.1.16"/>
+      <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
+      <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
+      <CustomParameter Name="$MSTest.TestFramework-version$" Value="1.3.2"/>
+      <CustomParameter Name="$NLog-version$" Value="4.6.6"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="75.0.3770.90"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.24.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.141.59"/>
+    </CustomParameters>
   </TemplateContent>
 </VSTemplate>
