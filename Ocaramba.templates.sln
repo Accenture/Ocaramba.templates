@@ -22,6 +22,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.NUnit.NetFramework
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.NUnit.NetCore", "Ocaramba.ProjectExample.NUnit.NetCore\Ocaramba.NUnit.NetCore.csproj", "{0D939866-7020-46D8-B066-2CBF25DB6B49}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9BF4C880-D059-4C86-86FE-CF564E56AB13}"
+	ProjectSection(SolutionItems) = preProject
+		images\new-item.png = images\new-item.png
+		images\new-project.png = images\new-project.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
