@@ -24,7 +24,7 @@ using System.Collections;
 using System.Globalization;
 using NUnit.Framework;
 
-namespace Ocaramba.ProjectExample.NUnit.NetCore.DataDriven
+namespace $safeprojectname$.DataDriven
 {
     /// <summary>
     /// DataDriven methods for NUnit test framework

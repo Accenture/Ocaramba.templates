@@ -6,3 +6,4 @@
 /**/bin
 /Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.ProjectExample.NUnit.NetFramework.csproj.user
 /Ocaramba.ProjectExample.NUnit.NetFramework/NLog.xsd
+/Ocaramba.ProjectExample.MsTest.NetFramework/*.user

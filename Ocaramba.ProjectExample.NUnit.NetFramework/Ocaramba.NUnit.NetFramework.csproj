@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.$NUnit3TestAdapter-version$\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.$NUnit3TestAdapter-version$\build\net35\NUnit3TestAdapter.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -11,11 +12,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{0706AE93-76DA-43AF-8117-A8BD4A346A93}</ProjectGuid>
+    <ProjectGuid>{FF7B0974-E071-400A-A909-A083A40A592A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ocaramba.ProjectExample.MsTest.NetFramework2</RootNamespace>
-    <AssemblyName>Ocaramba.ProjectExample.MsTest.NetFramework2</AssemblyName>
+    <RootNamespace>Ocaramba.ProjectExample.NUnit.NetFramework</RootNamespace>
+    <AssemblyName>Ocaramba.ProjectExample.NUnit.NetFramework</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
@@ -58,6 +59,7 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,31 +67,31 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="AssemblyInfo.cs" />
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Ocaramba.ProjectExample.NUnit.NetFramework.ico" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ProjectTemplate.csproj" />
-    <None Include="Runsettings.runsettings" />
-    <None Include="Testsettings.testsettings" />
-	<None Include="Tests\HerokuappTestsMsTest.cs" />
-    <None Include="Tests\HerokuappTestsMsTest1.cs" />
+    <None Include="DataDriven\DataDrivenHelper.cs" />
+    <None Include="DataDriven\TestData.cs" />
     <None Include="PageObjects\InternetPage.cs" />
+    <None Include="ProjectBaseConfiguration.cs" />
     <None Include="ProjectPageBase.cs" />
     <None Include="ProjectTestBase.cs" />
+    <None Include="Tests\HerokuappTestsNUnit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.MsTest.NetFramework.vstemplate">
+    <VSTemplate Include="Ocaramba.NUnit.NF.vstemplate">
+      <OutputSubPath>Ocaramba</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DDT.xml" />
-    <None Include="Ocaramba.ProjectExample.MsTest.NetFramework.ico" />
+    <Content Include="DataDriven\DataDriven.xml" />
+    <Content Include="ProjectTemplate.csproj">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
- <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

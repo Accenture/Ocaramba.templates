@@ -6,13 +6,15 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
-    <PackageReference Include="NPOI" Version="2.4.1" />
-    <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
-    <PackageReference Include="Ocaramba" Version="3.2.1-alpha" />
-    <PackageReference Include="Selenium.WebDriver.GeckoDriver.Win64" Version="0.24.0" />
+    <PackageReference Include="Appveyor.TestLogger" Version="$Appveyor.TestLogger-version$" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$Microsoft.NET.Test.Sdk-version$" />
+    <PackageReference Include="NPOI" Version="$NPOI-version$" />
+    <PackageReference Include="NUnit" Version="$NUnit-version$" />
+    <PackageReference Include="NUnit3TestAdapter" Version="$NUnit3TestAdapter-version$" />
+    <PackageReference Include="Ocaramba" Version="$Ocaramba-version$" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver.Win64" Version="$Selenium.WebDriver.GeckoDriver.Win64-version$" />
+    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="$Selenium.WebDriver.IEDriver-version$" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="$Selenium.WebDriver.ChromeDriver-version$" />
 	</ItemGroup>
 	<ItemGroup>
     <Compile Include="DataDriven\DataDrivenHelper.cs" />
@@ -38,4 +40,4 @@
     </None>
   </ItemGroup>
 
-</Project>
+ </Project>

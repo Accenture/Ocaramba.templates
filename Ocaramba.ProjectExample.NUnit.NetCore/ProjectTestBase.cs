@@ -3,7 +3,7 @@ using NUnit.Framework.Interfaces;
 using Ocaramba.Helpers;
 using Ocaramba.Logger;
 
-namespace Ocaramba.ProjectExample.NUnit.NetCore
+namespace $safeprojectname$
 {
     /// <summary>
     /// The base class for all tests <see href="https://github.com/ObjectivityLtd/Ocaramba/wiki/ProjectTestBase-class">More details on wiki</see>

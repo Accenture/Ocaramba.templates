@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -12,7 +11,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{53EFEAAC-6775-486A-A476-AA47B1C353DB}</ProjectGuid>
+    <ProjectGuid>{0D939866-7020-46D8-B066-2CBF25DB6B49}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ocaramba.ProjectExample.NUnit.NetCore</RootNamespace>
@@ -68,13 +67,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="appsettings.json" />
     <None Include="appsettings.Linux.json" />
     <None Include="AssemblyInfo.cs" />
     <None Include="nlog.config" />
-    <None Include="packages.config" />
-    <None Include="ProjectTemplate.csproj"/>
+    <None Include="ProjectTemplate.csproj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DataDriven\DataDrivenHelper.cs" />
     <None Include="DataDriven\TestData.cs" />
     <None Include="PageObjects\InternetPage.cs" />
@@ -84,13 +83,16 @@
     <None Include="Tests\HerokuappTestsNUnit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.NUnit.NetCore.vstemplate" />
+    <VSTemplate Include="Ocaramba.NUnit.NC.vstemplate">
+      <OutputSubPath>Ocaramba</OutputSubPath>
+      <SubType>Designer</SubType>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataDriven\DataDriven.xml" />
     <None Include="Ocaramba.ProjectExample.NUnit.NetCore.ico" />
   </ItemGroup>
- <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,26 +1,4 @@
-﻿// <copyright file="DataDrivenHelper.cs" company="Objectivity Bespoke Software Specialists">
-// Copyright (c) Objectivity Bespoke Software Specialists. All rights reserved.
-// </copyright>
-// <license>
-//     The MIT License (MIT)
-//     Permission is hereby granted, free of charge, to any person obtaining a copy
-//     of this software and associated documentation files (the "Software"), to deal
-//     in the Software without restriction, including without limitation the rights
-//     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//     copies of the Software, and to permit persons to whom the Software is
-//     furnished to do so, subject to the following conditions:
-//     The above copyright notice and this permission notice shall be included in all
-//     copies or substantial portions of the Software.
-//     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//     SOFTWARE.
-// </license>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -34,34 +12,34 @@ using NPOI.XSSF.UserModel;
 using NUnit.Framework;
 using Ocaramba.Exceptions;
 
-namespace Ocaramba.ProjectExample.NUnit.NetCore.DataDriven
+namespace $safeprojectname$.DataDriven
 {
     /// <summary>
     /// XML DataDriven methods for NUnit test framework <see href="https://github.com/ObjectivityLtd/Ocaramba/wiki/DataDriven-tests-from-Xml-files">More details on wiki</see>
     /// </summary>
     public static class DataDrivenHelper
     {
-        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+    private static readonly NLog.Logger Logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
-        /// <summary>
-        /// Reads the data drive file and set test name.
-        /// </summary>
-        /// <param name="folder">Full path to XML DataDriveFile file</param>
-        /// <param name="testData">Name of the child element in xml file.</param>
-        /// <param name="diffParam">Values of listed parameters will be used in test case name.</param>
-        /// <param name="testName">Name of the test, use as prefix for test case name.</param>
-        /// <returns>
-        /// IEnumerable TestCaseData
-        /// </returns>
-        /// <exception cref="System.ArgumentNullException">Exception when element not found in file</exception>
-        /// <exception cref="DataDrivenReadException">Exception when parameter not found in row</exception>
-        /// <example>How to use it: <code>
-        /// public static IEnumerable Credentials
-        /// {
-        /// get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "credential", new[] { "user", "password" }, "credential"); }
-        /// }
-        /// </code></example>
-        public static IEnumerable<TestCaseData> ReadDataDriveFile(string folder, string testData, string[] diffParam, [Optional] string testName)
+    /// <summary>
+    /// Reads the data drive file and set test name.
+    /// </summary>
+    /// <param name="folder">Full path to XML DataDriveFile file</param>
+    /// <param name="testData">Name of the child element in xml file.</param>
+    /// <param name="diffParam">Values of listed parameters will be used in test case name.</param>
+    /// <param name="testName">Name of the test, use as prefix for test case name.</param>
+    /// <returns>
+    /// IEnumerable TestCaseData
+    /// </returns>
+    /// <exception cref="System.ArgumentNullException">Exception when element not found in file</exception>
+    /// <exception cref="DataDrivenReadException">Exception when parameter not found in row</exception>
+    /// <example>How to use it: <code>
+    /// public static IEnumerable Credentials
+    /// {
+    /// get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "credential", new[] { "user", "password" }, "credential"); }
+    /// }
+    /// </code></example>
+    public static IEnumerable<TestCaseData> ReadDataDriveFile(string folder, string testData, string[] diffParam, [Optional] string testName)
         {
             var doc = XDocument.Load(folder);
 

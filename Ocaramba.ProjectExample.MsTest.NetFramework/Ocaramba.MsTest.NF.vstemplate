@@ -3,7 +3,7 @@
   <TemplateData>
     <Name>Ocaramba.ProjectExample.MsTest.NetFramework</Name>
     <Description>Ocaramba.ProjectExample.MsTest.NetFramework</Description>
-    <Icon>Ocaramba.ProjectExample.MsTest.NetFramework.ico</Icon>
+    <Icon>Ocaramba.MsTest.NetFramework.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>

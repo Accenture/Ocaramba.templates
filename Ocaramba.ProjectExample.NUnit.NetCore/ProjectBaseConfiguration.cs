@@ -2,7 +2,7 @@
 using System.IO;
 using Ocaramba.Helpers;
 
-namespace Ocaramba.ProjectExample.NUnit.NetCore
+namespace $safeprojectname$
 {
     /// <summary>
     /// SeleniumConfiguration that consume app.config file

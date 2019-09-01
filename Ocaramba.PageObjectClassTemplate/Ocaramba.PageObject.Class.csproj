@@ -1,22 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit3TestAdapter.$NUnit3TestAdapter-version$\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.$NUnit3TestAdapter-version$\build\net35\NUnit3TestAdapter.props')" />  <PropertyGroup>
+  <PropertyGroup>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{FF7B0974-E071-400A-A909-A083A40A592A}</ProjectGuid>
+    <ProjectGuid>{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ocaramba.ProjectExample.NUnit.NetFramework</RootNamespace>
-    <AssemblyName>Ocaramba.ProjectExample.NUnit.NetFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Ocaramba.PageObjectClassTemplate</RootNamespace>
+    <AssemblyName>Ocaramba.PageObjectClassTemplate</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
@@ -47,47 +45,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.CoreUtility">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="AssemblyInfo.cs" />
-    <None Include="Ocaramba.ProjectExample.NUnit.NetFramework.ico" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataDriven\DataDrivenHelper.cs" />
-    <None Include="DataDriven\TestData.cs" />
-    <None Include="PageObjects\InternetPage.cs" />
-    <None Include="ProjectBaseConfiguration.cs" />
-    <None Include="ProjectPageBase.cs" />
-    <None Include="ProjectTestBase.cs" />
-	<None Include="Tests\HerokuappTestsNUnit.cs" />
+    <None Include="Class.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ocaramba.NUnit.NetFramework.vstemplate">
-      <SubType>Designer</SubType>
+    <VSTemplate Include="Ocaramba.PageObject.Class.vstemplate" >
+      <OutputSubPath>Ocaramba</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataDriven\DataDriven.xml" />
-    <Content Include="ProjectTemplate.csproj">
-      <SubType>Designer</SubType>
-    </Content>
+    <None Include="Ocaramba.PageObjectClassTemplate.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
