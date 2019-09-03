@@ -87,6 +87,13 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
+    <ProjectReference Include="..\Ocaramba.ProjectExample.MsTest.NetCore\Ocaramba.MsTest.NetCore.csproj">
+      <Project>{EBBC42EA-ED97-4E6D-9759-C8FB6ACC8CE1}</Project>
+      <Name>Ocaramba.MsTest.NetCore</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\Ocaramba.ProjectExample.MsTest.NetFramework\Ocaramba.MsTest.NetFramework.csproj">
       <Project>{0706AE93-76DA-43AF-8117-A8BD4A346A93}</Project>
       <Name>Ocaramba.MsTest.NetFramework</Name>

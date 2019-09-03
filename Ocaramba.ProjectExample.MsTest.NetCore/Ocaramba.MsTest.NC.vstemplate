@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Ocaramba.ProjectExample.MsTest.NetCore</Name>
+    <Description>Ocaramba.ProjectExample.MsTest.NetCore</Description>
+    <Icon>Ocaramba.ProjectExample.MsTest.NetCore.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>6c4e9577-cdd2-48eb-8ba4-a02ff57f4d1d</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Ocaramba.UITests</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LanguageTag>C#</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <PlatformTag>linux</PlatformTag>
+    <ProjectTypeTag>Test</ProjectTypeTag>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <Folder Name="PageObjects" TargetFolderName="PageObjects">
+        <ProjectItem ReplaceParameters="true" TargetFileName="InternetPage.cs">InternetPage.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Tests" TargetFolderName="Tests">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest.cs">HerokuappTestsMsTest.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest1.cs">HerokuappTestsMsTest1.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Linux.json">appsettings.Linux.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="nlog.config">nlog.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ProjectBaseConfiguration.cs">ProjectBaseConfiguration.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
+	  <ProjectItem ReplaceParameters="true" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$Appveyor.TestLogger-version$" Value="2.0.0"/>
+      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.2.0"/>
+      <CustomParameter Name="$MSTest.TestAdapter-version$" Value="1.4.0"/>
+      <CustomParameter Name="$MSTest.TestFramework-version$" Value="1.4.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="75.0.3770.90"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.24.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.141.59"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.2.1-alpha"/>
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>
