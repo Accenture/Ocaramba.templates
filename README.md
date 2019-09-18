@@ -7,6 +7,7 @@ The extension contains:
 
 - Project templates:
   - Ocaramba.MsTest (.NET Framework)
+  - Ocaramba.MsTest (.NET Core)
   - Ocaramba.NUnit (.NET Core)
   - Ocaramba.NUnit (.NET Framework)
 - Item templates:
