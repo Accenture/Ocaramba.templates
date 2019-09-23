@@ -23,9 +23,8 @@ namespace $safeprojectname$.PageObjects
         }
 
         /// <summary>
-        /// Methods for this HomePage
+        /// Navigate To URL
         /// </summary>
-        /// <returns>Returns HomePage</returns>
         public void OpenHomePage()
         {
             var url = BaseConfiguration.GetUrlValue;
@@ -34,14 +33,13 @@ namespace $safeprojectname$.PageObjects
         }
 
         /// <summary>
-        /// Methods for this HomePage
+        /// Click on Link
         /// </summary>
-        /// <returns>Returns Homepage</returns>
-
         public void GoToPage(string page)
         {
             Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
-            this.Driver.GetElement(this.linkLocator.Format(page)).Click();
+            var element = this.Driver.GetElement(this.linkLocator.Format(page));
+            element.Click();
         }
     }
 }
