@@ -1,5 +1,5 @@
 # Ocaramba.templates
-<img align="left" src="objectivity_logo.ico">
+<img align="left" src="objectivity_logo.ico" width="64" height="64">
 
 Ocaramba project extension for Visual Studio - a set of project and class templates for web automated testing using [Ocaramba Framework](https://github.com/ObjectivityLtd/Ocaramba).
 
