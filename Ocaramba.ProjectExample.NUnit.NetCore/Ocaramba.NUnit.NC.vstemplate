@@ -41,7 +41,7 @@
       <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.2.0"/>
       <CustomParameter Name="$NPOI-version$" Value="2.4.1"/>
       <CustomParameter Name="$NUnit-version$" Value="3.12.0"/>
-      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.15.0"/>
+      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.15.1"/>
       <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="75.0.3770.90"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.24.0"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.141.59"/>
