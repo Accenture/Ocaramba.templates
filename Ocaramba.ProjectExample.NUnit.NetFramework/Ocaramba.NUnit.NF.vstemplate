@@ -44,9 +44,9 @@
       <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.15.0"/>
       <CustomParameter Name="$NLog-version$" Value="4.6.6"/>
       <CustomParameter Name="$NPOI-version$" Value="2.4.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="75.0.3770.90"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.24.0"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.141.59"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="77.0.3865.4000"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.25.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.0"/>
       <CustomParameter Name="$SharpZipLib-version$" Value="1.0.0"/>
     </CustomParameters>
   </TemplateContent>

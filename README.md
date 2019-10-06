@@ -6,10 +6,10 @@ Ocaramba project extension for Visual Studio - a set of project and class templa
 The extension contains:
 
 - Project templates:
-  - Ocaramba.MsTest (.NET Framework)
-  - Ocaramba.MsTest (.NET Core)
-  - Ocaramba.NUnit (.NET Core)
-  - Ocaramba.NUnit (.NET Framework)
+  - Ocaramba.MsTest (.NET Framework 4.7.2)
+  - Ocaramba.MsTest (.NET Core 2.2)
+  - Ocaramba.NUnit (.NET Core 2.2)
+  - Ocaramba.NUnit (.NET Framework 4.7.2)
 - Item templates:
   - Ocaramba Page Object
   - Ocaramba NUnit Test Object
