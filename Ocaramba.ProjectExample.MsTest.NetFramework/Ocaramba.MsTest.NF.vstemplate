@@ -37,7 +37,7 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="Testsettings.testsettings">Testsettings.testsettings</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.2.4-beta"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.2.5"/>
       <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
       <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
       <CustomParameter Name="$MSTest.TestFramework-version$" Value="1.3.2"/>
