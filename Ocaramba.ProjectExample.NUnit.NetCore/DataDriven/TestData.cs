@@ -1,5 +1,5 @@
-﻿// <copyright file="TestData.cs" company="Objectivity Bespoke Software Specialists">
-// Copyright (c) Objectivity Bespoke Software Specialists. All rights reserved.
+﻿// <copyright file="TestData.cs" company="Ocaramba">
+// Copyright (c) Ocaramba. All rights reserved.
 // </copyright>
 // <license>
 //     The MIT License (MIT)
