@@ -18,7 +18,8 @@ The extension contains:
 
 ![Add New Item window](images/new-item.png)
 
-In case of problems with executing tests, update at least TestAdapter and Selenium drivers
+In case of problems with executing tests, update at least TestAdapter and Selenium browser drivers.
+You can also try to uninstall and install back one of browser drivers.
  
 ![Update](images/Update.png)
 
