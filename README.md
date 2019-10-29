@@ -3,6 +3,9 @@
 
 Ocaramba project extension for Visual Studio - a set of project and class templates for web automated testing using [Ocaramba Framework](https://github.com/ObjectivityLtd/Ocaramba).
 
+
+[![Ocaramba Templates](https://img.shields.io/badge/get-Ocaramba_Templates-green.svg?color=4BC21F)](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
+
 The extension contains:
 
 - Project templates:
@@ -29,7 +32,7 @@ All templates are located on Visual Studio's **New Project** and **New Item** wi
 
 [![Build status](https://ci.appveyor.com/api/projects/status/1rge2tva73nlfvm2?svg=true)](https://ci.appveyor.com/project/ObjectivityAdminsTeam/ocaramba-templates)
 
-Download Ocaramba Visual Studio templates [from marketplace visualstudio](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
+Download Ocaramba Visual Studio templates [![Ocaramba Templates](https://img.shields.io/badge/get-Ocaramba_Templates-green.svg?color=4BC21F)](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
 
 #### Where to start?
 -------------
