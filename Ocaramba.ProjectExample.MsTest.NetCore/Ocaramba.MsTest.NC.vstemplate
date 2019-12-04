@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Ocaramba.ProjectExample.MsTest.NetCore</Name>
-    <Description>Ocaramba.ProjectExample.MsTest.NetCore</Description>
+    <Name>Ocaramba Test Project (MsTest)(.Net Core)</Name>
+    <Description>A project for creating an automated tests using Ocaramba framework and MsTest</Description>
     <Icon>Ocaramba.ProjectExample.MsTest.NetCore.ico</Icon>
     <ProjectType>CSharp</ProjectType>
-    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
     <TemplateID>6c4e9577-cdd2-48eb-8ba4-a02ff57f4d1d</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
@@ -15,6 +14,7 @@
     <PlatformTag>windows</PlatformTag>
     <PlatformTag>linux</PlatformTag>
     <ProjectTypeTag>Test</ProjectTypeTag>
+    <ProjectTypeTag>Ocaramba</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
