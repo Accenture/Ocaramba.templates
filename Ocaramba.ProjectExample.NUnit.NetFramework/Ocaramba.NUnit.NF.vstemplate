@@ -13,7 +13,6 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>
-    <PlatformTag>linux</PlatformTag>
     <ProjectTypeTag>Test</ProjectTypeTag>
     <ProjectTypeTag>Ocaramba</ProjectTypeTag>
   </TemplateData>
