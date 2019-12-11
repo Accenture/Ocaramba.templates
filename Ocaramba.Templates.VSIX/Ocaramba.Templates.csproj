@@ -115,6 +115,13 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
+    <ProjectReference Include="..\Ocaramba.TestMsTest.Class\Ocaramba.TestMsTest.Class.csproj">
+      <Project>{DAD18C42-122C-4AC7-A6F4-88FEF1DBA1A6}</Project>
+      <Name>Ocaramba.TestMsTest.Class</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\Ocaramba.TestNunit.Class.Template\Ocaramba.TestNunit.Class.csproj">
       <Project>{BB31ED7A-719A-48A3-9204-55AACA222997}</Project>
       <Name>Ocaramba.TestNunit.Class</Name>

@@ -32,7 +32,6 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
       <Folder Name="Tests" TargetFolderName="Tests">
         <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest.cs">HerokuappTestsMsTest.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest1.cs">HerokuappTestsMsTest1.cs</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="false" TargetFileName="Testsettings.testsettings">Testsettings.testsettings</ProjectItem>
     </Project>

@@ -2,7 +2,8 @@
 {
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Logger;
+    using Ocaramba;
+    using Ocaramba.Logger;
 
     /// <summary>
     /// The base class for all tests <see href="https://github.com/ObjectivityLtd/Ocaramba/wiki/ProjectTestBase-class">More details on wiki</see>

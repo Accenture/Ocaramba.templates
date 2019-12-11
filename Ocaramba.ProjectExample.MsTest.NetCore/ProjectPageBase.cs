@@ -1,7 +1,8 @@
-﻿using OpenQA.Selenium;
-
-namespace $safeprojectname$
+﻿namespace $safeprojectname$
 {
+    using Ocaramba;
+    using OpenQA.Selenium;
+
     public partial class ProjectPageBase
     {
         public ProjectPageBase(DriverContext driverContext)

@@ -1,15 +1,14 @@
-﻿// NUnit 3 tests
+﻿// MsTest tests
 // See documentation : https://github.com/ObjectivityLtd/Ocaramba 
-
-using NUnit.Framework;
 
 namespace $rootnamespace$
 {
-    [TestFixture]
-    [Parallelizable(ParallelScope.Fixtures)]
-    public class $safeitemrootname$ : ProjectTestBase
-    {
-        [Test]
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+[TestClass]
+public class $safeitemrootname$ : ProjectTestBase
+{
+        [TestMethod]
         public void Test()
         {
             // TODO: Add your test code here

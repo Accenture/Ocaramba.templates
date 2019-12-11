@@ -4,11 +4,11 @@
 using NUnit.Framework;
 using $safeprojectname$.PageObjects;
 
-namespace $safeprojectname$.Tests
+namespace $safeprojectname$
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Fixtures)]
-    public class HerokuappTestsNUnit : ProjectTestBase
+    public class $safeitemrootname$ : ProjectTestBase
     {
         [Test]
         public void BasicAuthTest()

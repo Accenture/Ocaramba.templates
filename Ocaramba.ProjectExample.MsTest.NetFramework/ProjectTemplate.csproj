@@ -63,7 +63,6 @@
 	<ItemGroup>
 		<Compile Include="PageObjects\InternetPage.cs" />
 		<Compile Include="Tests\HerokuappTestsMsTest.cs" />
-		<Compile Include="Tests\HerokuappTestsMsTest1.cs" />
     <Compile Include="ProjectPageBase.cs" />
 		<Compile Include="ProjectTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
