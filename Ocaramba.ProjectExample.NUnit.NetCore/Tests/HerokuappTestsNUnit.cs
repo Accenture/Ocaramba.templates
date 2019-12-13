@@ -4,7 +4,7 @@
 using NUnit.Framework;
 using $safeprojectname$.PageObjects;
 
-namespace $safeprojectname$.Tests
+namespace $safeprojectname$
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Fixtures)]

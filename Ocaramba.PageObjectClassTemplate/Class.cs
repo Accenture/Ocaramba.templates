@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using NLog;
+using Ocaramba;
 using Ocaramba.Extensions;
 using Ocaramba.Types;
 
@@ -8,7 +9,7 @@ namespace $rootnamespace$
 {
     public class $safeitemrootname$ : ProjectPageBase
     {
-        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
+        $if$ ($targetframeworkversion$ >= 4.5)private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();$endif$$if$ ($targetframeworkversion$ < 4.0)private readonly NLog.Logger logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();$endif$
 
         /// <summary>
         /// Locators for elements
@@ -26,8 +27,8 @@ namespace $rootnamespace$
         /// Methods for this HomePage
         /// </summary>
         public void ClickOnElementWithLocatorFormating(string page)
-        {
-            Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
+{
+            $if$ ($targetframeworkversion$ >= 4.5)Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$$if$ ($targetframeworkversion$ < 4.0)logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$
             this.Driver.GetElement(this.linkLocator.Format(page)).Click();
         }
 
@@ -35,8 +36,8 @@ namespace $rootnamespace$
         /// Methods for this HomePage
         /// </summary>
         public void ClickOnElement()
-        {
-            Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
+{
+            $if$ ($targetframeworkversion$ >= 4.5)Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$$if$ ($targetframeworkversion$ < 4.0)logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$
             this.Driver.GetElement(this.basicAuthLink).Click();
         }
 

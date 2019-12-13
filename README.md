@@ -16,6 +16,7 @@ The extension contains:
 - Item templates:
   - Ocaramba Page Object
   - Ocaramba NUnit Test Object
+  - Ocaramba MsTest Test Object
 
 ![Add New Project window](images/new-project.png)
 

@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Ocaramba.ProjectExample.MsTest.NetFramework</Name>
-    <Description>Ocaramba.ProjectExample.MsTest.NetFramework</Description>
+    <Name>Ocaramba Test Project (MsTest)(.Net Framework)</Name>
+    <Description>A project for creating an automated tests using Ocaramba framework and MsTest</Description>
     <Icon>Ocaramba.MsTest.NetFramework.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
-    <SortOrder>1000</SortOrder>
+    <SortOrder>1001</SortOrder>
     <TemplateID>3b129647-bd8b-449f-be5d-6046f97978bb</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>Ocaramba.UITests</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>
-    <PlatformTag>linux</PlatformTag>
     <ProjectTypeTag>Test</ProjectTypeTag>
+    <ProjectTypeTag>Ocaramba</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
@@ -32,7 +32,6 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
       <Folder Name="Tests" TargetFolderName="Tests">
         <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest.cs">HerokuappTestsMsTest.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="HerokuappTestsMsTest1.cs">HerokuappTestsMsTest1.cs</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="false" TargetFileName="Testsettings.testsettings">Testsettings.testsettings</ProjectItem>
     </Project>

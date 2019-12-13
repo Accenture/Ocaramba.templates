@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Ocaramba.ProjectExample.NUnit.NetFramework</Name>
-    <Description>Ocaramba.ProjectExample.NUnit.NetFramework</Description>
+    <Name>Ocaramba Test Project (NUnit)(.Net Framework)</Name>
+    <Description>A project for creating an automated tests using Ocaramba framework and NUnit</Description>
     <Icon>Ocaramba.ProjectExample.NUnit.NetFramework.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
-    <SortOrder>1000</SortOrder>
+    <SortOrder>1003</SortOrder>
     <TemplateID>ac8bf509-a237-4ae5-9697-6b7cde4c85b1</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>Ocaramba.UITests</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>
-    <PlatformTag>linux</PlatformTag>
     <ProjectTypeTag>Test</ProjectTypeTag>
+    <ProjectTypeTag>Ocaramba</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using Ocaramba;
 
 namespace $safeprojectname$
 {

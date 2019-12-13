@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Ocaramba.PageObjectClassTemplate</Name>
-    <Description>Ocaramba page object class</Description>
-    <Icon>Ocaramba.PageObjectClassTemplate.ico</Icon>
-    <TemplateID>a12a551e-8446-4a02-a32a-bd9c01d556f3</TemplateID>
+    <Name>Ocaramba.TestMsTest.Class.Template</Name>
+    <Description>Ocaramba MsTest test class</Description>
+    <Icon>Ocaramba.TestMsTest.Class.ico</Icon>
+    <TemplateID>60cc9480-893e-43c1-8d58-4d50161808ff</TemplateID>
     <ProjectType>CSharp</ProjectType>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
-    <DefaultName>Page.cs</DefaultName>
+	 <DefaultName>Test.cs</DefaultName>
     <LanguageTag>C#</LanguageTag>
     <PlatformTag>windows</PlatformTag>
     <PlatformTag>linux</PlatformTag>

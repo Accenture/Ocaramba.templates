@@ -1,15 +1,14 @@
-﻿namespace $safeprojectname$.Tests
+﻿// MsTest tests
+// See documentation : https://github.com/ObjectivityLtd/Ocaramba 
+
+namespace $safeprojectname$
 {
-    using System.Diagnostics.CodeAnalysis;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using PageObjects;
 
-    /// <summary>
-    /// Tests to verify checkboxes tick and Untick.
-    /// </summary>
     [TestClass]
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-    public class HerokuappTestsMsTest : ProjectTestBase
+    public class $safeitemrootname$ : ProjectTestBase
     {
         [TestMethod]
         public void TickCheckboxTest()

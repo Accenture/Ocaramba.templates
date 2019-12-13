@@ -75,7 +75,6 @@
     <None Include="Runsettings.runsettings" />
     <None Include="Testsettings.testsettings" />
     <None Include="Tests\HerokuappTestsMsTest.cs" />
-    <None Include="Tests\HerokuappTestsMsTest1.cs" />
     <None Include="PageObjects\InternetPage.cs" />
     <None Include="ProjectPageBase.cs" />
     <None Include="ProjectTestBase.cs" />

@@ -3,10 +3,11 @@
     using System;
     using System.Globalization;
     using NLog;
-    using Extensions;
-    using Types;
+    using Ocaramba;
+    using Ocaramba.Extensions;
+    using Ocaramba.Types;
 
-    public class InternetPage : ProjectPageBase
+public class InternetPage : ProjectPageBase
     {
         private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
 

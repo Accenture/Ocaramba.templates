@@ -109,9 +109,16 @@
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
     <ProjectReference Include="..\Ocaramba.ProjectExample.NUnit.NetFramework\Ocaramba.NUnit.NetFramework.csproj">
-      <Project>{FF7B0974-E071-400A-A909-A083A40A592A}</Project>
+      <Project>{ff7b0974-e071-400a-a909-a083a40a592a}</Project>
       <Name>Ocaramba.NUnit.NetFramework</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Ocaramba.TestMsTest.Class\Ocaramba.TestMsTest.Class.csproj">
+      <Project>{DAD18C42-122C-4AC7-A6F4-88FEF1DBA1A6}</Project>
+      <Name>Ocaramba.TestMsTest.Class</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
