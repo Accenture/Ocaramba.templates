@@ -35,6 +35,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectBaseConfiguration.cs">ProjectBaseConfiguration.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
     </Project>
     <CustomParameters>
       <CustomParameter Name="$Appveyor.TestLogger-version$" Value="2.0.0"/>
