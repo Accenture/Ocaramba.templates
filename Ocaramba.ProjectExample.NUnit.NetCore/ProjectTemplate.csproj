@@ -12,7 +12,7 @@
     <PackageReference Include="NUnit" Version="$NUnit-version$" />
     <PackageReference Include="NUnit3TestAdapter" Version="$NUnit3TestAdapter-version$" />
     <PackageReference Include="Ocaramba" Version="$Ocaramba-version$" />
-    <PackageReference Include="Selenium.WebDriver.GeckoDriver.Win64" Version="$Selenium.WebDriver.GeckoDriver.Win64-version$" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="$Selenium.WebDriver.GeckoDriver-version$" />
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="$Selenium.WebDriver.IEDriver-version$" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="$Selenium.WebDriver.ChromeDriver-version$" />
 	</ItemGroup>
