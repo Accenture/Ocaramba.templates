@@ -41,7 +41,7 @@
       <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
       <CustomParameter Name="$MSTest.TestFramework-version$" Value="1.3.2"/>
       <CustomParameter Name="$NLog-version$" Value="4.6.6"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="77.0.3865.4000"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="78.0.3904.10500"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.26.0"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.0"/>
     </CustomParameters>
