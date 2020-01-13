@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="OcarambaTemplatesVSIX.226df7b1-616d-412d-a923-369996d73da8" Version="1.1" Language="en-US" Publisher="Ocaramba" />
+        <Identity Id="OcarambaTemplatesVSIX.226df7b1-616d-412d-a923-369996d73da8" Version="1.2" Language="en-US" Publisher="Ocaramba" />
         <DisplayName>Ocaramba.Templates</DisplayName>
         <Description xml:space="preserve">Set of Ocaramba framework templates for automated web testing.</Description>
         <MoreInfo>https://github.com/ObjectivityLtd/Ocaramba</MoreInfo>

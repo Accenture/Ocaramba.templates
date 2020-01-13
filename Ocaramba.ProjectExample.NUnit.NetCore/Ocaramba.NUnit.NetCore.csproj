@@ -70,6 +70,7 @@
     <None Include="appsettings.json" />
     <None Include="appsettings.Linux.json" />
     <None Include="AssemblyInfo.cs" />
+    <None Include="Dockerfile" />
     <None Include="nlog.config" />
     <None Include="ProjectTemplate.csproj">
       <SubType>Designer</SubType>

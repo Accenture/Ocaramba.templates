@@ -30,6 +30,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectBaseConfiguration.cs">ProjectBaseConfiguration.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
 	  <ProjectItem ReplaceParameters="true" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
     </Project>
     <CustomParameters>
@@ -37,10 +38,10 @@
       <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.2.0"/>
       <CustomParameter Name="$MSTest.TestAdapter-version$" Value="1.4.0"/>
       <CustomParameter Name="$MSTest.TestFramework-version$" Value="1.4.0"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="77.0.3865.4000"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver.Win64-version$" Value="0.25.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="78.0.3904.10500"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.26.0"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.0"/>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.2.5"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.2.6"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
