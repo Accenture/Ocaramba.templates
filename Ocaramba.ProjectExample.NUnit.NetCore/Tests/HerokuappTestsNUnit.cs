@@ -11,11 +11,11 @@ namespace $safeprojectname$
     public class HerokuappTestsNUnit : ProjectTestBase
     {
         [Test]
-        public void BasicAuthTest()
+        public void HomePageTest()
         {
             // TODO: Add your test code here
-            var basicAuthPage = new InternetPage(this.DriverContext);
-            basicAuthPage.OpenHomePage();
+            var homePage = new InternetPage(this.DriverContext);
+            homePage.OpenHomePage();
         }
     }
 }
