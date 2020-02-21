@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$Microsoft.NET.Test.Sdk-version$" />
     <PackageReference Include="MSTest.TestAdapter" Version="$MSTest.TestAdapter-version$" />
     <PackageReference Include="MSTest.TestFramework" Version="$MSTest.TestFramework-version$" />
-    <PackageReference Include="Ocaramba" Version="$Ocaramba-version$" />
+    <PackageReference Include="OcarambaLite" Version="$Ocaramba-version$" />
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="$Selenium.WebDriver.GeckoDriver-version$" />
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="$Selenium.WebDriver.IEDriver-version$" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="$Selenium.WebDriver.ChromeDriver-version$" />

@@ -15,7 +15,7 @@ namespace $safeprojectname$.PageObjects
         /// </summary>
         private readonly ElementLocator
             linkLocator = new ElementLocator(Locator.CssSelector, "a[href='/{0}']"),
-            basicAuthLink = new ElementLocator(Locator.XPath, "//a[contains(text(),'Auth')]");
+            exampleLocator = new ElementLocator(Locator.XPath, "//a[contains(text(),'Auth')]");
 
         public InternetPage(DriverContext driverContext)
             : base(driverContext)
