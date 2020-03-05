@@ -10,8 +10,8 @@ The extension contains:
 
 - Project templates:
   - Ocaramba.MsTest (.NET Framework 4.7.2)
-  - Ocaramba.MsTest (.NET Core 2.2)
-  - Ocaramba.NUnit (.NET Core 2.2)
+  - Ocaramba.MsTest (.NET Core 3.1)
+  - Ocaramba.NUnit (.NET Core 3.1)
   - Ocaramba.NUnit (.NET Framework 4.7.2)
 - Item templates:
   - Ocaramba Page Object

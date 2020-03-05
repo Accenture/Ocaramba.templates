@@ -1,7 +1,7 @@
 version: $(frameworkVersion).{build}
 image: Visual Studio 2017
 environment:
-  frameworkVersion: 1.2.0
+  frameworkVersion: 1.4.0
 configuration: Release
 assembly_info:
   patch: true
