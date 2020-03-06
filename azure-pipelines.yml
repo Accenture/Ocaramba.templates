@@ -16,6 +16,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   frameworkVersion: '1.4.0'
+  version: '$(frameworkVersion).$(BuildID)'
 
 steps:
 - task: NuGetCommand@2
@@ -29,15 +30,13 @@ steps:
   inputs:
     Path: '$(Build.SourcesDirectory)'
     FileNames: |
-      **\AssemblyInfo.cs
-
-      **\AssemblyInfo.vb
+      **\AssemblyInfo.*
     InsertAttributes: false
     FileEncoding: 'auto'
     WriteBOM: false
-    Configuration: '$(frameworkVersion)'
+    Configuration: '$(buildConfiguration)'
     VersionNumber: '$(frameworkVersion)'
-    FileVersionNumber: '$(frameworkVersion)'
+    FileVersionNumber: '$(version)'
     InformationalVersion: '$(frameworkVersion)'
     LogLevel: 'verbose'
     FailOnWarning: false
