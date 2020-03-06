@@ -22,7 +22,7 @@ steps:
     command: 'restore'
     restoreSolution: './Ocaramba.Templates.VSIX/packages.config'
     feedsToUse: 'select'
-    restoreDirectory: './packages'
+    restoreDirectory: '../packages'
 
 - task: VSBuild@1
   inputs:
