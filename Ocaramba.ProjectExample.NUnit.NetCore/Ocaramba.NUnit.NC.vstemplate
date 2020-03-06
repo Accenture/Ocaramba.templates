@@ -39,14 +39,14 @@
     </Project>
     <CustomParameters>
       <CustomParameter Name="$Appveyor.TestLogger-version$" Value="2.0.0"/>
-      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.2.0"/>
+      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.5.0"/>
       <CustomParameter Name="$NPOI-version$" Value="2.4.1"/>
       <CustomParameter Name="$NUnit-version$" Value="3.12.0"/>
-      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.15.1"/>
+      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.16.1"/>
       <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="80.0.3987.10600"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.26.0"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.0"/>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.2.7"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.2.8"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
