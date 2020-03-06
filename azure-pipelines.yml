@@ -16,7 +16,6 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   frameworkVersion: '1.4.0'
-  version: '$(frameworkVersion).$(BuildID)'
 
 steps:
 - task: NuGetCommand@2
@@ -36,7 +35,7 @@ steps:
     WriteBOM: false
     Configuration: '$(buildConfiguration)'
     VersionNumber: '$(frameworkVersion)'
-    FileVersionNumber: '$(version)'
+    FileVersionNumber: '$(frameworkVersion).$(BuildID)'
     InformationalVersion: '$(frameworkVersion)'
     LogLevel: 'verbose'
     FailOnWarning: false
