@@ -14,17 +14,20 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
+- task: PowerShell@2
   inputs:
-    restoreSolution: '$(solution)'
+    targetType: 'inline'
+    script: |
+      cd Ocaramba.Templates.VSIX
+            
+            nuget restore -PackagesDirectory ..\packages
+            
+            cd ..
 
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    msbuildArgs: '/v:minimal'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
