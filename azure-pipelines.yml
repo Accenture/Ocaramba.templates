@@ -15,6 +15,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  frameworkVersion: '1.4.0'
 
 steps:
 - task: NuGetCommand@2
@@ -29,7 +30,7 @@ steps:
     solution: '$(solution)'
     msbuildArgs: '/v:minimal'
     platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    configuration: '$(buildConfiguration);VersionAssembly=$(frameworkVersion)'
 
 - task: PublishPipelineArtifact@1
   inputs:
