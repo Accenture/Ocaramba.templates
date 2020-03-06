@@ -14,15 +14,16 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
+steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
       cd Ocaramba.Templates.VSIX
             
-            nuget restore -PackagesDirectory ..\packages
+       nuget restore -PackagesDirectory ..\packages
             
-            cd ..
+      cd ..
 
 - task: VSBuild@1
   inputs:
