@@ -35,7 +35,7 @@ steps:
     WriteBOM: false
     Configuration: '$(buildConfiguration)'
     VersionNumber: '$(frameworkVersion)'
-    FileVersionNumber: '$(frameworkVersion).$(BuildID)'
+    FileVersionNumber: '$(frameworkVersion).$(Build.BuildId)'
     InformationalVersion: '$(frameworkVersion)'
     LogLevel: 'verbose'
     FailOnWarning: false
