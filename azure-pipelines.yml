@@ -30,7 +30,7 @@ steps:
     solution: '$(solution)'
     msbuildArgs: '/v:minimal'
     platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration);VersionAssembly=$(frameworkVersion)'
+    configuration: '$(buildConfiguration)'
 
 - task: PublishPipelineArtifact@1
   inputs:
