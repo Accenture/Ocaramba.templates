@@ -15,15 +15,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: PowerShell@2
+- task: NuGetCommand@2
   inputs:
-    targetType: 'inline'
-    script: |
-      cd Ocaramba.Templates.VSIX
-            
-       nuget restore -PackagesDirectory ..\packages
-            
-      cd ..
+    command: 'restore'
+    restoreSolution: './Ocaramba.Templates.VSIX/packages.config'
+    feedsToUse: 'select'
+    restoreDirectory: 'packages'
 
 - task: VSBuild@1
   inputs:
