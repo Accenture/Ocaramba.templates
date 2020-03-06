@@ -4,7 +4,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 trigger:
-- master
+  branches:
+    include:
+    - '*'
 
 pool:
   vmImage: 'windows-latest'
@@ -20,16 +22,11 @@ steps:
     command: 'restore'
     restoreSolution: './Ocaramba.Templates.VSIX/packages.config'
     feedsToUse: 'select'
-    restoreDirectory: 'packages'
+    restoreDirectory: './packages'
 
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
     msbuildArgs: '/v:minimal'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
