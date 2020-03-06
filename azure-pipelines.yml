@@ -1,0 +1,55 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+  branches:
+    include:
+    - '*'
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  frameworkVersion: '1.4.0'
+
+steps:
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: './Ocaramba.Templates.VSIX/packages.config'
+    feedsToUse: 'select'
+    restoreDirectory: '../packages'
+
+- task: Assembly-Info-NetFramework@2
+  inputs:
+    Path: '$(Build.SourcesDirectory)'
+    FileNames: |
+      **\AssemblyInfo.*
+    InsertAttributes: false
+    FileEncoding: 'auto'
+    WriteBOM: false
+    Configuration: '$(buildConfiguration)'
+    VersionNumber: '$(frameworkVersion)'
+    FileVersionNumber: '$(frameworkVersion).$(Build.BuildId)'
+    InformationalVersion: '$(frameworkVersion)'
+    LogLevel: 'verbose'
+    FailOnWarning: false
+    DisableTelemetry: false
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/v:minimal'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: './Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix'
+    artifact: 'Template'
+    publishLocation: 'pipeline'
