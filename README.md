@@ -31,7 +31,7 @@ All templates are located on Visual Studio's **New Project** and **New Item** wi
 
 *Find out more on [Ocaramba](https://github.com/ObjectivityLtd/Ocaramba).*
 
-[![Build status](https://ci.appveyor.com/api/projects/status/1rge2tva73nlfvm2?svg=true)](https://ci.appveyor.com/project/ObjectivityAdminsTeam/ocaramba-templates)
+[![Build Status](https://dev.azure.com/ocaramba/Ocaramba.templates/_apis/build/status/ObjectivityLtd.Ocaramba.templates)](https://dev.azure.com/ocaramba/Ocaramba.templates/_build?definitionId=1&_a=summary)
 
 Download Ocaramba Visual Studio templates [![Ocaramba Templates](https://img.shields.io/badge/get-Ocaramba_Templates-green.svg?color=4BC21F)](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
 
