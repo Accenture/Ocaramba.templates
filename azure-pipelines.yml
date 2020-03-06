@@ -30,3 +30,9 @@ steps:
     msbuildArgs: '/v:minimal'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: './Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix'
+    artifact: 'Template'
+    publishLocation: 'pipeline'
