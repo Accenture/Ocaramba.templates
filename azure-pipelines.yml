@@ -25,6 +25,24 @@ steps:
     feedsToUse: 'select'
     restoreDirectory: '../packages'
 
+- task: Assembly-Info-NetFramework@2
+  inputs:
+    Path: '$(Build.SourcesDirectory)'
+    FileNames: |
+      **\AssemblyInfo.cs
+
+      **\AssemblyInfo.vb
+    InsertAttributes: false
+    FileEncoding: 'auto'
+    WriteBOM: false
+    Configuration: '$(frameworkVersion)'
+    VersionNumber: '$(frameworkVersion)'
+    FileVersionNumber: '$(frameworkVersion)'
+    InformationalVersion: '$(frameworkVersion)'
+    LogLevel: 'verbose'
+    FailOnWarning: false
+    DisableTelemetry: false
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
