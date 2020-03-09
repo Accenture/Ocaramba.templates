@@ -15,7 +15,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  frameworkVersion: '1.4.0'
+  templateVersion: '1.5.0'
 
 steps:
 - task: NuGetCommand@2
@@ -34,9 +34,9 @@ steps:
     FileEncoding: 'auto'
     WriteBOM: false
     Configuration: '$(buildConfiguration)'
-    VersionNumber: '$(frameworkVersion)'
-    FileVersionNumber: '$(frameworkVersion).$(Build.BuildId)'
-    InformationalVersion: '$(frameworkVersion)'
+    VersionNumber: '$(templateVersion)'
+    FileVersionNumber: '$(templateVersion).$(Build.BuildId)'
+    InformationalVersion: '$(templateVersion)'
     LogLevel: 'verbose'
     FailOnWarning: false
     DisableTelemetry: false
