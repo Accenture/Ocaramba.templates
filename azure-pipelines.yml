@@ -15,9 +15,13 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  templateVersion: '1.5.0'
+  templateVersion: '1.5'
 
 steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d Language"'',''$Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
