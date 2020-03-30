@@ -7,6 +7,9 @@ trigger:
   branches:
     include:
     - '*'
+  tags:
+    include:
+    - '*'
 
 pool:
   vmImage: 'windows-latest'
@@ -16,6 +19,16 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   templateVersion: '1.5'
+
+steps:
+- task: PowerShell@2
+  condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+  inputs:
+    targetType: 'inline'
+    script: |
+      $tags = git tag --sort=-creatordate   
+      $tag = $tags[0]
+      Write-Host "##vso[task.setvariable variable=templateVersion]$tag"
 
 steps:
 - task: PowerShell@2
