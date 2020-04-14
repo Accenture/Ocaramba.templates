@@ -1,7 +1,8 @@
-$regex='(\d+\.\d+\.\d+|\.\d+)'
+$regex3='(\d+\.\d+\.\d+)'
+$regex4='(\d+\.\d+\.\d+\.\d+)'
 
-$aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex","Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex", 
-"Ocaramba-version\`$`" Value=`"$regex", "NPOI-version\`$`" Value=`"$regex", "Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex"
+$aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex3","Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3", 
+"Ocaramba-version\`$`" Value=`"$regex3", "NPOI-version\`$`" Value=`"$regex3", "Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex4"
 
 $bArray="Appveyor.TestLogger-version`$`" Value=`"$env:APPVEYORTESTLOGGERVERSION","Microsoft.NET.Test.Sdk-version`$`" Value=`"$env:MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$env:OCARAMBAVERSION","NPOI-version`$`" Value=`"$env:NPOIVERSION","Selenium.WebDriver.ChromeDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERCHROMEDRIVERVERSION"
