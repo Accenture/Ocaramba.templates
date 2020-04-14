@@ -1,10 +1,5 @@
 $regex='(\d+\.\d+\.\d+|\.\d+)'
 
-Write-Host templateVersion $env:TEMPLATEVERSION, updating ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest
-
-((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace 'Version="\d\.\d" Language','Version="$env:TEMPLATEVERSION" Language') `
-| Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest
-
 $aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex","Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex", 
 "Ocaramba-version\`$`" Value=`"$regex", "NPOI-version\`$`" Value=`"$regex", "Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex"
 
