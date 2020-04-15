@@ -18,12 +18,28 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  
   templateVersion: '1.6'
   OcarambaVersion: '3.2.9'
-  AppveyorTestLoggerVersion: '2.0.0'
+  
+  SeleniumWebDriverVersion: '3.141.0'
+  SeleniumSupportVersion: '3.141.0'
+  
+  SeleniumWebdriverChromeDriverVersion: '80.0.3987.10600'
+  SeleniumWebDriverGeckoDriverVersion: '0.26.0'
+  SeleniumWebDriverIEDriverVersion: '3.150.0'
+  
+  NUnitVersion: '3.12.0'
+  NUnit3TestAdapterVersion: '3.16.1'
+
   MicrosoftNetTestSdkVersion: '16.5.0'
-  SeleniumWebdriverChromeDriverVersion: '80.0.3987.10601'
-  NpoiVersion: '2.4.1'
+  MSTestTestAdapterVersion: '1.4.0'
+  MSTestTestFrameworkVersion: '2.1.0'
+  
+  AppveyorTestLoggerVersion: '2.0.0'
+  SharpZipLibVersion: '1.0.0'
+  NPOIVersion: '2.4.1'
+  NLogVersion: '4.6.6'
 
 steps:
 - task: PowerShell@2
