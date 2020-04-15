@@ -93,3 +93,17 @@ steps:
     targetPath: './Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix'
     artifact: 'Template'
     publishLocation: 'pipeline'
+
+- task: GitHubRelease@1
+  condition: and(succeeded(),startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+  inputs:
+    gitHubConnection: 'OcaramabaTemplateRelease'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'edit'
+    tagSource: 'gitTag'
+    tagPattern: '\d\.\d'
+    target: '$(Build.SourceVersion)'
+    tag: '$(templateVersion)'
+    title: 'Version $(templateVersion)'
+    changeLogCompareToRelease: 'lastNonDraftReleaseByTag'
+    changeLogType: 'commitBased'
