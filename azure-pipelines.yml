@@ -18,7 +18,28 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  templateVersion: '1.5'
+  
+  templateVersion: '1.6'
+  OcarambaVersion: '3.2.10'
+  
+  SeleniumWebDriverVersion: '3.141.0'
+  SeleniumSupportVersion: '3.141.0'
+  
+  SeleniumWebdriverChromeDriverVersion: '80.0.3987.10600'
+  SeleniumWebDriverGeckoDriverVersion: '0.26.0'
+  SeleniumWebDriverIEDriverVersion: '3.150.0'
+  
+  NUnitVersion: '3.12.0'
+  NUnit3TestAdapterVersion: '3.16.1'
+
+  MicrosoftNetTestSdkVersion: '16.5.0'
+  MSTestTestAdapterVersion: '1.4.0'
+  MSTestTestFrameworkVersion: '2.1.0'
+  
+  AppveyorTestLoggerVersion: '2.0.0'
+  SharpZipLibVersion: '1.0.0'
+  NPOIVersion: '2.4.1'
+  NLogVersion: '4.6.6'
 
 steps:
 - task: PowerShell@2
@@ -34,6 +55,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
+- task: PowerShell@2
+  inputs:
+    filePath: './setPackagesVersions.ps1'
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
@@ -69,3 +93,17 @@ steps:
     targetPath: './Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix'
     artifact: 'Template'
     publishLocation: 'pipeline'
+
+- task: GitHubRelease@1
+  condition: and(succeeded(),startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+  inputs:
+    gitHubConnection: 'OcaramabaTemplateRelease'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'edit'
+    tagSource: 'gitTag'
+    tagPattern: '\d\.\d'
+    target: '$(Build.SourceVersion)'
+    tag: '$(templateVersion)'
+    title: 'Version $(templateVersion)'
+    changeLogCompareToRelease: 'lastNonDraftReleaseByTag'
+    changeLogType: 'commitBased'
