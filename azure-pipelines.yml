@@ -33,8 +33,8 @@ variables:
   NUnit3TestAdapterVersion: '3.16.1'
 
   MicrosoftNetTestSdkVersion: '16.5.0'
-  MSTestTestAdapterVersion: '1.4.0'
-  MSTestTestFrameworkVersion: '2.1.0'
+  MSTestTestAdapterVersion: '2.1.1'
+  MSTestTestFrameworkVersion: '2.1.1'
   
   AppveyorTestLoggerVersion: '2.0.0'
   SharpZipLibVersion: '1.0.0'
