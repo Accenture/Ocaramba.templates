@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.IO;
+using Ocaramba;
 using Ocaramba.Helpers;
 
 namespace $safeprojectname$
