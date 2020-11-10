@@ -24,10 +24,10 @@ namespace $safeprojectname$
             {
                 if (BaseConfiguration.UseCurrentDirectory)
                 {
-                    return Path.Combine(CurrentDirectory + ConfigurationManager.AppSettings["DataDrivenFile"]);
+                    return Path.Combine(CurrentDirectory + BaseConfiguration.Builder["appSettings:DataDrivenFile"]);
                 }
 
-                return ConfigurationManager.AppSettings["DataDrivenFile"];
+                return BaseConfiguration.Builder["appSettings:DataDrivenFile"];
             }
         }
 
@@ -43,10 +43,10 @@ namespace $safeprojectname$
             {
                 if (BaseConfiguration.UseCurrentDirectory)
                 {
-                    return Path.Combine(CurrentDirectory + ConfigurationManager.AppSettings["DataDrivenFileXlsx"]);
+                    return Path.Combine(CurrentDirectory + BaseConfiguration.Builder["appSettings:DataDrivenFileXlsx"]);
                 }
 
-                return ConfigurationManager.AppSettings["DataDrivenFileXlsx"];
+                return BaseConfiguration.Builder["appSettings:DataDrivenFileXlsx"];
             }
         }
 
@@ -55,7 +55,7 @@ namespace $safeprojectname$
         /// </summary>
         public static string DownloadFolderPath
         {
-            get { return FilesHelper.GetFolder(ConfigurationManager.AppSettings["DownloadFolder"], CurrentDirectory); }
+            get { return FilesHelper.GetFolder(BaseConfiguration.Builder["appSettings:DownloadFolder"], CurrentDirectory); }
         }
     }
 }
