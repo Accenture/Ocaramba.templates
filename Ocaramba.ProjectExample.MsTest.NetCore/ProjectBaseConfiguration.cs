@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.IO;
+using Ocaramba;
 using Ocaramba.Helpers;
 
 namespace $safeprojectname$
@@ -16,7 +17,7 @@ namespace $safeprojectname$
         /// </summary>
         public static string DownloadFolderPath
         {
-            get { return FilesHelper.GetFolder(ConfigurationManager.AppSettings["DownloadFolder"], CurrentDirectory); }
+            get { return FilesHelper.GetFolder(BaseConfiguration.Builder["appSettings:DownloadFolder"], CurrentDirectory); }
         }
     }
 }
