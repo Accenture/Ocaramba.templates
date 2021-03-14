@@ -1,7 +1,7 @@
 # Ocaramba.templates
 <img align="left" src="objectivity_logo.ico" width="64" height="64">
 
-Ocaramba project extension for Visual Studio - a set of project and class templates for web automated testing using [Ocaramba Framework](https://github.com/ObjectivityLtd/Ocaramba).
+The Ocaramba project extension for Visual Studio - a set of project and class templates for web automated testing using [Ocaramba Framework](https://github.com/ObjectivityLtd/Ocaramba).
 
 
 [![Ocaramba Templates](https://img.shields.io/badge/get-Ocaramba_Templates-green.svg?color=4BC21F)](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
@@ -23,7 +23,7 @@ The extension contains:
 ![Add New Item window](images/new-item.png)
 
 In case of problems with executing tests, update at least TestAdapter and Selenium browser drivers.
-You can also try to uninstall and install back one of browser drivers.
+You can also try to uninstall and install back one of the browser drivers.
  
 ![Update](images/Update.png)
 
