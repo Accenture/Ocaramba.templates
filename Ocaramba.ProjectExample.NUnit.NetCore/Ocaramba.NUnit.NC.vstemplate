@@ -15,6 +15,7 @@
     <PlatformTag>linux</PlatformTag>
     <ProjectTypeTag>Test</ProjectTypeTag>
     <ProjectTypeTag>Ocaramba</ProjectTypeTag>
+	<OutputType>Library</OutputType>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
