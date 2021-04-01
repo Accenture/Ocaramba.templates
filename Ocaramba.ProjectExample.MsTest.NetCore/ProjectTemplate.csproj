@@ -4,6 +4,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Appveyor.TestLogger" Version="$Appveyor.TestLogger-version$" />
