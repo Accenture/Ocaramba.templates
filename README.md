@@ -3,6 +3,7 @@
 
 The Ocaramba project extension for Visual Studio - a set of project and class templates for web automated testing using [Ocaramba Framework](https://github.com/ObjectivityLtd/Ocaramba).
 
+Thanks to the Ocaramba.Templates you can create in the few minutes ready to use in Continuous Integration tool project test solution for web automated testing. 
 
 [![Ocaramba Templates](https://img.shields.io/badge/get-Ocaramba_Templates-green.svg?color=4BC21F)](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
 
@@ -21,6 +22,8 @@ The extension contains:
 ![Add New Project window](images/new-project.png)
 
 ![Add New Item window](images/new-item.png)
+
+![Project](images/project.png)
 
 In case of problems with executing tests, update at least TestAdapter and Selenium browser drivers.
 You can also try to uninstall and install back one of the browser drivers.
