@@ -14,7 +14,6 @@ $aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex3",
 "NUnit3TestAdapter-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
-"SharpZipLib-version\`$`" Value=`"$regex3",
 "NLog-version\`$`" Value=`"$regex3"
 
 $bArray="Appveyor.TestLogger-version`$`" Value=`"$env:APPVEYORTESTLOGGERVERSION",
@@ -30,7 +29,6 @@ $bArray="Appveyor.TestLogger-version`$`" Value=`"$env:APPVEYORTESTLOGGERVERSION"
 "NUnit3TestAdapter-version`$`" Value=`"$env:NUNIT3TESTADAPTERVERSION",
 "Selenium.WebDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERVERSION",
 "Selenium.Support-version`$`" Value=`"$env:SELENIUMSUPPORTVERSION",
-"SharpZipLib-version`$`" Value=`"$env:SHARPZIPLIBVERSION",
 "NLog-version`$`" Value=`"$env:NLOGVERSION"
 
 Write-Host updating ./Ocaramba.ProjectExample.NUnit.NetCore/Ocaramba.NUnit.NC.vstemplate,`n /Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate,`n `
