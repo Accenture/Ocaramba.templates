@@ -1,0 +1,57 @@
+skip_commits:
+  files:
+    - README.md
+    - 'azure-pipelines.yml'
+
+image: Visual Studio 2019
+
+environment:  
+    templateVersion: '1.9.3'
+    OcarambaVersion: '3.3.0'
+      
+    SeleniumWebDriverVersion: '3.141.0'
+    SeleniumSupportVersion: '3.141.0'
+      
+    SeleniumWebdriverChromeDriverVersion: '91.0.4472.10100'
+    SeleniumWebDriverGeckoDriverVersion: '0.29.1'
+    SeleniumWebDriverIEDriverVersion: '3.150.1.2'
+      
+    NUnitVersion: '3.13.2'
+    NUnit3TestAdapterVersion: '4.0.0'
+
+    MicrosoftNetTestSdkVersion: '16.8.3'
+    MSTestTestAdapterVersion: '2.2.4'
+    MSTestTestFrameworkVersion: '2.2.4'
+      
+    AppveyorTestLoggerVersion: '2.0.0'
+    NPOIVersion: '2.5.3'
+    NLogVersion: '4.7.10'
+
+install:
+- ps: (new-object Net.WebClient).DownloadString("https://raw.github.com/madskristensen/ExtensionScripts/master/AppVeyor/vsix.ps1") | iex
+
+before_build:
+   - ps: >-
+      if ($env:APPVEYOR_REPO_TAG -eq "true")
+      {
+      
+        Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME.$env:APPVEYOR_BUILD_NUMBER"
+        
+        $env:templateVersion = "$env:APPVEYOR_REPO_TAG_NAME" 
+        
+      }
+      
+      echo 'templateVersion'  $env:templateVersion
+      
+      ((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest
+      
+      ./setPackagesVersions.ps1
+  
+build_script:
+  - nuget restore -Verbosity quiet
+  - msbuild /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
+
+after_test:
+   - ps: >-
+      7z a template.zip ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+      appveyor PushArtifact template.zip
