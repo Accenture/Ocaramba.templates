@@ -45,7 +45,7 @@ before_build:
       ./setPackagesVersions.ps1
   
 build_script:
-  - nuget restore ./Ocaramba.Templates.VSIX/packages.config -PackagesDirectory C:\projects\ocaramba-templates\packages -Verbosity quiet
+  - nuget restore ./Ocaramba.Templates.VSIX/packages.config -PackagesDirectory ./packages -Source https://api.nuget.org/v3/index.json -Verbosity Detailed -NonInteractive
   - msbuild /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
 after_test:
