@@ -5,7 +5,7 @@ namespace $safeprojectname$
 {
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using PageObjects;
+    using $safeprojectname$.PageObjects;
 
     [TestClass]
     public class $safeitemrootname$ : ProjectTestBase

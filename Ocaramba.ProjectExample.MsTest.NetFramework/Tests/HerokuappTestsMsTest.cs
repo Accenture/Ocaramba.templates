@@ -1,7 +1,7 @@
 ﻿namespace $safeprojectname$
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using PageObjects;
+    using $safeprojectname$.PageObjects;
 
     /// <summary>
     /// Tests to verify checkboxes tick and Untick.
