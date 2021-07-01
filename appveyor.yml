@@ -43,7 +43,7 @@ before_build:
       
       echo 'templateVersion'  $env:templateVersion
       
-      ((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest
+      ((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace 'Version="\d\.\d.\d" Language','Version="$($env:templateVersion)" Language') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest
       
       ./setPackagesVersions.ps1
   
