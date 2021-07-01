@@ -4,7 +4,7 @@ $regex4='(\d+\.\d+\.\d+\.\d+)'
 $aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex3",
 "Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3", 
 "Ocaramba-version\`$`" Value=`"$regex3", "NPOI-version\`$`" Value=`"$regex3",
-"Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex4",
+"Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex3",
 "MSTest\.TestAdapter-version\`$`" Value=`"$regex3",
 "MSTest\.TestFramework-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver\.GeckoDriver-version\`$`" Value=`"$regex3",
@@ -30,6 +30,17 @@ $bArray="Appveyor.TestLogger-version`$`" Value=`"$env:APPVEYORTESTLOGGERVERSION"
 "Selenium.WebDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERVERSION",
 "Selenium.Support-version`$`" Value=`"$env:SELENIUMSUPPORTVERSION",
 "NLog-version`$`" Value=`"$env:NLOGVERSION"
+
+
+For ($i=0; $i -lt $aArray.length; $i++) {
+	echo $bArray[$i]
+	$valueNumber=$bArray[$i] -split 'Value'
+	if(([regex]::Matches($valueNumber[1], "\." )).count -eq 3){
+
+	$aArray[$i]= $aArray[$i].replace('Value="(`(+\.\d+\.\d+)','Value="(`(+\.\d+\.\d+\.\d+)')
+		}
+	echo $aArray[$i]	
+  }
 
 Write-Host updating ./Ocaramba.ProjectExample.NUnit.NetCore/Ocaramba.NUnit.NC.vstemplate,`n /Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate,`n `
 ./Ocaramba.ProjectExample.MsTest.NetFramework/Ocaramba.MsTest.NF.vstemplate,`n ./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate
