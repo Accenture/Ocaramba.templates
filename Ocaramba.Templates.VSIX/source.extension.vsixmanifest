@@ -16,12 +16,12 @@
         <InstallationTarget Version="[11.0,)" Id="Microsoft.VisualStudio.Enterprise" />
 		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
 		  <ProductArchitecture>amd64</ProductArchitecture>
+		   </InstallationTarget>
 		  <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)">
 		  <ProductArchitecture>amd64</ProductArchitecture>
 	    </InstallationTarget>
 	    <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)">
 		  <ProductArchitecture>amd64</ProductArchitecture>
-	   </InstallationTarget>
 	   </InstallationTarget>
     </Installation>
     <Dependencies>
