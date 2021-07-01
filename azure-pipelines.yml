@@ -60,7 +60,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    restoreSolution: './Ocaramba.Templates.VSIX/packages.config'
+    restoreSolution: './Ocaramba.Templates.VSIX/Ocaramba.Templates.csproj'
     feedsToUse: 'select'
     restoreDirectory: '../packages'
 
