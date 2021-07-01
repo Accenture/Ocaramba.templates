@@ -38,7 +38,6 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Appveyor.TestLogger-version$" Value="2.0.0"/>
       <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.8.3"/>
       <CustomParameter Name="$NPOI-version$" Value="2.5.3"/>
       <CustomParameter Name="$NUnit-version$" Value="3.13.2"/>

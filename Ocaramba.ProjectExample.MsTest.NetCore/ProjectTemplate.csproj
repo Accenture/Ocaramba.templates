@@ -7,7 +7,6 @@
     <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Appveyor.TestLogger" Version="$Appveyor.TestLogger-version$" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$Microsoft.NET.Test.Sdk-version$" />
     <PackageReference Include="MSTest.TestAdapter" Version="$MSTest.TestAdapter-version$" />
     <PackageReference Include="MSTest.TestFramework" Version="$MSTest.TestFramework-version$" />

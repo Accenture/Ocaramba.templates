@@ -19,7 +19,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   
-  templateVersion: '1.9.3'
+  templateVersion: '1.9.4'
   OcarambaVersion: '3.3.0'
   
   SeleniumWebDriverVersion: '3.141.0'
@@ -36,7 +36,6 @@ variables:
   MSTestTestAdapterVersion: '2.2.4'
   MSTestTestFrameworkVersion: '2.2.4'
   
-  AppveyorTestLoggerVersion: '2.0.0'
   NPOIVersion: '2.5.3'
   NLogVersion: '4.7.10'
 
@@ -60,7 +59,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    restoreSolution: './Ocaramba.Templates.VSIX/packages.config'
+    restoreSolution: './Ocaramba.Templates.VSIX/Ocaramba.Templates.csproj'
     feedsToUse: 'select'
     restoreDirectory: '../packages'
 

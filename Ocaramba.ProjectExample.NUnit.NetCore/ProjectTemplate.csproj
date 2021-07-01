@@ -7,7 +7,6 @@
     <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Appveyor.TestLogger" Version="$Appveyor.TestLogger-version$" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$Microsoft.NET.Test.Sdk-version$" />
     <PackageReference Include="NPOI" Version="$NPOI-version$" />
     <PackageReference Include="NUnit" Version="$NUnit-version$" />
