@@ -47,5 +47,5 @@ build_script:
 
 after_test:
    - ps: >-
-      7z a template.zip ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+      7z a template.zip ./**/Ocaramba.Templates.vsix
       appveyor PushArtifact template.zip
