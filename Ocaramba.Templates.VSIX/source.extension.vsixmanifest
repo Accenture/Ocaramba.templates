@@ -10,20 +10,14 @@
         <Icon>Objectivity_logo_avatar.png</Icon>
         <Tags>Ocaramba</Tags>
     </Metadata>
-    <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[11.0,)" >
-			<ProductArchitecture>x86</ProductArchitecture>
-		</InstallationTarget>
-        <InstallationTarget Version="[11.0,)" Id="Microsoft.VisualStudio.Pro" >
-			<ProductArchitecture>amd64</ProductArchitecture>
-		</InstallationTarget>
-        <InstallationTarget Version="[11.0,)" Id="Microsoft.VisualStudio.Enterprise" >
-			<ProductArchitecture>amd64</ProductArchitecture>
-		</InstallationTarget>
-        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community" >
-			<ProductArchitecture>amd64</ProductArchitecture>
-		</InstallationTarget>
-    </Installation>
+<Installation>
+   <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)">
+      <ProductArchitecture>x86</ProductArchitecture>
+   </InstallationTarget>
+   <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+   </InstallationTarget>
+</Installation>
     <Dependencies>
     </Dependencies>
     <Assets>
