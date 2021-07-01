@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="OcarambaTemplatesVSIX.226df7b1-616d-412d-a923-369996d73da8" Version="1.4.0" Language="en-US" Publisher="Ocaramba" />
+        <Identity Id="OcarambaTemplatesVSIX.226df7b1-616d-412d-a923-369996d73da8" Version="1.9.3" Language="en-US" Publisher="Ocaramba" />
         <DisplayName>Ocaramba.Templates</DisplayName>
         <Description xml:space="preserve">Set of Ocaramba framework templates for automated web testing using Selenium WebDriver.</Description>
         <MoreInfo>https://github.com/ObjectivityLtd/Ocaramba</MoreInfo>
@@ -10,13 +10,12 @@
         <Icon>Objectivity_logo_avatar.png</Icon>
         <Tags>Ocaramba</Tags>
     </Metadata>
-    <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[11.0,)" />
-        <InstallationTarget Version="[11.0,)" Id="Microsoft.VisualStudio.Pro" />
-        <InstallationTarget Version="[11.0,)" Id="Microsoft.VisualStudio.Enterprise" />
-    </Installation>
-    <Dependencies>
-    </Dependencies>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 17.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ocaramba.MsTest.NetFramework" d:TargetPath="|Ocaramba.MsTest.NetFramework;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="Ocaramba.PageObject.Class" d:TargetPath="|Ocaramba.PageObject.Class;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>Ocaramba Test Project (NUnit)(.Net Core)</Name>
@@ -39,14 +39,14 @@
     </Project>
     <CustomParameters>
       <CustomParameter Name="$Appveyor.TestLogger-version$" Value="2.0.0"/>
-      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.5.0"/>
-      <CustomParameter Name="$NPOI-version$" Value="2.4.1"/>
-      <CustomParameter Name="$NUnit-version$" Value="3.12.0"/>
-      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="3.16.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="80.0.3987.10600"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.26.0"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.0"/>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.2.8"/>
+      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.8.3"/>
+      <CustomParameter Name="$NPOI-version$" Value="2.5.3"/>
+      <CustomParameter Name="$NUnit-version$" Value="3.13.2"/>
+      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="4.0.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
