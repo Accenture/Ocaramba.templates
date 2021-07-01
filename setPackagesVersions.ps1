@@ -1,3 +1,23 @@
+$OcarambaVersion=$env:OcarambaVersion
+  
+$SeleniumWebDriverVersion=$env:SeleniumWebDriverVersion
+$SeleniumSupportVersion= $env:SeleniumSupportVersion
+  
+$SeleniumWebdriverChromeDriverVersion=$env:SeleniumWebdriverChromeDriverVersion
+$SeleniumWebDriverGeckoDriverVersion= $env:SeleniumWebDriverGeckoDriverVersion
+$SeleniumWebDriverIEDriverVersion= $env:SeleniumWebDriverIEDriverVersion
+  
+$NUnitVersion= $env:NUnitVersion
+$NUnit3TestAdapterVersion= $env:NUnit3TestAdapterVersion
+
+$MicrosoftNetTestSdkVersion= $env:MicrosoftNetTestSdkVersion
+$MSTestTestAdapterVersion= $env:MSTestTestAdapterVersion
+$MSTestTestFrameworkVersion= $env:MSTestTestFrameworkVersion
+  
+$AppveyorTestLoggerVersion= $env:AppveyorTestLoggerVersion
+$NPOIVersion= $env:NPOIVersion
+$NLogVersion= $env:NLogVersion
+
 $regex3='(\d+\.\d+\.\d+)'
 $regex4='(\d+\.\d+\.\d+\.\d+)'
 
@@ -16,20 +36,20 @@ $aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
 "NLog-version\`$`" Value=`"$regex3"
 
-$bArray="Appveyor.TestLogger-version`$`" Value=`"$env:APPVEYORTESTLOGGERVERSION",
-"Microsoft.NET.Test.Sdk-version`$`" Value=`"$env:MICROSOFTNETTESTSDKVERSION", 
-"Ocaramba-version`$`" Value=`"$env:OCARAMBAVERSION","NPOI-version`$`" Value=`"$env:NPOIVERSION",
-"Selenium.WebDriver.ChromeDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERCHROMEDRIVERVERSION",
-"MSTest.TestAdapter-version`$`" Value=`"$env:MSTESTTESTADAPTERVERSION",
-"MSTest.TestFramework-version`$`" Value=`"$env:MSTESTTESTFRAMEWORKVERSION",
-"Selenium.WebDriver.GeckoDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERGECKODRIVERVERSION",
-"Selenium.WebDriver.IEDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERIEDRIVERVERSION",
-"NPOI-version`$`" Value=`"$env:NPOIVERSION",
-"NUnit-version`$`" Value=`"$env:NUNITVERSION",
-"NUnit3TestAdapter-version`$`" Value=`"$env:NUNIT3TESTADAPTERVERSION",
-"Selenium.WebDriver-version`$`" Value=`"$env:SELENIUMWEBDRIVERVERSION",
-"Selenium.Support-version`$`" Value=`"$env:SELENIUMSUPPORTVERSION",
-"NLog-version`$`" Value=`"$env:NLOGVERSION"
+$bArray="Appveyor.TestLogger-version`$`" Value=`"$APPVEYORTESTLOGGERVERSION",
+"Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
+"Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
+"Selenium.WebDriver.ChromeDriver-version`$`" Value=`"$SELENIUMWEBDRIVERCHROMEDRIVERVERSION",
+"MSTest.TestAdapter-version`$`" Value=`"$MSTESTTESTADAPTERVERSION",
+"MSTest.TestFramework-version`$`" Value=`"$MSTESTTESTFRAMEWORKVERSION",
+"Selenium.WebDriver.GeckoDriver-version`$`" Value=`"$SELENIUMWEBDRIVERGECKODRIVERVERSION",
+"Selenium.WebDriver.IEDriver-version`$`" Value=`"$SELENIUMWEBDRIVERIEDRIVERVERSION",
+"NPOI-version`$`" Value=`"$NPOIVERSION",
+"NUnit-version`$`" Value=`"$NUNITVERSION",
+"NUnit3TestAdapter-version`$`" Value=`"$NUNIT3TESTADAPTERVERSION",
+"Selenium.WebDriver-version`$`" Value=`"$SELENIUMWEBDRIVERVERSION",
+"Selenium.Support-version`$`" Value=`"$SELENIUMSUPPORTVERSION",
+"NLog-version`$`" Value=`"$NLOGVERSION"
 
 
 For ($i=0; $i -lt $aArray.length; $i++) {

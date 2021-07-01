@@ -16,8 +16,6 @@
       <ProductArchitecture>amd64</ProductArchitecture>
     </InstallationTarget>
   </Installation>
-    <Dependencies>
-    </Dependencies>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ocaramba.MsTest.NetFramework" d:TargetPath="|Ocaramba.MsTest.NetFramework;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="Ocaramba.PageObject.Class" d:TargetPath="|Ocaramba.PageObject.Class;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />

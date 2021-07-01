@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>Ocaramba Test Project (MsTest)(.Net Framework)</Name>
@@ -36,14 +36,14 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="Testsettings.testsettings">Testsettings.testsettings</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.2.8"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
       <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
       <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
-      <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.1.0"/>
-      <CustomParameter Name="$NLog-version$" Value="4.6.6"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="80.0.3987.10600"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.26.0"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.0"/>
+      <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.4"/>
+      <CustomParameter Name="$NLog-version$" Value="4.7.10"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1.2.2"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
