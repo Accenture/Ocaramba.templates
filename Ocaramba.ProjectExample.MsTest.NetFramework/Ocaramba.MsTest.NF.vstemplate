@@ -43,7 +43,7 @@
       <CustomParameter Name="$NLog-version$" Value="4.7.10"/>
       <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1.2.2"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
