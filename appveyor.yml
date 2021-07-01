@@ -45,7 +45,3 @@ build_script:
   - nuget restore ./Ocaramba.Templates.VSIX/Ocaramba.Templates.csproj -PackagesDirectory ./packages -Source https://api.nuget.org/v3/index.json -Verbosity Detailed -NonInteractive
   - msbuild /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
-after_test:
-   - ps: >-
-      7z a template.zip .\Ocaramba.Templates.VSIX\bin\Release\Ocaramba.Templates.vsix
-      appveyor PushArtifact template.zip

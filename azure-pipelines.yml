@@ -19,7 +19,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   
-  templateVersion: '1.9.3'
+  templateVersion: '1.9.4'
   OcarambaVersion: '3.3.0'
   
   SeleniumWebDriverVersion: '3.141.0'
