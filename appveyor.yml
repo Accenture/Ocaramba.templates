@@ -20,7 +20,6 @@ environment:
     MSTestTestAdapterVersion: '2.2.4'
     MSTestTestFrameworkVersion: '2.2.4'
       
-    AppveyorTestLoggerVersion: '2.0.0'
     NPOIVersion: '2.5.3'
     NLogVersion: '4.7.10'
 

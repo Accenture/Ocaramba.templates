@@ -34,7 +34,6 @@
 	  <ProjectItem ReplaceParameters="true" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Appveyor.TestLogger-version$" Value="2.0.0"/>
       <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.8.3"/>
       <CustomParameter Name="$MSTest.TestAdapter-version$" Value="2.2.4"/>
       <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.4"/>

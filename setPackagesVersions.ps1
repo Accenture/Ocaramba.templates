@@ -13,16 +13,14 @@ $NUnit3TestAdapterVersion= $env:NUnit3TestAdapterVersion
 $MicrosoftNetTestSdkVersion= $env:MicrosoftNetTestSdkVersion
 $MSTestTestAdapterVersion= $env:MSTestTestAdapterVersion
 $MSTestTestFrameworkVersion= $env:MSTestTestFrameworkVersion
-  
-$AppveyorTestLoggerVersion= $env:AppveyorTestLoggerVersion
+
 $NPOIVersion= $env:NPOIVersion
 $NLogVersion= $env:NLogVersion
 
 $regex3='(\d+\.\d+\.\d+)'
 $regex4='(\d+\.\d+\.\d+\.\d+)'
 
-$aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex3",
-"Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3", 
+$aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3", 
 "Ocaramba-version\`$`" Value=`"$regex3", "NPOI-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex3",
 "MSTest\.TestAdapter-version\`$`" Value=`"$regex3",
@@ -36,8 +34,7 @@ $aArray="Appveyor\.TestLogger-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
 "NLog-version\`$`" Value=`"$regex3"
 
-$bArray="Appveyor.TestLogger-version`$`" Value=`"$APPVEYORTESTLOGGERVERSION",
-"Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
+$bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
 "Selenium.WebDriver.ChromeDriver-version`$`" Value=`"$SELENIUMWEBDRIVERCHROMEDRIVERVERSION",
 "MSTest.TestAdapter-version`$`" Value=`"$MSTESTTESTADAPTERVERSION",
