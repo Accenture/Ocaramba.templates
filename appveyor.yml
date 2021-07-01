@@ -24,9 +24,6 @@ environment:
     NPOIVersion: '2.5.3'
     NLogVersion: '4.7.10'
 
-install:
-- ps: (new-object Net.WebClient).DownloadString("https://raw.github.com/madskristensen/ExtensionScripts/master/AppVeyor/vsix.ps1") | iex
-
 before_build:
    - ps: >-
       if ($env:APPVEYOR_REPO_TAG -eq "true")
