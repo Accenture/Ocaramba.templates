@@ -1,5 +1,7 @@
 image: Visual Studio 2019
 
+version: $(templateVersion)
+
 environment:  
     templateVersion: '1.9.3'
     OcarambaVersion: '3.3.0'
