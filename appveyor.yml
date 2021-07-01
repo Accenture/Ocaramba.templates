@@ -1,6 +1,6 @@
 image: Visual Studio 2019
 
-version: $(templateVersion)
+version: $(templateVersion).{build}
 
 environment:  
     templateVersion: '1.9.3'
