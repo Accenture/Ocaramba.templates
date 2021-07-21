@@ -35,7 +35,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectBaseConfiguration.cs">ProjectBaseConfiguration.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="set_AppConfig_for_tests.ps1">set_AppConfig_for_tests.ps1</ProjectItem>
     </Project>
     <CustomParameters>
       <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.8.3"/>
