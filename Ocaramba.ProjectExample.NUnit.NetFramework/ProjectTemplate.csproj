@@ -86,6 +86,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="DataDriven\DataDriven.xml" />
+    <None Include="set_AppConfig_for_tests.ps1" />
     <None Include="App.config" />
   </ItemGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

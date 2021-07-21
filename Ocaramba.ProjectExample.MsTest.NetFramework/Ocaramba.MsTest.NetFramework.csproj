@@ -73,6 +73,7 @@
     </None>
     <None Include="ProjectTemplate.csproj" />
     <None Include="Runsettings.runsettings" />
+    <None Include="set_AppConfig_for_tests.ps1" />
     <None Include="Testsettings.testsettings" />
     <None Include="Tests\HerokuappTestsMsTest.cs" />
     <None Include="PageObjects\InternetPage.cs" />

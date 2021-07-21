@@ -65,8 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Dockerfile" />
     <None Include="Runsettings.runsettings" />
+    <None Include="set_AppConfig_for_tests.ps1" />
     <None Include="Tests\HerokuappTestsMsTest.cs" />
   </ItemGroup>
   <ItemGroup>

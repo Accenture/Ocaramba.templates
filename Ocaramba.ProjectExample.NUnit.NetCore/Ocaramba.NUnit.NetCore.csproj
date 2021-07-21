@@ -70,7 +70,6 @@
     <None Include="appsettings.json" />
     <None Include="appsettings.Linux.json" />
     <None Include="AssemblyInfo.cs" />
-    <None Include="Dockerfile" />
     <None Include="nlog.config" />
     <None Include="ProjectTemplate.csproj">
       <SubType>Designer</SubType>
@@ -81,6 +80,7 @@
     <None Include="ProjectBaseConfiguration.cs" />
     <None Include="ProjectPageBase.cs" />
     <None Include="ProjectTestBase.cs" />
+    <None Include="set_AppConfig_for_tests.ps1" />
     <None Include="Tests\HerokuappTestsNUnit.cs" />
   </ItemGroup>
   <ItemGroup>

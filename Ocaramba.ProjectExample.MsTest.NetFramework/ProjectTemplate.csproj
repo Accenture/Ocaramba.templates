@@ -70,6 +70,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="DDT.xml" />
+    <None Include="set_AppConfig_for_tests.ps1" />
     <None Include="App.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
