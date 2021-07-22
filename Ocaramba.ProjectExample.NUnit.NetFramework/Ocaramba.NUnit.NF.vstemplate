@@ -32,6 +32,7 @@
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="set_AppConfig_for_tests.ps1">set_AppConfig_for_tests.ps1</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectBaseConfiguration.cs">ProjectBaseConfiguration.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectPageBase.cs">ProjectPageBase.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>

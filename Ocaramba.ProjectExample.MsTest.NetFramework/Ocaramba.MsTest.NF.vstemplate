@@ -23,6 +23,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="NLog.xsd">NLog.xsd</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="set_AppConfig_for_tests.ps1">set_AppConfig_for_tests.ps1</ProjectItem>
       <Folder Name="PageObjects" TargetFolderName="PageObjects">
         <ProjectItem ReplaceParameters="true" TargetFileName="InternetPage.cs">InternetPage.cs</ProjectItem>
       </Folder>
