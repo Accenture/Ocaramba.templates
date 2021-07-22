@@ -48,6 +48,7 @@
       <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
+	  <CustomParameter Name="$Microsoft.Edge.SeleniumTools-version$" Value="3.141.2"/>
   </CustomParameters>
   </TemplateContent>
 </VSTemplate>

@@ -29,6 +29,8 @@ variables:
   SeleniumWebDriverGeckoDriverVersion: '0.29.1'
   SeleniumWebDriverIEDriverVersion: '3.150.1.2'
   
+  MicrosoftEdgeSeleniumToolsVersion: '3.141.2'
+  
   NUnitVersion: '3.13.2'
   NUnit3TestAdapterVersion: '4.0.0'
 
