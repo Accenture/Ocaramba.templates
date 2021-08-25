@@ -1,15 +1,24 @@
 ﻿// NUnit 3 tests
-// See documentation : https://github.com/ObjectivityLtd/Ocaramba 
-
-using NUnit.Framework;
-using $safeprojectname$.PageObjects;
+// <copyright file="HerokuappTestsNUnit.cs" company="Ocaramba">
+// Copyright (c) Ocaramba. All rights reserved.
+// </copyright>
+// See documentation : https://github.com/ObjectivityLtd/Ocaramba
 
 namespace $safeprojectname$
 {
+    using NUnit.Framework;
+    using $safeprojectname$.PageObjects;
+
+    /// <summary>
+    /// Test class.
+    /// </summary>
     [TestFixture]
     [Parallelizable(ParallelScope.Fixtures)]
     public class $safeitemrootname$ : ProjectTestBase
     {
+        /// <summary>
+        /// Test method.
+        /// </summary>
         [Test]
         public void BasicAuthTest()
         {

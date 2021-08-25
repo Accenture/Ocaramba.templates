@@ -1,4 +1,10 @@
-﻿namespace $safeprojectname$
+﻿// <copyright file="HerokuappTestsMsTest.cs" company="Ocaramba">
+// Copyright (c) Ocaramba. All rights reserved.
+// </copyright>
+// MsTest tests
+// See documentation : https://github.com/ObjectivityLtd/Ocaramba
+
+namespace $safeprojectname$
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using $safeprojectname$.PageObjects;
@@ -9,6 +15,9 @@
     [TestClass]
     public class $safeitemrootname$ : ProjectTestBase
     {
+        /// <summary>
+        /// Test method.
+        /// </summary>
         [TestMethod]
         public void TickCheckboxTest()
         {
@@ -17,6 +26,9 @@
             checkboxes.OpenHomePage();
         }
 
+        /// <summary>
+        /// Test method.
+        /// </summary>
         [TestMethod]
         public void UnTickCheckboxTest()
         {

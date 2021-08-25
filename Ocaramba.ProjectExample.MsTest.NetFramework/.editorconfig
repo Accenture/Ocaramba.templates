@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# SA1132: Do not combine fields
+dotnet_diagnostic.SA1132.severity = silent

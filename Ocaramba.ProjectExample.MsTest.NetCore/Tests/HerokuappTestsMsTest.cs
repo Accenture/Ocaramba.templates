@@ -1,15 +1,23 @@
-﻿// MsTest tests
-// See documentation : https://github.com/ObjectivityLtd/Ocaramba 
+﻿// <copyright file="HerokuappTestsMsTest.cs" company="Ocaramba">
+// Copyright (c) Ocaramba. All rights reserved.
+// </copyright>
+// MsTest tests
+// See documentation : https://github.com/ObjectivityLtd/Ocaramba
 
 namespace $safeprojectname$
 {
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using $safeprojectname$.PageObjects;
 
+    /// <summary>
+    /// Test class.
+    /// </summary>
     [TestClass]
     public class $safeitemrootname$ : ProjectTestBase
     {
+        /// <summary>
+        /// Test method.
+        /// </summary>
         [TestMethod]
         public void TickCheckboxTest()
         {
@@ -18,6 +26,9 @@ namespace $safeprojectname$
             checkboxes.OpenHomePage();
         }
 
+        /// <summary>
+        /// Test method.
+        /// </summary>
         [TestMethod]
         public void UnTickCheckboxTest()
         {

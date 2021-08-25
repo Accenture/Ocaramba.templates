@@ -20,42 +20,62 @@
 //     SOFTWARE.
 // </license>
 
-using System.Collections;
-using System.Globalization;
-using NUnit.Framework;
-
 namespace $safeprojectname$.DataDriven
 {
+    using System.Collections;
+    using System.Globalization;
+    using NUnit.Framework;
+
     /// <summary>
-    /// DataDriven methods for NUnit test framework
+    /// DataDriven methods for NUnit test framework.
     /// </summary>
     public static class TestData
     {
+        /// <summary>
+        /// Gets Credentials from DataDriven file.
+        /// </summary>
         public static IEnumerable Credentials
         {
             get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "credential", new[] { "user", "password" }, "credential"); }
         }
 
+        /// <summary>
+        /// Gets Credentials from Excel DataDriven file.
+        /// </summary>
         public static IEnumerable CredentialsExcel
         {
             get { return DataDrivenHelper.ReadXlsxDataDriveFile(ProjectBaseConfiguration.DataDrivenFileXlsx, "credential", new[] { "user", "password" }, "credentialExcel"); }
         }
 
+        /// <summary>
+        /// Gets set of links from DataDriven file.
+        /// </summary>
         public static IEnumerable LinksSetTestName
         {
             get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "links", new[] { "number" }, "Count_links"); }
         }
 
+        /// <summary>
+        /// Gets links from DataDriven file.
+        /// </summary>
         public static IEnumerable Links
         {
             get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "links"); }
         }
 
+        /// <summary>
+        /// Gets set of links from Excel DataDriven file.
+        /// </summary>
+        /// <returns> Excel Data driven. </returns>
         public static IEnumerable LinksExcel()
         {
             return DataDrivenHelper.ReadXlsxDataDriveFile(ProjectBaseConfiguration.DataDrivenFileXlsx, "links");
         }
 
+        /// <summary>
+        /// Gets Credentials from CSV DataDriven file.
+        /// </summary>
+        /// <returns> CSV Data driven. </returns>
         public static IEnumerable CredentialsCSV()
         {
             var path = TestContext.CurrentContext.TestDirectory;

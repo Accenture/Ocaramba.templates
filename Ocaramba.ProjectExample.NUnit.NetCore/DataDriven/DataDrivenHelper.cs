@@ -1,45 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
-using NLog;
-using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
-using NUnit.Framework;
-using Ocaramba.Exceptions;
+﻿// <copyright file="DataDrivenHelper.cs" company="Ocaramba">
+// Copyright (c) Ocaramba. All rights reserved.
+// </copyright>
+// <license>
+//     The MIT License (MIT)
+//     Permission is hereby granted, free of charge, to any person obtaining a copy
+//     of this software and associated documentation files (the "Software"), to deal
+//     in the Software without restriction, including without limitation the rights
+//     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//     copies of the Software, and to permit persons to whom the Software is
+//     furnished to do so, subject to the following conditions:
+//     The above copyright notice and this permission notice shall be included in all
+//     copies or substantial portions of the Software.
+//     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//     SOFTWARE.
+// </license>
 
 namespace $safeprojectname$.DataDriven
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Runtime.InteropServices;
+    using System.Text.RegularExpressions;
+    using System.Xml.Linq;
+    using NLog;
+    using NPOI.SS.UserModel;
+    using NPOI.XSSF.UserModel;
+    using NUnit.Framework;
+    using Ocaramba.Exceptions;
+
     /// <summary>
-    /// XML DataDriven methods for NUnit test framework <see href="https://github.com/ObjectivityLtd/Ocaramba/wiki/DataDriven-tests-from-Xml-files">More details on wiki</see>
+    /// XML DataDriven methods for NUnit test framework <see href="https://github.com/ObjectivityLtd/Ocaramba/wiki/DataDriven-tests-from-Xml-files">More details on wiki</see>.
     /// </summary>
     public static class DataDrivenHelper
     {
-    private static readonly NLog.Logger Logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+        private static readonly Logger Logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
-    /// <summary>
-    /// Reads the data drive file and set test name.
-    /// </summary>
-    /// <param name="folder">Full path to XML DataDriveFile file</param>
-    /// <param name="testData">Name of the child element in xml file.</param>
-    /// <param name="diffParam">Values of listed parameters will be used in test case name.</param>
-    /// <param name="testName">Name of the test, use as prefix for test case name.</param>
-    /// <returns>
-    /// IEnumerable TestCaseData
-    /// </returns>
-    /// <exception cref="System.ArgumentNullException">Exception when element not found in file</exception>
-    /// <exception cref="DataDrivenReadException">Exception when parameter not found in row</exception>
-    /// <example>How to use it: <code>
-    /// public static IEnumerable Credentials
-    /// {
-    /// get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "credential", new[] { "user", "password" }, "credential"); }
-    /// }
-    /// </code></example>
-    public static IEnumerable<TestCaseData> ReadDataDriveFile(string folder, string testData, string[] diffParam, [Optional] string testName)
+        /// <summary>
+        /// Reads the data drive file and set test name.
+        /// </summary>
+        /// <param name="folder">Full path to XML DataDriveFile file.</param>
+        /// <param name="testData">Name of the child element in xml file.</param>
+        /// <param name="diffParam">Values of listed parameters will be used in test case name.</param>
+        /// <param name="testName">Name of the test, use as prefix for test case name.</param>
+        /// <returns>
+        /// IEnumerable TestCaseData.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">Exception when element not found in file.</exception>
+        /// <exception cref="DataDrivenReadException">Exception when parameter not found in row.</exception>
+        /// <example>How to use it: <code>
+        /// public static IEnumerable Credentials
+        /// {
+        /// get { return DataDrivenHelper.ReadDataDriveFile(ProjectBaseConfiguration.DataDrivenFile, "credential", new[] { "user", "password" }, "credential"); }
+        /// }
+        /// </code></example>
+        public static IEnumerable<TestCaseData> ReadDataDriveFile(string folder, string testData, string[] diffParam, [Optional] string testName)
         {
             var doc = XDocument.Load(folder);
 
@@ -78,14 +100,14 @@ namespace $safeprojectname$.DataDriven
         /// <summary>
         /// Reads the Csv data drive file and set test name.
         /// </summary>
-        /// <param name="file">Full path to csv DataDriveFile file</param>
+        /// <param name="file">Full path to csv DataDriveFile file.</param>
         /// <param name="diffParam">The difference parameter.</param>
         /// <param name="testName">Name of the test, use as prefix for test case name.</param>
         /// <returns>
-        /// IEnumerable TestCaseData
+        /// IEnumerable TestCaseData.
         /// </returns>
-        /// <exception cref="System.InvalidOperationException">Exception when wrong cell type in file</exception>
-        /// <exception cref="DataDrivenReadException">Exception when parameter not found in row</exception>
+        /// <exception cref="InvalidOperationException">Exception when wrong cell type in file.</exception>
+        /// <exception cref="DataDrivenReadException">Exception when parameter not found in row.</exception>
         /// <example>How to use it: <code>
         ///  {
         ///  var path = TestContext.CurrentContext.TestDirectory;
@@ -132,14 +154,14 @@ namespace $safeprojectname$.DataDriven
                         {
                             throw new DataDrivenReadException(
                             string.Format(
-                                       " Exception while reading Csv Data Driven file\n searched key '{0}' not found \n for test {1} in file '{2}' at row {3}",
-                                        e.Message,
-                                        testName,
-                                        file,
-                                        row));
+                                " Exception while reading Csv Data Driven file\n searched key '{0}' not found \n for test {1} in file '{2}' at row {3}",
+                                e.Message,
+                                testName,
+                                file,
+                                row));
                         }
 
-                        row = row + 1;
+                        row += 1;
 
                         var data = new TestCaseData(testParams);
                         data.SetName(testCaseName);
@@ -152,12 +174,12 @@ namespace $safeprojectname$.DataDriven
         /// <summary>
         /// Reads the data drive file without setting test name.
         /// </summary>
-        /// <param name="folder">Full path to XML DataDriveFile file</param>
+        /// <param name="folder">Full path to XML DataDriveFile file.</param>
         /// <param name="testData">Name of the child element in xml file.</param>
         /// <returns>
-        /// IEnumerable TestCaseData
+        /// IEnumerable TestCaseData.
         /// </returns>
-        /// <exception cref="System.ArgumentNullException">Exception when element not found in file</exception>
+        /// <exception cref="ArgumentNullException">Exception when element not found in file.</exception>
         /// <example>How to use it: <code>
         /// public static IEnumerable Credentials
         /// {
@@ -178,15 +200,15 @@ namespace $safeprojectname$.DataDriven
         /// <summary>
         /// Reads the Excel data drive file and optionaly set test name.
         /// </summary>
-        /// <param name="path">Full path to Excel DataDriveFile file</param>
+        /// <param name="path">Full path to Excel DataDriveFile file.</param>
         /// <param name="sheetName">Name of the sheet at xlsx file.</param>
         /// <param name="diffParam">Optional values of listed parameters will be used in test case name.</param>
         /// <param name="testName">Optional name of the test, use as prefix for test case name.</param>
         /// <returns>
-        /// IEnumerable TestCaseData
+        /// IEnumerable TestCaseData.
         /// </returns>
-        /// <exception cref="System.InvalidOperationException">Exception when wrong cell type in file</exception>
-        /// <exception cref="DataDrivenReadException">Exception when parameter not found in row</exception>
+        /// <exception cref="InvalidOperationException">Exception when wrong cell type in file.</exception>
+        /// <exception cref="DataDrivenReadException">Exception when parameter not found in row.</exception>
         /// <example>How to use it: <code>
         /// public static IEnumerable CredentialsFromExcel
         /// {
@@ -275,16 +297,15 @@ namespace $safeprojectname$.DataDriven
         /// <param name="diffParam">The difference parameter.</param>
         /// <param name="testParams">The test parameters.</param>
         /// <param name="testCaseName">Name of the test case.</param>
-        /// <returns>Test case name</returns>
-        /// <exception cref="NullReferenceException">Exception when trying to set test case name</exception>
+        /// <returns>Test case name.</returns>
+        /// <exception cref="NullReferenceException">Exception when trying to set test case name.</exception>
         private static string TestCaseName(string[] diffParam, Dictionary<string, string> testParams, string testCaseName)
         {
             if (diffParam != null && diffParam.Any())
             {
                 foreach (var p in diffParam)
                 {
-                    string keyValue;
-                    bool keyFlag = testParams.TryGetValue(p, out keyValue);
+                    bool keyFlag = testParams.TryGetValue(p, out string keyValue);
 
                     if (keyFlag)
                     {
