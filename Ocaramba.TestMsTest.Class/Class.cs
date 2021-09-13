@@ -1,4 +1,4 @@
-﻿// <copyright file="HerokuappTestsMsTest.cs" company="Ocaramba">
+﻿// <copyright file="$safeitemrootname$.cs" company="Ocaramba">
 // Copyright (c) Ocaramba. All rights reserved.
 // </copyright>
 // MsTest tests

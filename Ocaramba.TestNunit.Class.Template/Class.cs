@@ -1,4 +1,4 @@
-﻿// <copyright file="HerokuappTestsNUnit.cs" company="Ocaramba">
+﻿// <copyright file="$safeitemrootname$.cs" company="Ocaramba">
 // Copyright (c) Ocaramba. All rights reserved.
 // </copyright>
 // NUnit 3 tests
