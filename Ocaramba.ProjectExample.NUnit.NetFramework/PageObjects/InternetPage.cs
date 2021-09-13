@@ -34,7 +34,7 @@ namespace $safeprojectname$.PageObjects
     /// </summary>
     public class InternetPage : ProjectPageBase
     {
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Locators for elements.

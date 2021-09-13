@@ -41,7 +41,7 @@ namespace $safeprojectname$.DataDriven
     /// </summary>
     public static class DataDrivenHelper
     {
-        private static readonly Logger Logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+        private static readonly NLog.Logger Logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
         /// <summary>
         /// Reads the data drive file and set test name.
