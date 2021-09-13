@@ -1,13 +1,22 @@
-﻿// MsTest tests
-// See documentation : https://github.com/ObjectivityLtd/Ocaramba 
+﻿// <copyright file="HerokuappTestsMsTest.cs" company="Ocaramba">
+// Copyright (c) Ocaramba. All rights reserved.
+// </copyright>
+// MsTest tests
+// See documentation : https://github.com/ObjectivityLtd/Ocaramba
 
 namespace $rootnamespace$
 {
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-[TestClass]
-public class $safeitemrootname$ : ProjectTestBase
-{
+    /// <summary>
+    /// Test class.
+    /// </summary>
+    [TestClass]
+    public class $safeitemrootname$ : ProjectTestBase
+    {
+        /// <summary>
+        /// Test method.
+        /// </summary>
         [TestMethod]
         public void Test()
         {
