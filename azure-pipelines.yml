@@ -25,7 +25,7 @@ variables:
   SeleniumWebDriverVersion: '3.141.0'
   SeleniumSupportVersion: '3.141.0'
   
-  SeleniumWebdriverChromeDriverVersion: '91.0.4472.10100'
+  SeleniumWebdriverChromeDriverVersion: '93.0.4577.6300'
   SeleniumWebDriverGeckoDriverVersion: '0.29.1'
   SeleniumWebDriverIEDriverVersion: '3.150.1.2'
   
