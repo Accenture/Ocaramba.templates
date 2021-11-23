@@ -7,8 +7,6 @@ $SeleniumWebdriverChromeDriverVersion=$env:SeleniumWebdriverChromeDriverVersion
 $SeleniumWebDriverGeckoDriverVersion= $env:SeleniumWebDriverGeckoDriverVersion
 $SeleniumWebDriverIEDriverVersion= $env:SeleniumWebDriverIEDriverVersion
  
-$MicrosoftEdgeSeleniumToolsVersion=$env:MicrosoftEdgeSeleniumToolsVersion
- 
 $NUnitVersion= $env:NUnitVersion
 $NUnit3TestAdapterVersion= $env:NUnit3TestAdapterVersion
 
@@ -34,8 +32,7 @@ $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3",
 "NUnit3TestAdapter-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
-"NLog-version\`$`" Value=`"$regex3",
-"Microsoft\.Edge\.SeleniumTools-version\`$`" Value=`"$regex3"
+"NLog-version\`$`" Value=`"$regex3""
 
 $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
@@ -49,8 +46,7 @@ $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION"
 "NUnit3TestAdapter-version`$`" Value=`"$NUNIT3TESTADAPTERVERSION",
 "Selenium.WebDriver-version`$`" Value=`"$SELENIUMWEBDRIVERVERSION",
 "Selenium.Support-version`$`" Value=`"$SELENIUMSUPPORTVERSION",
-"NLog-version`$`" Value=`"$NLOGVERSION",
-"Microsoft.Edge.SeleniumTools-version`$`" Value=`"$MICROSOFTEDGESELENIUMTOOLSVERSION"
+"NLog-version`$`" Value=`"$NLOGVERSION"
 
 
 For ($i=0; $i -lt $aArray.length; $i++) {
