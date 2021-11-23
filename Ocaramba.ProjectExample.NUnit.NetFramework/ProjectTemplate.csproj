@@ -33,9 +33,6 @@
 	</PropertyGroup>
 	<ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-	<Reference Include="Microsoft.Edge.SeleniumTools, Version=$Microsoft.Edge.SeleniumTools-version$.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Edge.SeleniumTools.$Microsoft.Edge.SeleniumTools-version$\lib\net45\Microsoft.Edge.SeleniumTools.dll</HintPath>
-    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.$NLog-version$\lib\net45\NLog.dll</HintPath>
     </Reference>
