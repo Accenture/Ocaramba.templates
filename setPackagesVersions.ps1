@@ -32,7 +32,7 @@ $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3",
 "NUnit3TestAdapter-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
-"NLog-version\`$`" Value=`"$regex3""
+"NLog-version\`$`" Value=`"$regex3"
 
 $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
