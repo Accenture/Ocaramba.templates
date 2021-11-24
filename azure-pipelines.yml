@@ -41,6 +41,7 @@ variables:
 
 steps:
 - task: PowerShell@2
+  displayName: Find latest tag name
   condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
   inputs:
     targetType: 'inline'
@@ -50,10 +51,12 @@ steps:
       Write-Host "##vso[task.setvariable variable=templateVersion]$tag"
 
 - task: PowerShell@2
+  displayName: Set template version
   inputs:
     targetType: 'inline'
     script: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
 - task: PowerShell@2
+  displayName: Set Packages Version
   inputs:
     filePath: './setPackagesVersions.ps1'
 - task: NuGetCommand@2
