@@ -22,8 +22,8 @@ variables:
   templateVersion: '1.9.7'
   OcarambaVersion: '4.0.0'
   
-  SeleniumWebDriverVersion: '4.0.1'
-  SeleniumSupportVersion: '4.0.1'
+  SeleniumWebDriverVersion: '4.1.0'
+  SeleniumSupportVersion: '4.1.0'
   
   SeleniumWebdriverChromeDriverVersion: '96.0.4664.4500'
   SeleniumWebDriverGeckoDriverVersion: '0.30.0.1'
