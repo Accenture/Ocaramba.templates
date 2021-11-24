@@ -33,8 +33,8 @@ variables:
   NUnit3TestAdapterVersion: '4.1.0'
 
   MicrosoftNetTestSdkVersion: '17.0.0'
-  MSTestTestAdapterVersion: '2.2.6'
-  MSTestTestFrameworkVersion: '2.2.7'
+  MSTestTestAdapterVersion: '2.2.8'
+  MSTestTestFrameworkVersion: '2.2.8'
   
   NPOIVersion: '2.5.5'
   NLogVersion: '4.7.11'
