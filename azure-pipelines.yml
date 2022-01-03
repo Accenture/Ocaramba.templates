@@ -19,25 +19,25 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   
-  templateVersion: '1.9.7'
-  OcarambaVersion: '4.0.0'
+  templateVersion: '2.0.1'
+  OcarambaVersion: '4.0.1'
   
   SeleniumWebDriverVersion: '4.1.0'
   SeleniumSupportVersion: '4.1.0'
   
   SeleniumWebdriverChromeDriverVersion: '96.0.4664.4500'
   SeleniumWebDriverGeckoDriverVersion: '0.30.0.1'
-  SeleniumWebDriverIEDriverVersion: '3.150.1.2'
+  SeleniumWebDriverIEDriverVersion: '4.0.0'
   
   NUnitVersion: '3.13.2'
-  NUnit3TestAdapterVersion: '4.1.0'
+  NUnit3TestAdapterVersion: '4.2.0'
 
-  MicrosoftNetTestSdkVersion: '17.0.0'
+  MicrosoftNetTestSdkVersion: '16.8.3'
   MSTestTestAdapterVersion: '2.2.8'
   MSTestTestFrameworkVersion: '2.2.8'
   
   NPOIVersion: '2.5.5'
-  NLogVersion: '4.7.11'
+  NLogVersion: '4.7.13'
 
 steps:
 - task: PowerShell@2
