@@ -55,10 +55,10 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WebDriver, Version=$Selenium.WebDriver-version$.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.WebDriver.$Selenium.WebDriver-version$\lib\net45\WebDriver.dll</HintPath>
+      <HintPath>..\packages\Selenium.WebDriver.$Selenium.WebDriver-version$\lib\net47\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support, Version=$Selenium.Support-version$.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.$Selenium.Support-version$\lib\net45\WebDriver.Support.dll</HintPath>
+      <HintPath>..\packages\Selenium.Support.$Selenium.Support-version$\lib\net47\WebDriver.Support.dll</HintPath>
     </Reference>
 	</ItemGroup>
 	<ItemGroup>
