@@ -20,7 +20,7 @@ variables:
   buildConfiguration: 'Release'
   
   templateVersion: '2.0.1'
-  OcarambaVersion: '4.0.1'
+  OcarambaVersion: '4.0.0'
   
   SeleniumWebDriverVersion: '4.1.0'
   SeleniumSupportVersion: '4.1.0'
