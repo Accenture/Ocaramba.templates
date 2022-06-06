@@ -37,7 +37,7 @@
       <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.8.3"/>
       <CustomParameter Name="$MSTest.TestAdapter-version$" Value="2.2.4"/>
       <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.4"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="102.0.5005.6102"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
       <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
