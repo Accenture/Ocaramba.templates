@@ -42,7 +42,7 @@
       <CustomParameter Name="$NPOI-version$" Value="2.5.3"/>
       <CustomParameter Name="$NUnit-version$" Value="3.13.2"/>
       <CustomParameter Name="$NUnit3TestAdapter-version$" Value="4.0.0"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="102.0.5005.6102"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
       <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
