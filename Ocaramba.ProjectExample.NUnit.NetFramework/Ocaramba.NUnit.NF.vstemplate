@@ -38,16 +38,16 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ProjectTestBase.cs">ProjectTestBase.cs</ProjectItem>
     </Project>
 	<CustomParameters>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
-      <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
-	    <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
-      <CustomParameter Name="$NUnit-version$" Value="3.13.2"/>
-      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="4.0.0"/>
-      <CustomParameter Name="$NLog-version$" Value="4.7.10"/>
-      <CustomParameter Name="$NPOI-version$" Value="2.5.3"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="4.0.2"/>
+      <CustomParameter Name="$Selenium.WebDriver-version$" Value="4.4.0"/>
+	    <CustomParameter Name="$Selenium.Support-version$" Value="4.4.0"/>
+      <CustomParameter Name="$NUnit-version$" Value="3.13.3"/>
+      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="4.2.1"/>
+      <CustomParameter Name="$NLog-version$" Value="5.0.2"/>
+      <CustomParameter Name="$NPOI-version$" Value="2.5.6"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="104.0.5112.7900"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.3.0"/>
   </CustomParameters>
   </TemplateContent>
 </VSTemplate>

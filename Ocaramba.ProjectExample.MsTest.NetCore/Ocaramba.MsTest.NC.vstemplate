@@ -34,13 +34,13 @@
 	  <ProjectItem ReplaceParameters="true" TargetFileName="Runsettings.runsettings">Runsettings.runsettings</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="16.8.3"/>
-      <CustomParameter Name="$MSTest.TestAdapter-version$" Value="2.2.4"/>
-      <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.4"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
+      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="17.3.0"/>
+      <CustomParameter Name="$MSTest.TestAdapter-version$" Value="2.2.10"/>
+      <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.10"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="104.0.5112.7900"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.3.0"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="4.0.2"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
