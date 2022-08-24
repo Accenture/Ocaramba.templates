@@ -88,7 +88,7 @@ steps:
     msbuildArgs: '/v:minimal'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    vsVersion: '17.0'
+    vsVersion: '16.0'
 
 - task: PublishPipelineArtifact@1
   inputs:
