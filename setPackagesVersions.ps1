@@ -22,7 +22,7 @@ $regex4='(\d+\.\d+\.\d+\.\d+)'
 
 $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3", 
 "Ocaramba-version\`$`" Value=`"$regex3", "NPOI-version\`$`" Value=`"$regex3",
-"Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex3",
+"Selenium\.WebDriver\.ChromeDriver-version\`$`" Value=`"$regex4",
 "MSTest\.TestAdapter-version\`$`" Value=`"$regex3",
 "MSTest\.TestFramework-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver\.GeckoDriver-version\`$`" Value=`"$regex3",
