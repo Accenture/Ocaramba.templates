@@ -37,14 +37,14 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="Testsettings.testsettings">Testsettings.testsettings</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Ocaramba-version$" Value="3.3.0"/>
-      <CustomParameter Name="$Selenium.WebDriver-version$" Value="3.141.0"/>
-      <CustomParameter Name="$Selenium.Support-version$" Value="3.141.0"/>
-      <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.4"/>
-      <CustomParameter Name="$NLog-version$" Value="4.7.10"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="91.0.4472"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.29.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="3.150.1"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="4.0.2"/>
+      <CustomParameter Name="$Selenium.WebDriver-version$" Value="4.4.0"/>
+      <CustomParameter Name="$Selenium.Support-version$" Value="4.4.0"/>
+      <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.10"/>
+      <CustomParameter Name="$NLog-version$" Value="5.0.2"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="104.0.5112.7900"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.3.0"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
