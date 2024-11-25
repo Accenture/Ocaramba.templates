@@ -62,7 +62,7 @@ jobs:
         file: |
           "**/Ocaramba**.csproj"
         version: ${{ env.templateVersion }}
-    - run: msbuild -t:Restore
+    - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
     - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
     - uses: actions/upload-artifact@v4
       with:
