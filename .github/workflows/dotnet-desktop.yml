@@ -28,7 +28,7 @@ env:
   NUnitVersion: 3.13.3
   NUnit3TestAdapterVersion: 4.6.0
 
-  MicrosoftNetTestSdkVersion: 17.4.0
+  MicrosoftNetTestSdkVersion: 17.12.0
   MSTestTestAdapterVersion: 2.2.10
   MSTestTestFrameworkVersion: 2.2.10
   
