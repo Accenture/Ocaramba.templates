@@ -1,0 +1,69 @@
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+    - '*'
+    paths-ignore:
+    - README.md
+    tags:
+    - '*'
+  schedule:
+  - cron: '0 18 * * 0'
+env:
+  solution: ${{ github.workspace }}/**/*.sln
+  buildPlatform: Any CPU
+  buildConfiguration: Release
+  
+  templateVersion: 2.0.5
+  OcarambaVersion: 4.2.0
+  
+  SeleniumWebDriverVersion: 4.4.0
+  SeleniumSupportVersion: 4.4.0
+  
+  SeleniumWebdriverChromeDriverVersion: 131.0.6778.8500
+  SeleniumWebDriverGeckoDriverVersion: 0.35.0
+  SeleniumWebDriverIEDriverVersion: 4.14.0
+  
+  NUnitVersion: 3.13.3
+  NUnit3TestAdapterVersion: 4.6.0
+
+  MicrosoftNetTestSdkVersion: 17.4.0
+  MSTestTestAdapterVersion: 2.2.10
+  MSTestTestFrameworkVersion: 2.2.10
+  
+  NPOIVersion: 2.7.2
+  NLogVersion: 5.3.4
+jobs:
+  build:
+    runs-on: windows-latest  
+    steps:
+    - uses: actions/checkout@v4
+    - uses: microsoft/setup-msbuild@v2
+    - shell: powershell
+      run: |
+        $tags = git tag --sort=-creatordate   
+        $tag = $tags[0]
+        Write-Host "##vso[task.setvariable variable=frameworkVersion]$tag"
+      if: startsWith(github.ref, 'refs/tags/')
+    - shell: powershell
+      run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
+    - shell: powershell
+      run: ./setPackagesVersions.ps1
+    - name: Setup nuget
+      uses: nuget/setup-nuget@v2
+      with:
+        nuget-version: latest
+    - name: Set project versions
+      id: update
+      uses: vers-one/dotnet-project-version-updater@v1.4
+      with:
+        file: |
+          "**/Ocaramba**.csproj"
+        version: ${{ env.frameworkVersion }}
+    - run: msbuild -t:Restore
+    - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
+    - uses: actions/upload-artifact@v4
+      with:
+        path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+        name: Template
