@@ -36,7 +36,7 @@ env:
   NLogVersion: 5.3.4
 jobs:
   build:
-    runs-on: windows-latest  
+    runs-on: windows-2019  
     steps:
     - uses: actions/checkout@v4
     - uses: microsoft/setup-msbuild@v2
