@@ -40,7 +40,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up MSBuild
-      uses: microsoft/setup-msbuild@v1
+      uses: microsoft/setup-msbuild@v2
     - shell: powershell
       run: |
         $tags = git tag --sort=-creatordate   
@@ -51,10 +51,6 @@ jobs:
       run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
     - shell: powershell
       run: ./setPackagesVersions.ps1
-    - name: Setup nuget
-      uses: nuget/setup-nuget@v2
-      with:
-        nuget-version: latest
     - name: Set project versions
       id: update
       uses: vers-one/dotnet-project-version-updater@v1.4
