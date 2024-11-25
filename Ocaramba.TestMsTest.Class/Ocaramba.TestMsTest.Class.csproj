@@ -15,6 +15,7 @@
     <RootNamespace>Ocaramba.TestMsTest.Class</RootNamespace>
     <AssemblyName>Ocaramba.TestMsTest.Class</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+	<Version>1.0.0</Version>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
