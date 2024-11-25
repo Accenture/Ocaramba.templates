@@ -11,7 +11,7 @@ on:
   schedule:
   - cron: '0 18 * * 0'
 env:
-  solution: ${{ github.workspace }}/*.sln
+  solution: ${{ github.workspace }}/Ocaramba.templates.sln
   buildPlatform: Any CPU
   buildConfiguration: Release
   
