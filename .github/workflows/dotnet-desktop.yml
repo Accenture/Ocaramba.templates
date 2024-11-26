@@ -60,12 +60,8 @@ jobs:
         version: ${{ env.templateVersion }}
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
     - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
-    - uses: actions/upload-artifact@v4
-      with:
-        path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
-        name: Template
-      if: startsWith(github.ref, 'refs/tags/')
     - name: 'Ocaramba Templates'
       run: gh release upload ${{github.event.release.tag_name}} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: startsWith(github.ref, 'refs/tags/')
