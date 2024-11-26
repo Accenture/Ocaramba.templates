@@ -61,7 +61,7 @@ jobs:
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
     - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
     - name: 'Ocaramba Templates'
-      run: gh release upload ${{github.event.release.tag_name}} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
+      run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: startsWith(github.ref, 'refs/tags/')
