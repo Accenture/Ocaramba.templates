@@ -17,6 +17,10 @@ $MSTestTestFrameworkVersion= $env:MSTestTestFrameworkVersion
 $NPOIVersion= $env:NPOIVersion
 $NLogVersion= $env:NLogVersion
 
+$SystemTextJsonVersion= $env:SYSTEMTEXTJSONVERSION
+$SystemTextEncodingsWebVersion= $env:SYSTEMTEXTENCODINGSWEBVERSION
+$SystemRuntimeCompilerServicesUnsafeVersion= $env:SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION
+
 $regex3='(\d+\.\d+\.\d+)'
 $regex4='(\d+\.\d+\.\d+\.\d+)'
 
@@ -32,7 +36,10 @@ $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3",
 "NUnit3TestAdapter-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
-"NLog-version\`$`" Value=`"$regex3"
+"NLog-version\`$`" Value=`"$regex3",
+"SystemTextJson-version`$`" Value=`"$regex3",
+"SystemRuntimeCompilerServicesUnsafe-version\`$`" Value=`"$regex3",
+"SystemTextEncodingsWeb-version\`$`" Value=`"$regex3"
 
 $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
@@ -46,7 +53,10 @@ $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION"
 "NUnit3TestAdapter-version`$`" Value=`"$NUNIT3TESTADAPTERVERSION",
 "Selenium.WebDriver-version`$`" Value=`"$SELENIUMWEBDRIVERVERSION",
 "Selenium.Support-version`$`" Value=`"$SELENIUMSUPPORTVERSION",
-"NLog-version`$`" Value=`"$NLOGVERSION"
+"NLog-version`$`" Value=`"$NLOGVERSION",
+"SystemTextJson-version`$`" Value=`"$SYSTEMTEXTJSONVERSION"
+"SystemRuntimeCompilerServicesUnsafe-version`$`" Value=`"$SYSTEMTEXTENCODINGSWEBVERSION"
+"SystemTextEncodingsWeb-version`$`" Value=`"$SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION"
 
 
 For ($i=0; $i -lt $aArray.length; $i++) {

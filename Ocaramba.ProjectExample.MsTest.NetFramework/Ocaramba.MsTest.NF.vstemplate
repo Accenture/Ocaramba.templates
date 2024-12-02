@@ -41,6 +41,9 @@
       <CustomParameter Name="$Selenium.WebDriver-version$" Value="4.4.0"/>
       <CustomParameter Name="$Selenium.Support-version$" Value="4.4.0"/>
       <CustomParameter Name="$MSTest.TestFramework-version$" Value="2.2.10"/>
+	  <CustomParameter Name="$System.Text.Json$" Value="9.0.0" />
+	  <CustomParameter Name="$System.Text.Encodings.Web$" Value="9.0.0" />
+	  <CustomParameter Name="$System.Runtime.CompilerServices.Unsafe$" Value="6.0.0" />
       <CustomParameter Name="$NLog-version$" Value="5.0.2"/>
       <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="104.0.5112.7900"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>

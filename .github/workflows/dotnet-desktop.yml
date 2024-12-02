@@ -34,6 +34,10 @@ env:
   
   NPOIVersion: 2.7.2
   NLogVersion: 5.3.4
+  
+  SystemTextJsonVersion: 9.0.0
+  SystemTextEncodingsWebVersion: 9.0.0
+  SystemRuntimeCompilerServicesUnsafeVersion: 6.0.0
 jobs:
   build:
     runs-on: windows-2019  
