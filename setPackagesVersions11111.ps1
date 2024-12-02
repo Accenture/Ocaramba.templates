@@ -1,25 +1,21 @@
-$OcarambaVersion=$env:OcarambaVersion
+$OcarambaVersion='4.2.0'
   
-$SeleniumWebDriverVersion=$env:SeleniumWebDriverVersion
-$SeleniumSupportVersion= $env:SeleniumSupportVersion
+$SeleniumWebDriverVersion='4.4.0'
+$SeleniumSupportVersion= '4.4.0'
   
-$SeleniumWebdriverChromeDriverVersion=$env:SeleniumWebdriverChromeDriverVersion
-$SeleniumWebDriverGeckoDriverVersion= $env:SeleniumWebDriverGeckoDriverVersion
-$SeleniumWebDriverIEDriverVersion= $env:SeleniumWebDriverIEDriverVersion
+$SeleniumWebdriverChromeDriverVersion='131.0.6778.8500'
+$SeleniumWebDriverGeckoDriverVersion= '0.35.0'
+$SeleniumWebDriverIEDriverVersion= '4.14.0'
  
-$NUnitVersion= $env:NUnitVersion
-$NUnit3TestAdapterVersion= $env:NUnit3TestAdapterVersion
+$NUnitVersion= '3.13.3'
+$NUnit3TestAdapterVersion= '4.6.0'
 
-$MicrosoftNetTestSdkVersion= $env:MicrosoftNetTestSdkVersion
-$MSTestTestAdapterVersion= $env:MSTestTestAdapterVersion
-$MSTestTestFrameworkVersion= $env:MSTestTestFrameworkVersion
+$MicrosoftNetTestSdkVersion= '17.12.0'
+$MSTestTestAdapterVersion= '2.2.10'
+$MSTestTestFrameworkVersion= '2.2.10'
 
-$NPOIVersion= $env:NPOIVersion
-$NLogVersion= $env:NLogVersion
-
-$SystemTextJsonVersion= $env:SYSTEMTEXTJSONVERSION
-$SystemTextEncodingsWebVersion= $env:SYSTEMTEXTENCODINGSWEBVERSION
-$SystemRuntimeCompilerServicesUnsafeVersion= $env:SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION
+$NPOIVersion= '2.7.2'
+$NLogVersion= '5.3.4'
 
 $regex3='(\d+\.\d+\.\d+)'
 $regex4='(\d+\.\d+\.\d+\.\d+)'
@@ -36,10 +32,7 @@ $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3",
 "NUnit3TestAdapter-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
-"NLog-version\`$`" Value=`"$regex3",
-"SystemTextJson-version`$`" Value=`"$regex3",
-"SystemRuntimeCompilerServicesUnsafe-version\`$`" Value=`"$regex3",
-"SystemTextEncodingsWeb-version\`$`" Value=`"$regex3"
+"NLog-version\`$`" Value=`"$regex3"
 
 $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
@@ -53,10 +46,7 @@ $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION"
 "NUnit3TestAdapter-version`$`" Value=`"$NUNIT3TESTADAPTERVERSION",
 "Selenium.WebDriver-version`$`" Value=`"$SELENIUMWEBDRIVERVERSION",
 "Selenium.Support-version`$`" Value=`"$SELENIUMSUPPORTVERSION",
-"NLog-version`$`" Value=`"$NLOGVERSION",
-"SystemTextJson-version`$`" Value=`"$SYSTEMTEXTJSONVERSION"
-"SystemRuntimeCompilerServicesUnsafe-version`$`" Value=`"$SYSTEMTEXTENCODINGSWEBVERSION"
-"SystemTextEncodingsWeb-version`$`" Value=`"$SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION"
+"NLog-version`$`" Value=`"$NLOGVERSION"
 
 
 For ($i=0; $i -lt $aArray.length; $i++) {
@@ -80,6 +70,5 @@ Write-Host $bArray[$i]
 	((Get-Content -path ./Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate
 	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetFramework/Ocaramba.MsTest.NF.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetFramework/Ocaramba.MsTest.NF.vstemplate
 	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate
-	((Get-Content -path ./Ocaramba.ProjectExample.NUnit.NetFramework/App.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.NUnit.NetFramework/App.config
-	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetFramework/App.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetFramework/App.config
+	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetFramework/packages.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetFramework/packages.config
   }
