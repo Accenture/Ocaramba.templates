@@ -11,8 +11,8 @@ The extension contains:
 
 - Project templates:
   - Ocaramba.MsTest (.NET Framework 4.7.2)
-  - Ocaramba.MsTest (.NET Core 3.1)
-  - Ocaramba.NUnit (.NET Core 3.1)
+  - Ocaramba.MsTest (.NET 8.0)
+  - Ocaramba.NUnit (.NET 8.0)
   - Ocaramba.NUnit (.NET Framework 4.7.2)
 - Item templates:
   - Ocaramba Page Object
@@ -34,7 +34,7 @@ All templates are located on Visual Studio's **New Project** and **New Item** wi
 
 *Find out more on [Ocaramba](https://github.com/ObjectivityLtd/Ocaramba).*
 
-[![Build Status](https://dev.azure.com/ocaramba/Ocaramba.templates/_apis/build/status/ObjectivityLtd.Ocaramba.templates)](https://dev.azure.com/ocaramba/Ocaramba.templates/_build?definitionId=1&_a=summary)
+![Build status](https://github.com/Accenture/Ocaramba/actions/workflows/github-actions.yml/badge.svg)
 
 Download Ocaramba Visual Studio templates [![Ocaramba Templates](https://img.shields.io/badge/get-Ocaramba_Templates-green.svg?color=4BC21F)](https://marketplace.visualstudio.com/items?itemName=Ocaramba.Ocaramba1)
 

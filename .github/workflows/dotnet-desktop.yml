@@ -18,14 +18,14 @@ env:
   templateVersion: 2.0.6
   OcarambaVersion: 4.2.0
   
-  SeleniumWebDriverVersion: 4.4.0
-  SeleniumSupportVersion: 4.4.0
+  SeleniumWebDriverVersion: 4.27.0
+  SeleniumSupportVersion: 4.27.0
   
   SeleniumWebdriverChromeDriverVersion: 131.0.6778.8500
   SeleniumWebDriverGeckoDriverVersion: 0.35.0
   SeleniumWebDriverIEDriverVersion: 4.14.0
   
-  NUnitVersion: 3.13.3
+  NUnitVersion: 4.2.2
   NUnit3TestAdapterVersion: 4.6.0
 
   MicrosoftNetTestSdkVersion: 17.12.0
@@ -52,7 +52,7 @@ jobs:
         Write-Host "##vso[task.setvariable variable=frameworkVersion]$tag"
       if: startsWith(github.ref, 'refs/tags/')
     - shell: powershell
-      run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="$(templateVersion)" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
+      run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="${{ env.templateVersion }}" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
     - shell: powershell
       run: ./setPackagesVersions.ps1
     - name: Setup nuget
@@ -64,7 +64,7 @@ jobs:
       uses: vers-one/dotnet-project-version-updater@v1.4
       with:
         file: |
-          "**/Ocaramba**.csproj"
+          "**/Ocaramba**.csproj",
           "!**/Ocaramba.Templates.csproj"
         version: ${{ env.templateVersion }}
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
