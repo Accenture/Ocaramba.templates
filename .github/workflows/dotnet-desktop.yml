@@ -73,7 +73,7 @@ jobs:
       with:
         path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
         name: Template
-    - name: 'Ocaramba Templates'
+    - name: 'Upload windows artifact to Release'
       run: gh release upload ${{ env.frameworkVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
