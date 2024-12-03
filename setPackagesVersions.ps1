@@ -36,10 +36,7 @@ $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3",
 "NUnit3TestAdapter-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
-"NLog-version\`$`" Value=`"$regex3",
-"SystemTextJson-version`$`" Value=`"$regex3",
-"SystemRuntimeCompilerServicesUnsafe-version\`$`" Value=`"$regex3",
-"SystemTextEncodingsWeb-version\`$`" Value=`"$regex3"
+"NLog-version\`$`" Value=`"$regex3"
 
 $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
@@ -53,11 +50,9 @@ $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION"
 "NUnit3TestAdapter-version`$`" Value=`"$NUNIT3TESTADAPTERVERSION",
 "Selenium.WebDriver-version`$`" Value=`"$SELENIUMWEBDRIVERVERSION",
 "Selenium.Support-version`$`" Value=`"$SELENIUMSUPPORTVERSION",
-"NLog-version`$`" Value=`"$NLOGVERSION",
-"SystemTextJson-version`$`" Value=`"$SYSTEMTEXTJSONVERSION"
-"SystemRuntimeCompilerServicesUnsafe-version`$`" Value=`"$SYSTEMTEXTENCODINGSWEBVERSION"
-"SystemTextEncodingsWeb-version`$`" Value=`"$SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION"
+"NLog-version`$`" Value=`"$NLOGVERSION"
 
+$cArray="./Ocaramba.ProjectExample.NUnit.NetFramework/App.config","./Ocaramba.ProjectExample.MsTest.NetFramework/App.config"
 
 For ($i=0; $i -lt $aArray.length; $i++) {
 	echo $bArray[$i]
@@ -83,3 +78,14 @@ Write-Host $bArray[$i]
 	((Get-Content -path ./Ocaramba.ProjectExample.NUnit.NetFramework/App.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.NUnit.NetFramework/App.config
 	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetFramework/App.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetFramework/App.config
   }
+
+For ($i=0; $i -lt $cArray.length; $i++) {
+	echo $cArray[$i]
+	$configFilePath = $cArray[$i]
+	$configContent = Get-Content -Path $configFilePath
+	$configContent = $configContent -replace '\$SystemTextEncodingsWeb-version\$', $SystemTextEncodingsWebVersion
+	$configContent = $configContent -replace '\$SystemRuntimeCompilerServicesUnsafe-version\$', $SystemRuntimeCompilerServicesUnsafeVersion
+	$configContent = $configContent -replace '\$SystemTextJson-version\$', $SystemTextJsonVersion
+
+	Set-Content -Path $configFilePath -Value $configContent
+}	
