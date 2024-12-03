@@ -30,9 +30,18 @@ The extension contains:
 In case of problems with executing tests, update at least TestAdapter and Selenium browser drivers.
 You can also try to uninstall and install back one of the browser drivers.
 
-In case of build failure due to a missing package, try uninstalling and reinstalling that package again.
+In case of build failure due to a missing package, try uninstalling and reinstalling that package again. In case of problems with unistalling package try to update to previous version and than back update to the latest version. 
+
+In case of test execution failure with following error
+ 
+    OneTimeSetUp: System.IO.FileNotFoundException : Could not load fle or assembly 'System.Text.Json, Version=9.0.0.0
  
  
+ Add to your csproj file following lines in ItemGroup section
+
+ 	<Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.0\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+    </Reference>
 ![Update](images/Update.png)
 
 All templates are located on Visual Studio's **New Project** and **New Item** windows inside **Ocaramba** category.
