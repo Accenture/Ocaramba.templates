@@ -61,10 +61,10 @@ jobs:
         nuget-version: latest
     - name: Set project versions
       id: update
-      uses: vers-one/dotnet-project-version-updater@v1.4
+      uses: vers-one/dotnet-project-version-updater@v1.7
       with:
         file: |
-          "**/Ocaramba**.csproj"
+          "**/Ocaramba**.csproj",
           "!**/Ocaramba.Templates.csproj"
         version: ${{ env.templateVersion }}
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
