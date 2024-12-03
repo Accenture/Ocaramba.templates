@@ -73,12 +73,8 @@ jobs:
       with:
         path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
         name: Template
-    - name: 'Upload windows artifact to Release'
-      shell: powershell
-      run: |
-        $tags = git tag --sort=-creatordate   
-        $tag = $tags[0]
-        gh release upload $tag ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
+    - name: 'Upload vsix artifact to Release'
+      run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: startsWith(github.ref, 'refs/tags/')
