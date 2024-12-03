@@ -15,7 +15,7 @@ env:
   buildPlatform: Any CPU
   buildConfiguration: Release
   
-  templateVersion: 2.0.5
+  templateVersion: 2.0.6
   OcarambaVersion: 4.2.0
   
   SeleniumWebDriverVersion: 4.4.0
@@ -61,7 +61,7 @@ jobs:
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
     - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
     - name: 'Ocaramba Templates'
-      run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
+      run: gh release upload ${{ env.frameworkVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: startsWith(github.ref, 'refs/tags/')
