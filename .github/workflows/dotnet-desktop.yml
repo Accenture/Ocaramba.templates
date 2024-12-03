@@ -18,14 +18,14 @@ env:
   templateVersion: 2.0.6
   OcarambaVersion: 4.2.0
   
-  SeleniumWebDriverVersion: 4.4.0
-  SeleniumSupportVersion: 4.4.0
+  SeleniumWebDriverVersion: 4.27.0
+  SeleniumSupportVersion: 4.27.0
   
   SeleniumWebdriverChromeDriverVersion: 131.0.6778.8500
   SeleniumWebDriverGeckoDriverVersion: 0.35.0
   SeleniumWebDriverIEDriverVersion: 4.14.0
   
-  NUnitVersion: 3.13.3
+  NUnitVersion: 4.2.2
   NUnit3TestAdapterVersion: 4.6.0
 
   MicrosoftNetTestSdkVersion: 17.12.0
@@ -34,13 +34,17 @@ env:
   
   NPOIVersion: 2.7.2
   NLogVersion: 5.3.4
+  
+  SystemTextJsonVersion: 9.0.0
+  SystemTextEncodingsWebVersion: 9.0.0
+  SystemRuntimeCompilerServicesUnsafeVersion: 6.0.0
 jobs:
   build:
     runs-on: windows-2019  
     steps:
     - uses: actions/checkout@v4
     - name: Set up MSBuild
-      uses: microsoft/setup-msbuild@v2
+      uses: microsoft/setup-msbuild@v1
     - shell: powershell
       run: |
         $tags = git tag --sort=-creatordate   
@@ -51,17 +55,21 @@ jobs:
       run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="${{ env.templateVersion }}" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
     - shell: powershell
       run: ./setPackagesVersions.ps1
+    - name: Setup nuget
+      uses: nuget/setup-nuget@v2
+      with:
+        nuget-version: latest
     - name: Set project versions
       id: update
       uses: vers-one/dotnet-project-version-updater@v1.4
       with:
         file: |
-          "**/Ocaramba**.csproj"
+          "**/Ocaramba**.csproj",
+          "!**/Ocaramba.Templates.csproj"
         version: ${{ env.templateVersion }}
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
     - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
-    - name: 'Ocaramba Templates'
-      run: gh release upload ${{ env.frameworkVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      if: startsWith(github.ref, 'refs/tags/')
+    - uses: actions/upload-artifact@v4
+      with:
+        path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+        name: Template

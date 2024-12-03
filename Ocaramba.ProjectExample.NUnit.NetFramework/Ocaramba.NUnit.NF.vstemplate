@@ -48,6 +48,9 @@
       <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="104.0.5112.7900"/>
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.3.0"/>
+	  <CustomParameter Name="$SystemTextJson-version$" Value="9.0.0" />
+	  <CustomParameter Name="$SystemTextEncodingsWeb-version$" Value="9.0.0" />
+	  <CustomParameter Name="$SystemRuntimeCompilerServicesUnsafe-version$" Value="6.0.0" />
   </CustomParameters>
   </TemplateContent>
 </VSTemplate>
