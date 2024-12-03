@@ -18,14 +18,14 @@ env:
   templateVersion: 2.0.6
   OcarambaVersion: 4.2.0
   
-  SeleniumWebDriverVersion: 4.4.0
-  SeleniumSupportVersion: 4.4.0
+  SeleniumWebDriverVersion: 4.27.0
+  SeleniumSupportVersion: 4.27.0
   
   SeleniumWebdriverChromeDriverVersion: 131.0.6778.8500
   SeleniumWebDriverGeckoDriverVersion: 0.35.0
   SeleniumWebDriverIEDriverVersion: 4.14.0
   
-  NUnitVersion: 3.13.3
+  NUnitVersion: 4.2.2
   NUnit3TestAdapterVersion: 4.6.0
 
   MicrosoftNetTestSdkVersion: 17.12.0
