@@ -19,14 +19,19 @@ The extension contains:
   - Ocaramba NUnit Test Object
   - Ocaramba MsTest Test Object
 
+
 ![Add New Project window](images/new-project.png)
 
 ![Add New Item window](images/new-item.png)
 
 ![Project](images/project.png)
 
+## Troubleshooting & Known Issues
 In case of problems with executing tests, update at least TestAdapter and Selenium browser drivers.
 You can also try to uninstall and install back one of the browser drivers.
+
+In case of build failure due to a missing package, try uninstalling and reinstalling that package again.
+ 
  
 ![Update](images/Update.png)
 
