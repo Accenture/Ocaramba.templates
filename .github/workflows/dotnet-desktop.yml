@@ -65,7 +65,8 @@ jobs:
       with:
         file: |
           "**/Ocaramba**.csproj",
-          "!**/Ocaramba.Templates.csproj"
+          "!**/Ocaramba.Templates.csproj",
+          "**/**.vsixmanifest"
         version: ${{ env.templateVersion }}
     - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
     - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
