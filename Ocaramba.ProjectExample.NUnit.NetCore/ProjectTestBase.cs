@@ -24,8 +24,8 @@ namespace $safeprojectname$
 {
     using NUnit.Framework;
     using NUnit.Framework.Interfaces;
-    using Ocaramba;
-    using Ocaramba.Logger;
+	using OcarambaLite.Logger;
+
 
     /// <summary>
     /// The base class for all tests <see href="https://github.com/ObjectivityLtd/Ocaramba/wiki/ProjectTestBase-class">More details on wiki</see>.
