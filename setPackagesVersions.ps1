@@ -19,7 +19,6 @@ $NLogVersion= $env:NLogVersion
 
 $SystemTextJsonVersion= $env:SYSTEMTEXTJSONVERSION
 $SystemTextEncodingsWebVersion= $env:SYSTEMTEXTENCODINGSWEBVERSION
-$SystemRuntimeCompilerServicesUnsafeVersion= $env:SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION
 
 $regex3='(\d+\.\d+\.\d+)'
 $regex4='(\d+\.\d+\.\d+\.\d+)'
@@ -52,8 +51,6 @@ $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION"
 "Selenium.Support-version`$`" Value=`"$SELENIUMSUPPORTVERSION",
 "NLog-version`$`" Value=`"$NLOGVERSION"
 
-$cArray="./Ocaramba.ProjectExample.NUnit.NetFramework/App.config","./Ocaramba.ProjectExample.MsTest.NetFramework/App.config"
-
 For ($i=0; $i -lt $aArray.length; $i++) {
 	echo $bArray[$i]
 	$valueNumber=$bArray[$i] -split 'Value'
@@ -64,28 +61,13 @@ For ($i=0; $i -lt $aArray.length; $i++) {
 	echo $aArray[$i]	
   }
 
-Write-Host updating ./Ocaramba.ProjectExample.NUnit.NetCore/Ocaramba.NUnit.NC.vstemplate,`n /Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate,`n `
-./Ocaramba.ProjectExample.MsTest.NetFramework/Ocaramba.MsTest.NF.vstemplate,`n ./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate
+Write-Host updating ./Ocaramba.ProjectExample.NUnit.NetCore/Ocaramba.NUnit.NC.vstemplate,`n `
+./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate
 
 For ($i=0; $i -lt $aArray.length; $i++) {
 
 Write-Host $bArray[$i] 
 
 	((Get-Content -path ./Ocaramba.ProjectExample.NUnit.NetCore/Ocaramba.NUnit.NC.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.NUnit.NetCore/Ocaramba.NUnit.NC.vstemplate
-	((Get-Content -path ./Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.NUnit.NF.vstemplate
-	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetFramework/Ocaramba.MsTest.NF.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetFramework/Ocaramba.MsTest.NF.vstemplate
 	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetCore/Ocaramba.MsTest.NC.vstemplate
-	((Get-Content -path ./Ocaramba.ProjectExample.NUnit.NetFramework/App.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.NUnit.NetFramework/App.config
-	((Get-Content -path ./Ocaramba.ProjectExample.MsTest.NetFramework/App.config -Raw) -replace $aArray[$i],$bArray[$i]) | Set-Content -Path ./Ocaramba.ProjectExample.MsTest.NetFramework/App.config
   }
-
-For ($i=0; $i -lt $cArray.length; $i++) {
-	echo $cArray[$i]
-	$configFilePath = $cArray[$i]
-	$configContent = Get-Content -Path $configFilePath
-	$configContent = $configContent -replace '\$SystemTextEncodingsWeb-version\$', $SystemTextEncodingsWebVersion
-	$configContent = $configContent -replace '\$SystemRuntimeCompilerServicesUnsafe-version\$', $SystemRuntimeCompilerServicesUnsafeVersion
-	$configContent = $configContent -replace '\$SystemTextJson-version\$', $SystemTextJsonVersion
-
-	Set-Content -Path $configFilePath -Value $configContent
-}	

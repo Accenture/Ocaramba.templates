@@ -1,10 +1,6 @@
-/.vs/Ocaramba.templates/v15
 /Ocaramba.templates.sln.DotSettings.user
 /**/obj
-/.vs
+.vs
 /packages
 /**/bin
-/Ocaramba.ProjectExample.NUnit.NetFramework/Ocaramba.ProjectExample.NUnit.NetFramework.csproj.user
-/Ocaramba.ProjectExample.NUnit.NetFramework/NLog.xsd
-/Ocaramba.ProjectExample.MsTest.NetFramework/*.user
 .vscode/settings.json
