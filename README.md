@@ -10,10 +10,8 @@ Thanks to the Ocaramba.Templates you can create in the few minutes ready to use 
 The extension contains:
 
 - Project templates:
-  - Ocaramba.MsTest (.NET Framework 4.7.2)
   - Ocaramba.MsTest (.NET 8.0)
   - Ocaramba.NUnit (.NET 8.0)
-  - Ocaramba.NUnit (.NET Framework 4.7.2)
 - Item templates:
   - Ocaramba Page Object
   - Ocaramba NUnit Test Object
