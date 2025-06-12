@@ -19,7 +19,6 @@ $NLogVersion= $env:NLogVersion
 
 $SystemTextJsonVersion= $env:SYSTEMTEXTJSONVERSION
 $SystemTextEncodingsWebVersion= $env:SYSTEMTEXTENCODINGSWEBVERSION
-$SystemRuntimeCompilerServicesUnsafeVersion= $env:SYSTEMRUNTIMECOMPILERSERVICESUNSAFEVERSION
 
 $regex3='(\d+\.\d+\.\d+)'
 $regex4='(\d+\.\d+\.\d+\.\d+)'
@@ -84,7 +83,6 @@ For ($i=0; $i -lt $cArray.length; $i++) {
 	$configFilePath = $cArray[$i]
 	$configContent = Get-Content -Path $configFilePath
 	$configContent = $configContent -replace '\$SystemTextEncodingsWeb-version\$', $SystemTextEncodingsWebVersion
-	$configContent = $configContent -replace '\$SystemRuntimeCompilerServicesUnsafe-version\$', $SystemRuntimeCompilerServicesUnsafeVersion
 	$configContent = $configContent -replace '\$SystemTextJson-version\$', $SystemTextJsonVersion
 
 	Set-Content -Path $configFilePath -Value $configContent

@@ -90,23 +90,9 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
-    <ProjectReference Include="..\Ocaramba.ProjectExample.MsTest.NetFramework\Ocaramba.MsTest.NetFramework.csproj">
-      <Project>{0706AE93-76DA-43AF-8117-A8BD4A346A93}</Project>
-      <Name>Ocaramba.MsTest.NetFramework</Name>
-      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
-    </ProjectReference>
     <ProjectReference Include="..\Ocaramba.ProjectExample.NUnit.NetCore\Ocaramba.NUnit.NetCore.csproj">
       <Project>{0D939866-7020-46D8-B066-2CBF25DB6B49}</Project>
       <Name>Ocaramba.NUnit.NetCore</Name>
-      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
-    </ProjectReference>
-    <ProjectReference Include="..\Ocaramba.ProjectExample.NUnit.NetFramework\Ocaramba.NUnit.NetFramework.csproj">
-      <Project>{ff7b0974-e071-400a-a909-a083a40a592a}</Project>
-      <Name>Ocaramba.NUnit.NetFramework</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>

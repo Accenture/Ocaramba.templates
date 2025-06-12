@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5C3EAAB-7DD8-4D6C-9E18-A75F37BF817B}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,15 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.MsTest.NetFramework", "Ocaramba.ProjectExample.MsTest.NetFramework\Ocaramba.MsTest.NetFramework.csproj", "{0706AE93-76DA-43AF-8117-A8BD4A346A93}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.Templates", "Ocaramba.Templates.VSIX\Ocaramba.Templates.csproj", "{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.PageObject.Class", "Ocaramba.PageObjectClassTemplate\Ocaramba.PageObject.Class.csproj", "{ADD3EA19-5FDF-411F-B1B6-00D733E6EB02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.TestNunit.Class", "Ocaramba.TestNunit.Class.Template\Ocaramba.TestNunit.Class.csproj", "{BB31ED7A-719A-48A3-9204-55AACA222997}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.NUnit.NetFramework", "Ocaramba.ProjectExample.NUnit.NetFramework\Ocaramba.NUnit.NetFramework.csproj", "{FF7B0974-E071-400A-A909-A083A40A592A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocaramba.NUnit.NetCore", "Ocaramba.ProjectExample.NUnit.NetCore\Ocaramba.NUnit.NetCore.csproj", "{0D939866-7020-46D8-B066-2CBF25DB6B49}"
 EndProject
@@ -38,10 +34,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0706AE93-76DA-43AF-8117-A8BD4A346A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0706AE93-76DA-43AF-8117-A8BD4A346A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0706AE93-76DA-43AF-8117-A8BD4A346A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0706AE93-76DA-43AF-8117-A8BD4A346A93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05AB4DB9-1DC9-460A-804E-6ACDB04BD938}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,10 +46,6 @@ Global
 		{BB31ED7A-719A-48A3-9204-55AACA222997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB31ED7A-719A-48A3-9204-55AACA222997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB31ED7A-719A-48A3-9204-55AACA222997}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF7B0974-E071-400A-A909-A083A40A592A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF7B0974-E071-400A-A909-A083A40A592A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF7B0974-E071-400A-A909-A083A40A592A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF7B0974-E071-400A-A909-A083A40A592A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D939866-7020-46D8-B066-2CBF25DB6B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D939866-7020-46D8-B066-2CBF25DB6B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D939866-7020-46D8-B066-2CBF25DB6B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
