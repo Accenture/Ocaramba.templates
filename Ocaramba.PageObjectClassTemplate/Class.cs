@@ -19,7 +19,7 @@ namespace $rootnamespace$
     /// </summary>
     public class $safeitemrootname$ : ProjectPageBase
         {
-            $if$ ($targetframeworkversion$ >= 4.5)private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();$endif$$if$ ($targetframeworkversion$ < 4.0)private readonly NLog.Logger Logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();$endif$
+            private static readonly NLog.Logger Logger = LogManager.GetCurrentClassLogger();
 
             /// <summary>
             /// Locators for elements
@@ -42,7 +42,7 @@ namespace $rootnamespace$
             /// </summary>
             public void ClickOnElementWithLocatorFormating(string page)
             {
-                $if$ ($targetframeworkversion$ >= 4.5)Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$$if$ ($targetframeworkversion$ < 4.0)Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$
+                Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
                 this.Driver.GetElement(this.linkLocator.Format(page)).Click();
             }
 
@@ -51,7 +51,7 @@ namespace $rootnamespace$
             /// </summary>
             public void ClickOnElement()
     {
-                $if$ ($targetframeworkversion$ >= 4.5)Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$$if$ ($targetframeworkversion$ < 4.0)Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");$endif$
+                Logger.Info(CultureInfo.CurrentCulture, "Clicking on element link");
                 this.Driver.GetElement(this.basicAuthLink).Click();
             }
 
