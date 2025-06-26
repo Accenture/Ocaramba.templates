@@ -15,13 +15,13 @@ env:
   buildPlatform: Any CPU
   buildConfiguration: Release
   
-  templateVersion: 2.0.9
-  OcarambaVersion: 4.2.3
+  templateVersion: 2.0.10
+  OcarambaVersion: 4.2.4
   
   SeleniumWebDriverVersion: 4.33.0
   SeleniumSupportVersion: 4.33.0
   
-  SeleniumWebdriverChromeDriverVersion: 137.0.7151.11900
+  SeleniumWebdriverChromeDriverVersion: 138.0.7204.4900
   SeleniumWebDriverGeckoDriverVersion: 0.36.0
   SeleniumWebDriverIEDriverVersion: 4.14.0
   
@@ -33,7 +33,7 @@ env:
   MSTestTestFrameworkVersion: 3.9.3
   
   NPOIVersion: 2.7.3
-  NLogVersion: 5.5.0
+  NLogVersion: 6.0.0
   
   SystemTextJsonVersion: 9.0.6
   SystemTextEncodingsWebVersion: 9.0.6
