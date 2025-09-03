@@ -18,6 +18,7 @@
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="$Selenium.WebDriver.GeckoDriver-version$" />
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="$Selenium.WebDriver.IEDriver-version$" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="$Selenium.WebDriver.ChromeDriver-version$" />
+   <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="$Selenium.WebDriver.MSEdgeDriver-version$" />
 	</ItemGroup>
 	<ItemGroup>
     <Compile Include="DataDriven\DataDrivenHelper.cs" />
