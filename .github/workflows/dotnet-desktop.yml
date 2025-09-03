@@ -3,77 +3,78 @@ on:
   pull_request:
   push:
     branches:
-    - '*'
+      - "*"
     paths-ignore:
-    - README.md
+      - README.md
     tags:
-    - '*'
+      - "*"
   schedule:
-  - cron: '0 18 * * 0'
+    - cron: "0 18 * * 0"
 env:
   solution: ${{ github.workspace }}/Ocaramba.templates.sln
   buildPlatform: Any CPU
   buildConfiguration: Release
-  
-  templateVersion: 2.0.10
-  OcarambaVersion: 4.2.4
-  
-  SeleniumWebDriverVersion: 4.33.0
-  SeleniumSupportVersion: 4.33.0
-  
-  SeleniumWebdriverChromeDriverVersion: 138.0.7204.4900
+
+  templateVersion: 2.0.11
+  OcarambaVersion: 4.2.5
+
+  SeleniumWebDriverVersion: 4.35.0
+  SeleniumSupportVersion: 4.35.0
+
+  SeleniumWebdriverChromeDriverVersion: 138.0.7204.9400
   SeleniumWebDriverGeckoDriverVersion: 0.36.0
   SeleniumWebDriverIEDriverVersion: 4.14.0
-  
-  NUnitVersion: 4.3.2
-  NUnit3TestAdapterVersion: 5.0.0
+  SeleniumWebDriverMSEdgeDriverVersion: 139.0.3405.102
+
+  NUnitVersion: 4.4.0
+  NUnit3TestAdapterVersion: 5.1.0
 
   MicrosoftNetTestSdkVersion: 17.14.1
   MSTestTestAdapterVersion: 3.9.3
   MSTestTestFrameworkVersion: 3.9.3
-  
-  NPOIVersion: 2.7.3
-  NLogVersion: 6.0.0
-  
-  SystemTextJsonVersion: 9.0.6
-  SystemTextEncodingsWebVersion: 9.0.6
+
+  NPOIVersion: 2.7.4
+  NLogVersion: 6.0.3
+
+  SystemTextJsonVersion: 9.0.7
+  SystemTextEncodingsWebVersion: 9.0.7
 jobs:
   build:
-    runs-on: windows-latest 
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up MSBuild
-      uses: microsoft/setup-msbuild@v1
-    - shell: powershell
-      run: |
-        $tags = git tag --sort=-creatordate   
-        $tag = $tags[0]
-        echo "{frameworkVersion}={value}" >> "$tag"
-      if: startsWith(github.ref, 'refs/tags/')
-    - shell: powershell
-      run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="${{ env.templateVersion }}" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
-    - shell: powershell
-      run: ./setPackagesVersions.ps1
-    - name: Setup nuget
-      uses: nuget/setup-nuget@v2
-      with:
-        nuget-version: latest
-    - name: Set project versions
-      id: update
-      uses: vers-one/dotnet-project-version-updater@v1.4
-      with:
-        file: |
-          "**/Ocaramba**.csproj",
-          "!**/Ocaramba.Templates.csproj"
-        version: ${{ env.templateVersion }}
-    - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
-    - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
-    - uses: actions/upload-artifact@v4
-      with:
-        path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
-        name: Template
-    - name: 'Upload vsix artifact to Release'
-      run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix        
-      env:
+      - uses: actions/checkout@v4
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v1
+      - shell: powershell
+        run: |
+          $tags = git tag --sort=-creatordate   
+          $tag = $tags[0]
+          echo "{frameworkVersion}={value}" >> "$tag"
+        if: startsWith(github.ref, 'refs/tags/')
+      - shell: powershell
+        run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="${{ env.templateVersion }}" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
+      - shell: powershell
+        run: ./setPackagesVersions.ps1
+      - name: Setup nuget
+        uses: nuget/setup-nuget@v2
+        with:
+          nuget-version: latest
+      - name: Set project versions
+        id: update
+        uses: vers-one/dotnet-project-version-updater@v1.4
+        with:
+          file: |
+            "**/Ocaramba**.csproj",
+            "!**/Ocaramba.Templates.csproj"
+          version: ${{ env.templateVersion }}
+      - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
+      - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
+      - uses: actions/upload-artifact@v4
+        with:
+          path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+          name: Template
+      - name: "Upload vsix artifact to Release"
+        run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')

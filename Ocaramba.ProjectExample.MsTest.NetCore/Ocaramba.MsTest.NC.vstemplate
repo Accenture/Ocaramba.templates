@@ -41,6 +41,7 @@
       <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>
       <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.3.0"/>
       <CustomParameter Name="$Ocaramba-version$" Value="4.0.2"/>
+      <CustomParameter Name="$Selenium.WebDriver.MSEdgeDriver-version$" Value="139.0.3405.102"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
