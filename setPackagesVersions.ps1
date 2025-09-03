@@ -6,7 +6,7 @@ $SeleniumSupportVersion= $env:SeleniumSupportVersion
 $SeleniumWebdriverChromeDriverVersion=$env:SeleniumWebdriverChromeDriverVersion
 $SeleniumWebDriverGeckoDriverVersion= $env:SeleniumWebDriverGeckoDriverVersion
 $SeleniumWebDriverIEDriverVersion= $env:SeleniumWebDriverIEDriverVersion
-$SeleniumWebDriverMSEdgeDriverVersion= $env:SELENIUMWEBDRIVERMSEDGEDRIVERVERSION
+$SeleniumWebDriverMSEdgeDriverVersion= $env:SeleniumWebDriverMSEdgeDriverVersion
 
 $NUnitVersion= $env:NUnitVersion
 $NUnit3TestAdapterVersion= $env:NUnit3TestAdapterVersion
