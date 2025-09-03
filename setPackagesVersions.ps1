@@ -38,7 +38,7 @@ $aArray="Microsoft\.NET\.Test\.Sdk-version\`$`" Value=`"$regex3",
 "Selenium\.WebDriver-version\`$`" Value=`"$regex3",
 "Selenium\.Support-version\`$`" Value=`"$regex3",
 "NLog-version\`$`" Value=`"$regex3",
-"Selenium\.WebDriver\.MSEdgeDriver-version\`$`" Value=`"$regex4",
+"Selenium\.WebDriver\.MSEdgeDriver-version\`$`" Value=`"$regex4"
 
 $bArray="Microsoft.NET.Test.Sdk-version`$`" Value=`"$MICROSOFTNETTESTSDKVERSION", 
 "Ocaramba-version`$`" Value=`"$OCARAMBAVERSION","NPOI-version`$`" Value=`"$NPOIVERSION",
