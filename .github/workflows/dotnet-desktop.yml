@@ -59,79 +59,96 @@ jobs:
         run: |
           pwsh ./scripts/get-versions.ps1
 
-      - name: Update workflow variables
+      - name: Set environment variables from version outputs
         shell: pwsh
         run: |
-          $file = ".github/workflows/dotnet-desktop.yml"
+          Write-Host "Setting environment variables from extracted versions..."
 
-          $vars = @{
-              SeleniumWebDriverVersion              = "${{ steps.versions.outputs.SeleniumWebDriverVersion }}"
-              SeleniumSupportVersion                = "${{ steps.versions.outputs.SeleniumSupportVersion }}"
-              SeleniumWebdriverChromeDriverVersion  = "${{ steps.versions.outputs.SeleniumWebdriverChromeDriverVersion }}"
-              SeleniumWebDriverGeckoDriverVersion   = "${{ steps.versions.outputs.SeleniumWebDriverGeckoDriverVersion }}"
-              SeleniumWebDriverIEDriverVersion      = "${{ steps.versions.outputs.SeleniumWebDriverIEDriverVersion }}"
-              SeleniumWebDriverMSEdgeDriverVersion  = "${{ steps.versions.outputs.SeleniumWebDriverMSEdgeDriverVersion }}"
-              NUnitVersion                          = "${{ steps.versions.outputs.NUnitVersion }}"
-              NUnit3TestAdapterVersion              = "${{ steps.versions.outputs.NUnit3TestAdapterVersion }}"
-              MicrosoftNetTestSdkVersion            = "${{ steps.versions.outputs.MicrosoftNetTestSdkVersion }}"
-              MSTestTestAdapterVersion              = "${{ steps.versions.outputs.MSTestTestAdapterVersion }}"
-              MSTestTestFrameworkVersion            = "${{ steps.versions.outputs.MSTestTestFrameworkVersion }}"
-              NPOIVersion                           = "${{ steps.versions.outputs.NPOIVersion }}"
-              NLogVersion                           = "${{ steps.versions.outputs.NLogVersion }}"
-              SystemTextJsonVersion                 = "${{ steps.versions.outputs.SystemTextJsonVersion }}"
-              SystemTextEncodingsWebVersion         = "${{ steps.versions.outputs.SystemTextEncodingsWebVersion }}"
-              OcarambaVersion                       = "${{ steps.versions.outputs.OcarambaVersion }}"
-          }
+          $env:OcarambaVersion = "${{ steps.versions.outputs.OcarambaVersion }}"
 
-          $content = Get-Content $file
+          $env:SeleniumWebDriverVersion              = "${{ steps.versions.outputs.SeleniumWebDriverVersion }}"
+          $env:SeleniumSupportVersion                = "${{ steps.versions.outputs.SeleniumSupportVersion }}"
+          $env:SeleniumWebdriverChromeDriverVersion  = "${{ steps.versions.outputs.SeleniumWebdriverChromeDriverVersion }}"
+          $env:SeleniumWebDriverGeckoDriverVersion   = "${{ steps.versions.outputs.SeleniumWebDriverGeckoDriverVersion }}"
+          $env:SeleniumWebDriverIEDriverVersion      = "${{ steps.versions.outputs.SeleniumWebDriverIEDriverVersion }}"
+          $env:SeleniumWebDriverMSEdgeDriverVersion  = "${{ steps.versions.outputs.SeleniumWebDriverMSEdgeDriverVersion }}"
 
-          foreach ($k in $vars.Keys) {
-              $pattern = "^\s*${k}:"
-              $value = $vars[$k]
-              $content = $content -replace $pattern, "${k}: $value"
-          }
+          $env:NUnitVersion               = "${{ steps.versions.outputs.NUnitVersion }}"
+          $env:NUnit3TestAdapterVersion   = "${{ steps.versions.outputs.NUnit3TestAdapterVersion }}"
 
-          $content | Set-Content $file
+          $env:MicrosoftNetTestSdkVersion = "${{ steps.versions.outputs.MicrosoftNetTestSdkVersion }}"
+          $env:MSTestTestAdapterVersion   = "${{ steps.versions.outputs.MSTestTestAdapterVersion }}"
+          $env:MSTestTestFrameworkVersion = "${{ steps.versions.outputs.MSTestTestFrameworkVersion }}"
 
-      - shell: powershell
-        run: ./setPackagesVersions.ps1
-      - name: Setup nuget
-        uses: nuget/setup-nuget@v2
-        with:
-          nuget-version: latest
-      - name: Set project versions
-        id: update
-        uses: vers-one/dotnet-project-version-updater@v1.4
-        with:
-          file: |
-            "**/Ocaramba**.csproj",
-            "!**/Ocaramba.Templates.csproj"
-          version: ${{ env.templateVersion }}
-      - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
-      - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
-      - uses: actions/upload-artifact@v4
-        with:
-          path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
-          name: Template
-      - name: "Upload vsix artifact to Release"
-        run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: startsWith(github.ref, 'refs/tags/')
+          $env:NPOIVersion = "${{ steps.versions.outputs.NPOIVersion }}"
+          $env:NLogVersion = "${{ steps.versions.outputs.NLogVersion }}"
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          # Note: GitHub normalizes env var names to uppercase
+          $env:SystemTextJsonVersion         = "${{ steps.versions.outputs.SystemTextJsonVersion }}"
+          $env:SystemTextEncodingsWebVersion = "${{ steps.versions.outputs.SystemTextEncodingsWebVersion }}"
 
-          git add .
-          if git diff --cached --quiet; then
-            echo "No changes detected."
-            exit 0
-          fi
+          # Export to GITHUB_ENV so next steps can use them
+          Add-Content -Path $env:GITHUB_ENV -Value "OcarambaVersion=$env:OcarambaVersion"
 
-          git commit -m "Auto-sync Ocaramba versions"
-          git push
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverVersion=$env:SeleniumWebDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumSupportVersion=$env:SeleniumSupportVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebdriverChromeDriverVersion=$env:SeleniumWebdriverChromeDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverGeckoDriverVersion=$env:SeleniumWebDriverGeckoDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverIEDriverVersion=$env:SeleniumWebDriverIEDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverMSEdgeDriverVersion=$env:SeleniumWebDriverMSEdgeDriverVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "NUnitVersion=$env:NUnitVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "NUnit3TestAdapterVersion=$env:NUnit3TestAdapterVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "MicrosoftNetTestSdkVersion=$env:MicrosoftNetTestSdkVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "MSTestTestAdapterVersion=$env:MSTestTestAdapterVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "MSTestTestFrameworkVersion=$env:MSTestTestFrameworkVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "NPOIVersion=$env:NPOIVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "NLogVersion=$env:NLogVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "SystemTextJsonVersion=$env:SystemTextJsonVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SystemTextEncodingsWebVersion=$env:SystemTextEncodingsWebVersion"
+
+            - shell: powershell
+              run: ./setPackagesVersions.ps1
+            - name: Setup nuget
+              uses: nuget/setup-nuget@v2
+              with:
+                nuget-version: latest
+            - name: Set project versions
+              id: update
+              uses: vers-one/dotnet-project-version-updater@v1.4
+              with:
+                file: |
+                  "**/Ocaramba**.csproj",
+                  "!**/Ocaramba.Templates.csproj"
+                version: ${{ env.templateVersion }}
+            - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
+            - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
+            - uses: actions/upload-artifact@v4
+              with:
+                path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+                name: Template
+            - name: "Upload vsix artifact to Release"
+              run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              if: startsWith(github.ref, 'refs/tags/')
+
+            - name: Commit changes
+              run: |
+                git config user.name "github-actions"
+                git config user.email "github-actions@github.com"
+
+                git add .
+                if git diff --cached --quiet; then
+                  echo "No changes detected."
+                  exit 0
+                fi
+
+                git commit -m "Auto-sync Ocaramba versions"
+                git push
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
