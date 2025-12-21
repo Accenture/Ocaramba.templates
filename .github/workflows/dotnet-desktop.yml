@@ -136,16 +136,23 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-
+      
+          # Create or switch to a branch for the PR
+          $branch = "auto/sync-ocaramba-versions"
+          git checkout -B $branch
+      
           git add .
-
-          if (git diff --cached --quiet) {
-              Write-Host "No changes to commit."
+      
+          # Check if there are staged changes
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+              Write-Host "No changes detected. Skipping commit."
               exit 0
           }
-
+      
           git commit -m "Auto-sync Ocaramba versions"
-          git push
+          git push origin $branch
+
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
@@ -160,4 +167,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+
 
