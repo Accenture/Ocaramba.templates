@@ -38,15 +38,30 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="set_AppConfig_for_tests.ps1">set_AppConfig_for_tests.ps1</ProjectItem>
     </Project>
     <CustomParameters>
-      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="17.3.0"/>
-      <CustomParameter Name="$NPOI-version$" Value="2.5.6"/>
-      <CustomParameter Name="$NUnit-version$" Value="3.13.3"/>
-      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="4.2.1"/>
-      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="104.0.5112.7900"/>
-      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.31.0"/>
-      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.3.0"/>
-      <CustomParameter Name="$Ocaramba-version$" Value="4.0.2"/>
-      <CustomParameter Name="$Selenium.WebDriver.MSEdgeDriver-version$" Value="139.0.3405.102"/>
+      <CustomParameter Name="$Microsoft.NET.Test.Sdk-version$" Value="18.0.1"/>
+      <CustomParameter Name="$NPOI-version$" Value="2.7.5"/>
+      <CustomParameter Name="$NUnit-version$" Value="4.4.0"/>
+      <CustomParameter Name="$NUnit3TestAdapter-version$" Value="5.1.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.ChromeDriver-version$" Value="140.0.7339.20700"/>
+      <CustomParameter Name="$Selenium.WebDriver.GeckoDriver-version$" Value="0.36.0"/>
+      <CustomParameter Name="$Selenium.WebDriver.IEDriver-version$" Value="4.14.0"/>
+      <CustomParameter Name="$Ocaramba-version$" Value="4.2.7"/>
+      <CustomParameter Name="$Selenium.WebDriver.MSEdgeDriver-version$" Value="140.0.3485.66"/>
     </CustomParameters>
   </TemplateContent>
 </VSTemplate>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
