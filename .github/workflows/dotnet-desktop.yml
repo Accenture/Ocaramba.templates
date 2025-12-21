@@ -15,7 +15,7 @@ env:
   buildPlatform: Any CPU
   buildConfiguration: Release
 
-  templateVersion: 2.0.11
+  templateVersion: 2.0.12
   OcarambaVersion: 4.2.5
 
   SeleniumWebDriverVersion: 4.35.0
@@ -53,6 +53,63 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
       - shell: powershell
         run: '((Get-Content -path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest -Raw) -replace ''Version="\d\.\d.\d" Language'',''Version="${{ env.templateVersion }}" Language'') | Set-Content -Path ./Ocaramba.Templates.VSIX/source.extension.vsixmanifest'
+      - name: Run version extractor
+        id: versions
+        shell: pwsh
+        run: |
+          pwsh ./scripts/get-versions.ps1
+
+      - name: Set environment variables from version outputs
+        shell: pwsh
+        run: |
+          Write-Host "Setting environment variables from extracted versions..."
+
+          $env:OcarambaVersion = "${{ steps.versions.outputs.OcarambaVersion }}"
+
+          $env:SeleniumWebDriverVersion              = "${{ steps.versions.outputs.SeleniumWebDriverVersion }}"
+          $env:SeleniumSupportVersion                = "${{ steps.versions.outputs.SeleniumSupportVersion }}"
+          $env:SeleniumWebdriverChromeDriverVersion  = "${{ steps.versions.outputs.SeleniumWebdriverChromeDriverVersion }}"
+          $env:SeleniumWebDriverGeckoDriverVersion   = "${{ steps.versions.outputs.SeleniumWebDriverGeckoDriverVersion }}"
+          $env:SeleniumWebDriverIEDriverVersion      = "${{ steps.versions.outputs.SeleniumWebDriverIEDriverVersion }}"
+          $env:SeleniumWebDriverMSEdgeDriverVersion  = "${{ steps.versions.outputs.SeleniumWebDriverMSEdgeDriverVersion }}"
+
+          $env:NUnitVersion               = "${{ steps.versions.outputs.NUnitVersion }}"
+          $env:NUnit3TestAdapterVersion   = "${{ steps.versions.outputs.NUnit3TestAdapterVersion }}"
+
+          $env:MicrosoftNetTestSdkVersion = "${{ steps.versions.outputs.MicrosoftNetTestSdkVersion }}"
+          $env:MSTestTestAdapterVersion   = "${{ steps.versions.outputs.MSTestTestAdapterVersion }}"
+          $env:MSTestTestFrameworkVersion = "${{ steps.versions.outputs.MSTestTestFrameworkVersion }}"
+
+          $env:NPOIVersion = "${{ steps.versions.outputs.NPOIVersion }}"
+          $env:NLogVersion = "${{ steps.versions.outputs.NLogVersion }}"
+
+          # Note: GitHub normalizes env var names to uppercase
+          $env:SystemTextJsonVersion         = "${{ steps.versions.outputs.SystemTextJsonVersion }}"
+          $env:SystemTextEncodingsWebVersion = "${{ steps.versions.outputs.SystemTextEncodingsWebVersion }}"
+
+          # Export to GITHUB_ENV so next steps can use them
+          Add-Content -Path $env:GITHUB_ENV -Value "OcarambaVersion=$env:OcarambaVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverVersion=$env:SeleniumWebDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumSupportVersion=$env:SeleniumSupportVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebdriverChromeDriverVersion=$env:SeleniumWebdriverChromeDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverGeckoDriverVersion=$env:SeleniumWebDriverGeckoDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverIEDriverVersion=$env:SeleniumWebDriverIEDriverVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SeleniumWebDriverMSEdgeDriverVersion=$env:SeleniumWebDriverMSEdgeDriverVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "NUnitVersion=$env:NUnitVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "NUnit3TestAdapterVersion=$env:NUnit3TestAdapterVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "MicrosoftNetTestSdkVersion=$env:MicrosoftNetTestSdkVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "MSTestTestAdapterVersion=$env:MSTestTestAdapterVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "MSTestTestFrameworkVersion=$env:MSTestTestFrameworkVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "NPOIVersion=$env:NPOIVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "NLogVersion=$env:NLogVersion"
+
+          Add-Content -Path $env:GITHUB_ENV -Value "SystemTextJsonVersion=$env:SystemTextJsonVersion"
+          Add-Content -Path $env:GITHUB_ENV -Value "SystemTextEncodingsWebVersion=$env:SystemTextEncodingsWebVersion"
+
       - shell: powershell
         run: ./setPackagesVersions.ps1
       - name: Setup nuget
@@ -74,7 +131,10 @@ jobs:
           path: ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
           name: Template
       - name: "Upload vsix artifact to Release"
-        run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+        if: success() && startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: startsWith(github.ref, 'refs/tags/')
+        run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+
+
+
