@@ -15,7 +15,7 @@ env:
   buildPlatform: Any CPU
   buildConfiguration: Release
 
-  templateVersion: 2.0.11
+  templateVersion: 2.0.12
   OcarambaVersion: 4.2.5
 
   SeleniumWebDriverVersion: 4.35.0
