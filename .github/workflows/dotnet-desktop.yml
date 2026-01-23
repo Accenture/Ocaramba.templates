@@ -15,7 +15,7 @@ env:
   buildPlatform: Any CPU
   buildConfiguration: Release
 
-  templateVersion: 2.0.12
+  templateVersion: 2.1.0
   OcarambaVersion: 4.2.5
 
   SeleniumWebDriverVersion: 4.35.0
@@ -135,6 +135,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+
 
 
 
