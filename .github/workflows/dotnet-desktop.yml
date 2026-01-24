@@ -123,6 +123,32 @@ jobs:
           file: |
               "**/Ocaramba**.csproj","Ocaramba.Templates.VSIX/source.extension.vsixmanifest", "!**/Ocaramba.Templates.csproj"
           version: ${{ env.templateVersion }}
+      - name: Set environment variables from version outputs
+        shell: pwsh
+        run: |
+          # Path to the VSIX manifest
+          $manifestPath = "Ocaramba.Templates.VSIX/source.extension.vsixmanifest"
+          
+          $version = $env:templateVersion   # or replace with your own variable source
+          
+          # Load XML
+          [xml]$xml = Get-Content $manifestPath
+          
+          # Navigate to the Identity node
+          $identityNode = $xml.PackageManifest.Metadata.Identity
+          
+          if (-not $identityNode) {
+              throw "Identity node not found in manifest."
+          }
+          
+          # Update the Version attribute
+          $identityNode.Version = $version
+          
+          # Save the updated manifest
+          $xml.Save($manifestPath)
+          
+          Write-Host "Updated VSIX manifest version to $version"
+
       - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
       - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
       - uses: actions/upload-artifact@v4
@@ -134,6 +160,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+
 
 
 
