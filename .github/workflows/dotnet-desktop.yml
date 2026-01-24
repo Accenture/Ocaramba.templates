@@ -121,7 +121,7 @@ jobs:
         uses: vers-one/dotnet-project-version-updater@v1.7
         with:
           file: |
-              "**/Ocaramba**.csproj", "!**/Ocaramba.Templates.csproj"
+              "**/Ocaramba**.csproj","Ocaramba.Templates.VSIX/source.extension.vsixmanifest", "!**/Ocaramba.Templates.csproj"
           version: ${{ env.templateVersion }}
       - run: msbuild -t:Restore /p:configuration='${{ env.buildConfiguration }}' /v:minimal
       - run: msbuild '${{ env.solution }}' /p:configuration='${{ env.buildConfiguration }}' /p:platform='${{ env.buildPlatform }}' /v:minimal
@@ -134,6 +134,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ env.templateVersion }} ./Ocaramba.Templates.VSIX/bin/Release/Ocaramba.Templates.vsix
+
 
 
 
